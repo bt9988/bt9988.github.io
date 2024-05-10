@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Wedding Venues in Vancouver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .venue {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .venue h2 {
+            margin-top: 0;
+        }
+        .venue img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .quick-facts {
+            margin-top: 20px;
+        }
+        .description {
+            margin-top: 20px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .photo-gallery img {
+            width: calc(33.33% - 10px);
+            margin: 5px;
+        }
+        .map {
+            height: 200px;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .venue img {
+                width: 100%;
+            }
+            .photo-gallery img {
+                width: 100%;
+            }
+            .map {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Free Wedding Venues in Vancouver</h1>
+    </header>
+
+    <!-- Venue 1 -->
+    <div class="venue">
+        <h2>Venue Name</h2>
+        <div class="photo-gallery">
+            <img src="venue1_1.jpg" alt="Venue 1">
+            <img src="venue1_2.jpg" alt="Venue 1">
+            <img src="venue1_3.jpg" alt="Venue 1">
+        </div>
+        <div class="quick-facts">
+            <p><strong>Location:</strong> Vancouver, BC</p>
+            <p><strong>Capacity:</strong> 100 guests</p>
+            <p><strong>Availability:</strong> Year-round</p>
+        </div>
+        <div class="description">
+            <p>This beautiful venue offers stunning views of the city skyline and waterfront. With its spacious indoor and outdoor areas, it's perfect for both intimate ceremonies and grand celebrations. The venue's flexible scheduling makes it an ideal choice for couples looking for a versatile wedding location.</p>
+        </div>
+        <div class="map" id="map1"></div>
+    </div>
+
+    <!-- Venue 2 -->
+    <div class="venue">
+        <h2>Venue Name</h2>
+        <div class="photo-gallery">
+            <img src="venue2_1.jpg" alt="Venue 2">
+            <img src="venue2_2.jpg" alt="Venue 2">
+            <img src="venue2_3.jpg" alt="Venue 2">
+        </div>
+        <div class="quick-facts">
+            <p><strong>Location:</strong> Vancouver, BC</p>
+            <p><strong>Capacity:</strong> 150 guests</p>
+            <p><strong>Availability:</strong> Summer only</p>
+        </div>
+        <div class="description">
+            <p>Nestled in the heart of the city, this charming venue boasts a rustic yet elegant atmosphere. Its lush gardens and picturesque surroundings create a romantic backdrop for exchanging vows. With its warm ambiance and attentive staff, this venue ensures an unforgettable wedding experience for you and your guests.</p>
+        </div>
+        <div class="map" id="map2"></div>
+    </div>
+
+    <!-- Add more venues here as needed -->
+
+    <script>
+        function initMap() {
+            var locations = [
+                {lat: 49.2827, lng: -123.1207}, // Replace with coordinates of Venue 1
+                {lat: 49.2827, lng: -123.1207} // Replace with coordinates of Venue 2
+                // Add more coordinates for additional venues as needed
+            ];
+
+            var maps = document.querySelectorAll('.map');
+            for (var i = 0; i < locations.length; i++) {
+                var map = new google.maps.Map(maps[i], {
+                    zoom: 11,
+                    center: locations[i]
+                });
+                var marker = new google.maps.Marker({
+                    position: locations[i],
+                    map: map,
+                    title: 'Venue ' + (i + 1)
+                });
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+</body>
+</html>
