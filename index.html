@@ -52,23 +52,41 @@
             margin-top: 20px;
         }
         .photo-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            overflow: hidden;
+            position: relative;
         }
         .photo-gallery img {
-            width: calc(33.33% - 10px);
-            margin: 5px;
+            width: 100%;
+            height: auto;
             border-radius: 5px;
-            transition: transform 0.3s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
-        .photo-gallery img:hover {
-            transform: scale(1.1);
+        .photo-gallery img.active {
+            opacity: 1;
         }
-        .map-container {
-            max-width: 100%;
-            overflow: hidden;
-            border-radius: 5px;
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
         }
         @media screen and (min-width: 768px) {
             .venue {
@@ -88,15 +106,11 @@
         <div class="venue">
             <h2>Jericho Beach</h2>
             <div class="photo-gallery">
-                <a href="https://live.staticflickr.com/4430/36001845273_c807a8af45_b.jpg" target="_blank">
-                    <img src="https://live.staticflickr.com/4430/36001845273_c807a8af45_b.jpg" alt="Venue 1">
-                </a>
-                <a href="https://jamiedelaineblog.com/wp-content/uploads/2020/08/Jericho-Beach-Wedding-Photos-15.jpg" target="_blank">
-                    <img src="https://jamiedelaineblog.com/wp-content/uploads/2020/08/Jericho-Beach-Wedding-Photos-15.jpg" alt="Venue 1">
-                </a>
-                <a href="https://jelgerandtanja.com/wp-content/uploads/2022/03/intimate-wedding-at-jericho-beach.jpg" target="_blank">
-                    <img src="https://jelgerandtanja.com/wp-content/uploads/2022/03/intimate-wedding-at-jericho-beach.jpg" alt="Venue 1">
-                </a>
+                <img class="active" src="https://live.staticflickr.com/4430/36001845273_c807a8af45_b.jpg" alt="Venue 1">
+                <img src="https://jamiedelaineblog.com/wp-content/uploads/2020/08/Jericho-Beach-Wedding-Photos-15.jpg" alt="Venue 1">
+                <img src="https://jelgerandtanja.com/wp-content/uploads/2022/03/intimate-wedding-at-jericho-beach.jpg" alt="Venue 1">
+                <div class="prev" onclick="plusSlides(-1)">❮</div>
+                <div class="next" onclick="plusSlides(1)">❯</div>
             </div>
             <div class="quick-facts">
                 <p><strong>Location:</strong> Vancouver, BC</p>
@@ -133,5 +147,13 @@
 
     </div>
 
-</body>
-</html>
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("photo-gallery")[0].getElementsByTagName
