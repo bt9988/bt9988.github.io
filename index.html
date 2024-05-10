@@ -61,11 +61,6 @@
             margin: 5px;
             border-radius: 5px;
         }
-        .map {
-            height: 200px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
         @media screen and (min-width: 768px) {
             .venue {
                 margin: 20px auto;
@@ -82,9 +77,9 @@
 
         <!-- Venue 1 -->
         <div class="venue">
-            <h2>Jericho Beach</h2>
+            <h2>Venue Name</h2>
             <div class="photo-gallery">
-                <img src="https://www.worldbeachguide.com/photos/jericho-beach.jpg" alt="Venue 1">
+                <img src="venue1_1.jpg" alt="Venue 1">
                 <img src="venue1_2.jpg" alt="Venue 1">
                 <img src="venue1_3.jpg" alt="Venue 1">
             </div>
@@ -96,7 +91,6 @@
             <div class="description">
                 <p>This beautiful venue offers stunning views of the city skyline and waterfront. With its spacious indoor and outdoor areas, it's perfect for both intimate ceremonies and grand celebrations. The venue's flexible scheduling makes it an ideal choice for couples looking for a versatile wedding location.</p>
             </div>
-            <div class="map" id="map1"></div>
         </div>
 
         <!-- Venue 2 -->
@@ -115,21 +109,11 @@
             <div class="description">
                 <p>Nestled in the heart of the city, this charming venue boasts a rustic yet elegant atmosphere. Its lush gardens and picturesque surroundings create a romantic backdrop for exchanging vows. With its warm ambiance and attentive staff, this venue ensures an unforgettable wedding experience for you and your guests.</p>
             </div>
-            <div class="map" id="map2"></div>
         </div>
 
         <!-- Add more venues here as needed -->
 
     </div>
 
-    <script>
-        function initMap() {
-            var locations = [
-                {lat: 49.2827, lng: -123.1207}, // Replace with coordinates of Venue 1
-                {lat: 49.2827, lng: -123.1207} // Replace with coordinates of Venue 2
-                // Add more coordinates for additional venues as needed
-            ];
-
-            var maps = document.querySelectorAll('.map');
-            for (var i = 0; i < locations.length; i++) {
-                v
+</body>
+</html>
