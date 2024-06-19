@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NHL Goal Songs</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL Goal Songs</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="menu">
-      <div class="hamburger" id="hamburger">☰</div>
-      <nav id="menu-links" class="hidden">
-        <a href="index.html">Home</a>
-        <!-- Dynamic team links will be injected here -->
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <h1>NHL Goal Songs</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Anaheim Ducks</a></li>
+                    <li><a href="#">Boston Bruins</a></li>
+                    <!-- Add other team links dynamically -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="team-buttons">
+                <!-- Team buttons will be dynamically generated -->
+                <!-- Placeholder buttons for now -->
+                <button class="team-button" data-team="anaheim-ducks">Anaheim Ducks</button>
+                <button class="team-button" data-team="boston-bruins">Boston Bruins</button>
+                <!-- Add buttons for other teams -->
+            </section>
+        </div>
+    </main>
 
-  <main>
-    <div id="teams-container">
-      <!-- Team buttons with logos -->
-    </div>
-  </main>
-
-  <script src="js/scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
