@@ -52,7 +52,7 @@
             // Fetch team data based on URL parameter
             const teamName = window.location.pathname.split('/').pop().replace('.html', '');
 
-            fetch('../teams.json')
+            fetch('../team/teams.json')
                 .then(response => response.json())
                 .then(data => {
                     const teamData = data[teamName];
