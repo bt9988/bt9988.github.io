@@ -1,27 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Document loaded");
 
-  // Get teamId from URL parameter
-  const urlParams = new URLSearchParams(window.location.search);
-  const teamId = urlParams.get('team');
-
-  if (!teamId) {
-    console.error("No team ID found in URL");
-    // Optionally, redirect to the homepage or handle the error
-    // Example: window.location.href = 'index.html';
-    return;
-  }
-
-  // Continue with your code for fetching team data and updating the DOM
-  fetchTeamData(teamId);
-});
-
-function fetchTeamData(teamId) {
-  // Example function to fetch team data based on teamId
-  // Implement your logic here to fetch and display team details
-  console.log("Fetching data for team:", teamId);
-
-  // Example: Fetching team data from a JSON file or API
   fetch('assets/data/teams.json')
     .then(response => {
       if (!response.ok) {
@@ -30,30 +9,41 @@ function fetchTeamData(teamId) {
       return response.json();
     })
     .then(data => {
-      const team = data.teams.find(t => t.id === teamId);
+      console.log("Data loaded:", data);
+      const teamsContainer = document.getElementById('teams-container');
+      const menuLinks = document.getElementById('menu-links');
 
-      if (!team) {
-        console.error("Team not found in teams.json");
-        return;
-      }
+      data.teams.forEach(team => {
+        console.log("Processing team:", team);
+        const teamButton = document.createElement('div');
+        teamButton.className = 'team-button';
+        teamButton.innerHTML = `<a href="team.html?team=${team.id}"><img src="assets/images/team-logos/${team.logo}" alt="${team.name}"></a>`;
+        teamsContainer.appendChild(teamButton);
 
-      console.log("Team details:", team);
+        const teamLink = document.createElement('a');
+        teamLink.href = `team.html?team=${team.id}`;
+        teamLink.innerText = team.name;
+        menuLinks.appendChild(teamLink);
 
-      // Update DOM with team details
-      const teamDetailsContainer = document.getElementById('team-details');
-      teamDetailsContainer.innerHTML = `
-        <h1>${team.name}</h1>
-        <h2>Current Goal Song</h2>
-        <p>Title: ${team.goalSong.title}</p>
-        <p>Artist: ${team.goalSong.artist}</p>
-        <p>YouTube: <a href="${team.goalSong.youtube}" target="_blank">${team.goalSong.youtube}</a></p>
-        <h3>Listen on:</h3>
-        <ul>
-          ${team.goalSong.links.map(link => `<li><a href="${link.url}" target="_blank">${link.platform}</a></li>`).join('')}
-        </ul>
-      `;
+        // Optionally, you can add more details for each team in a tooltip or modal
+        teamButton.addEventListener('click', () => {
+          // Example: Show details in a modal
+          showTeamDetails(team);
+        });
+      });
     })
     .catch(error => {
       console.error("Error loading teams.json:", error);
     });
+});
+
+function showTeamDetails(team) {
+  // Example: Implement your modal or tooltip to show team details including goal song information
+  console.log("Showing details for team:", team);
+  // Access team.goalSong.title, team.goalSong.artist, team.goalSong.youtube, and team.goalSong.links
+}
+
+function toggleMenu() {
+  const menuLinks = document.getElementById('menu-links');
+  menuLinks.classList.toggle('hidden');
 }
