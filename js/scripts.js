@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Document loaded");
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const teamId = urlParams.get('team');
-
-  console.log("Team ID from URL:", teamId);
-
-  if (!teamId) {
-    console.error("No team ID found in URL");
-    return;
-  }
-
   fetch('data/teams.json')
     .then(response => {
       if (!response.ok) {
@@ -20,30 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       console.log("Data loaded:", data);
-      const team = data.teams.find(t => t.id === teamId);
-      if (!team) {
-        console.error("Team not found");
-        return;
-      }
+      const teamsContainer = document.getElementById('teams-container');
+      const menuLinks = document.getElementById('menu-links');
 
-      console.log("Displaying team:", team);
+      data.teams.forEach(team => {
+        console.log("Processing team:", team);
+        const teamButton = document.createElement('div');
+        teamButton.className = 'team-button';
+        teamButton.innerHTML = `<img src="assets/images/team-logos/${team.logo}" alt="${team.name}">`;
+        teamButton.addEventListener('click', () => {
+          window.location.href = `team.html?team=${team.id}`;
+        });
+        teamsContainer.appendChild(teamButton);
 
-      document.getElementById('team-name').innerText = team.name;
-      document.getElementById('song-title').innerText = `Song Title: ${team.goalSong.title}`;
-      document.getElementById('song-artist').innerText = `Artist: ${team.goalSong.artist}`;
-
-      const streamingLinks = document.getElementById('streaming-links');
-      streamingLinks.innerHTML = ''; // Clear existing links
-      team.goalSong.links.forEach(link => {
-        const linkElement = document.createElement('a');
-        linkElement.href = link.url;
-        linkElement.innerText = link.platform;
-        linkElement.target = '_blank';
-        streamingLinks.appendChild(linkElement);
+        const teamLink = document.createElement('a');
+        teamLink.href = `team.html?team=${team.id}`;
+        teamLink.innerText = team.name;
+        menuLinks.appendChild(teamLink);
       });
-
-      const youtubeVideo = document.getElementById('youtube-video');
-      youtubeVideo.innerHTML = `<iframe width="560" height="315" src="${team.goalSong.youtube}" frameborder="0" allowfullscreen></iframe>`;
     })
     .catch(error => {
       console.error("Error loading teams.json:", error);
