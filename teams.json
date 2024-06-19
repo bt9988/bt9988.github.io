@@ -1,0 +1,188 @@
+{
+    "anaheim-ducks": {
+        "teamName": "Anaheim Ducks",
+        "songName": "Song Name 1",
+        "artist": "Artist 1",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_1"
+    },
+    "boston-bruins": {
+        "teamName": "Boston Bruins",
+        "songName": "Song Name 2",
+        "artist": "Artist 2",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_2"
+    },
+    "buffalo-sabres": {
+        "teamName": "Buffalo Sabres",
+        "songName": "Song Name 3",
+        "artist": "Artist 3",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_3"
+    },
+    "calgary-flames": {
+        "teamName": "Calgary Flames",
+        "songName": "Song Name 4",
+        "artist": "Artist 4",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_4"
+    },
+    "carolina-hurricanes": {
+        "teamName": "Carolina Hurricanes",
+        "songName": "Song Name 5",
+        "artist": "Artist 5",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_5"
+    },
+    "chicago-blackhawks": {
+        "teamName": "Chicago Blackhawks",
+        "songName": "Song Name 6",
+        "artist": "Artist 6",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_6"
+    },
+    "colorado-avalanche": {
+        "teamName": "Colorado Avalanche",
+        "songName": "Song Name 7",
+        "artist": "Artist 7",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_7"
+    },
+    "columbus-blue-jackets": {
+        "teamName": "Columbus Blue Jackets",
+        "songName": "Song Name 8",
+        "artist": "Artist 8",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_8"
+    },
+    "dallas-stars": {
+        "teamName": "Dallas Stars",
+        "songName": "Song Name 9",
+        "artist": "Artist 9",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_9"
+    },
+    "detroit-red-wings": {
+        "teamName": "Detroit Red Wings",
+        "songName": "Song Name 10",
+        "artist": "Artist 10",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_10"
+    },
+    "edmonton-oilers": {
+        "teamName": "Edmonton Oilers",
+        "songName": "Song Name 11",
+        "artist": "Artist 11",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_11"
+    },
+    "florida-panthers": {
+        "teamName": "Florida Panthers",
+        "songName": "Song Name 12",
+        "artist": "Artist 12",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_12"
+    },
+    "los-angeles-kings": {
+        "teamName": "Los Angeles Kings",
+        "songName": "Song Name 13",
+        "artist": "Artist 13",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_13"
+    },
+    "minnesota-wild": {
+        "teamName": "Minnesota Wild",
+        "songName": "Song Name 14",
+        "artist": "Artist 14",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_14"
+    },
+    "montreal-canadiens": {
+        "teamName": "Montreal Canadiens",
+        "songName": "Song Name 15",
+        "artist": "Artist 15",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_15"
+    },
+    "nashville-predators": {
+        "teamName": "Nashville Predators",
+        "songName": "Song Name 16",
+        "artist": "Artist 16",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_16"
+    },
+    "new-jersey-devils": {
+        "teamName": "New Jersey Devils",
+        "songName": "Song Name 17",
+        "artist": "Artist 17",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_17"
+    },
+    "new-york-islanders": {
+        "teamName": "New York Islanders",
+        "songName": "Song Name 18",
+        "artist": "Artist 18",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_18"
+    },
+    "new-york-rangers": {
+        "teamName": "New York Rangers",
+        "songName": "Song Name 19",
+        "artist": "Artist 19",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_19"
+    },
+    "ottawa-senators": {
+        "teamName": "Ottawa Senators",
+        "songName": "Song Name 20",
+        "artist": "Artist 20",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_20"
+    },
+    "philadelphia-flyers": {
+        "teamName": "Philadelphia Flyers",
+        "songName": "Song Name 21",
+        "artist": "Artist 21",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_21"
+    },
+    "pittsburgh-penguins": {
+        "teamName": "Pittsburgh Penguins",
+        "songName": "Song Name 22",
+        "artist": "Artist 22",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_22"
+    },
+    "san-jose-sharks": {
+        "teamName": "San Jose Sharks",
+        "songName": "Song Name 23",
+        "artist": "Artist 23",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_23"
+    },
+    "seattle-kraken": {
+        "teamName": "Seattle Kraken",
+        "songName": "Song Name 24",
+        "artist": "Artist 24",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_24"
+    },
+    "st-louis-blues": {
+        "teamName": "St Louis Blues",
+        "songName": "Song Name 25",
+        "artist": "Artist 25",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_25"
+    },
+    "tampa-bay-lightning": {
+        "teamName": "Tampa Bay Lightning",
+        "songName": "Song Name 26",
+        "artist": "Artist 26",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_26"
+    },
+    "toronto-maple-leafs": {
+        "teamName": "Toronto Maple Leafs",
+        "songName": "Song Name 27",
+        "artist": "Artist 27",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_27"
+    },
+    "vancouver-canucks": {
+        "teamName": "Vancouver Canucks",
+        "songName": "Song Name 28",
+        "artist": "Artist 28",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_28"
+    },
+    "vegas-golden-knights": {
+        "teamName": "Vegas Golden Knights",
+        "songName": "Song Name 29",
+        "artist": "Artist 29",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_29"
+    },
+    "washington-capitals": {
+        "teamName": "Washington Capitals",
+        "songName": "Song Name 30",
+        "artist": "Artist 30",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_30"
+    },
+    "winnipeg-jets": {
+        "teamName": "Winnipeg Jets",
+        "songName": "Song Name 31",
+        "artist": "Artist 31",
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_31"
+    }
+}
