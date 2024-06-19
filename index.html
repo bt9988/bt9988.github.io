@@ -34,7 +34,7 @@
     <script src="script.js"></script>
     <script>
         // Load teams.json and dynamically generate team buttons
-        fetch('teams.json')
+        fetch('team/teams.json')
             .then(response => response.json())
             .then(data => {
                 const navList = document.getElementById('nav-list');
