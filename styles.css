@@ -8,28 +8,34 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
 }
 
 header {
-    background: #333;
+    background: #ff4500;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5rem;
 }
 
 main {
-    padding: 1rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
 #teams h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #ff4500;
 }
 
 .team-list {
@@ -46,17 +52,18 @@ main {
 
 .team-list a {
     text-decoration: none;
-    color: #333;
-    background: #fff;
-    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #333;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    display: inline-block;
 }
 
 .team-list a:hover {
-    background: #333;
-    color: #fff;
+    background: #ff4500;
+    transform: translateY(-3px);
 }
 
 footer {
@@ -64,4 +71,22 @@ footer {
     padding: 1rem 0;
     background: #333;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #teams h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-list a {
+        padding: 0.5rem 1rem;
+    }
 }
