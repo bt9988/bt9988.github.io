@@ -1,103 +1,97 @@
-/* Reset and general styles */
+/* General reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #fff;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: #ff4500;
     color: #fff;
-    padding: 10px 0;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2rem;
+h1 {
     margin: 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 main {
-    padding: 20px 0;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.teams {
-    margin-bottom: 40px;
-}
-
-.teams h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+#teams h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #ff4500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .team-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.team-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.team-list li {
+    margin: 0.5rem;
 }
 
-.team-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.team-list a {
+    text-decoration: none;
+    color: #fff;
+    background: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    display: inline-block;
+    font-weight: 500;
 }
 
-.team-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.team-card p {
-    font-size: 1rem;
-    line-height: 1.4;
+.team-list a:hover {
+    background: #ff4500;
+    transform: translateY(-3px);
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
     position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #teams h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-list a {
+        padding: 0.5rem 1rem;
+    }
 }
