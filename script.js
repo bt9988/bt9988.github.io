@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             Object.keys(data).forEach(team => {
                 const teamName = data[team].teamName;
                 const teamLink = document.createElement('a');
-                teamLink.href = `team/${team}.html`;
+                teamLink.href = `#${team}`;
                 teamLink.textContent = teamName;
                 const listItem = document.createElement('li');
                 listItem.appendChild(teamLink);
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add click event listener to each team button
                 teamButton.addEventListener('click', function() {
                     const teamName = teamButton.getAttribute('data-team');
-                    window.location.href = `team/${teamName}.html`; // Navigate to team page
+                    window.location.href = `team.html#${teamName}`; // Navigate to team page
                 });
             });
         })
