@@ -95,52 +95,12 @@ main {
 }
 
 .team-list a {
-    display: block;
+    display: inline-block;
     padding: 10px 15px;
-    background: #fff;
-    color: #333;
+    background: #ff4500;
+    color: #fff;
     text-decoration: none;
     border: 2px solid #ff4500;
     border-radius: 5px;
     font-weight: 600;
     transition: background 0.3s, color 0.3s;
-}
-
-.team-list a:hover {
-    background: #ff4500;
-    color: #fff;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .menu {
-        text-align: center;
-    }
-
-    .menu li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .menu a {
-        font-size: 1rem;
-    }
-
-    .team-list {
-        flex-direction: column;
-    }
-}
