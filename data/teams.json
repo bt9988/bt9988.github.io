@@ -9,8 +9,8 @@
         "artist": "Pennywise",
         "youtube": "https://www.youtube.com/watch?v=d-ucCippEeM",
         "links": [
-          { "platform": "Spotify", "url": "https://www.google.com" },
-          { "platform": "Apple Music", "url": "https://www.google.com" }
+          { "platform": "Spotify", "url": "https://open.spotify.com/example1" },
+          { "platform": "Apple Music", "url": "https://music.apple.com/example1" }
         ]
       }
     },
@@ -23,11 +23,11 @@
         "artist": "Zombie Nation",
         "youtube": "https://www.youtube.com/watch?v=z5LW07FTJbI",
         "links": [
-          { "platform": "Spotify", "url": "https://www.google.com" },
-          { "platform": "Apple Music", "url": "https://www.google.com" }
+          { "platform": "Spotify", "url": "https://open.spotify.com/example2" },
+          { "platform": "Apple Music", "url": "https://music.apple.com/example2" }
         ]
       }
     }
- 
+    // Add more teams as needed
   ]
 }
