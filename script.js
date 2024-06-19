@@ -12,20 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('team/teams.json')
         .then(response => response.json())
         .then(data => {
-            const navList = document.getElementById('nav-list');
             const teamButtonsContainer = document.querySelector('.team-buttons');
 
-            // Update navigation menu with team links
+            // Create buttons for each team on homepage
             Object.keys(data).forEach(team => {
                 const teamName = data[team].teamName;
-                const teamLink = document.createElement('a');
-                teamLink.href = `#${team}`;
-                teamLink.textContent = teamName;
-                const listItem = document.createElement('li');
-                listItem.appendChild(teamLink);
-                navList.appendChild(listItem);
 
-                // Create buttons for each team on homepage
                 const teamButton = document.createElement('button');
                 teamButton.classList.add('team-button');
                 teamButton.textContent = teamName;
@@ -35,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add click event listener to each team button
                 teamButton.addEventListener('click', function() {
                     const teamName = teamButton.getAttribute('data-team');
-                    window.location.href = `team.html#${teamName}`; // Navigate to team page
+                    window.location.href = `team/${teamName}.html`; // Navigate to team page
                 });
             });
         })
