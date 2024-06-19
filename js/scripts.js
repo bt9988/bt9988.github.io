@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const urlParams = new URLSearchParams(window.location.search);
   const teamId = urlParams.get('team');
+  console.log("Team ID from URL:", teamId);
 
   if (!teamId) {
     console.error("No team ID found in URL");
@@ -31,7 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('song-artist').innerText = `Artist: ${team.goalSong.artist}`;
 
       const streamingLinks = document.getElementById('streaming-links');
+      console.log("Streaming links element:", streamingLinks);
+
       streamingLinks.innerHTML = ''; // Clear existing links
       team.goalSong.links.forEach(link => {
+        console.log("Adding link:", link);
         const linkElement = document.createElement('a');
-        lin
+        linkElement.href = link.url;
+        linkElement.innerText = link.platform;
+        linkElement.target = '_blank';
+        streamingLinks.appendChild(linkElement);
+      });
+
+      const youtubeVideo = document.getElementById('youtube-video');
+      youtubeVideo.innerHTML = `<iframe width="560" height="315" src="${team.goalSong.youtube}" frameborder="0" allowfullscreen></iframe>`;
+    })
+    .catch(error => {
+      console.error("Error loading teams.json:", error);
+    });
+});
+
+function toggleMenu() {
+  const menuLinks = document.getElementById('menu-links');
+  menuLinks.classList.toggle('hidden');
+}
