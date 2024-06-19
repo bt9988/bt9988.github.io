@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL Goal Songs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NHL Goal Songs</h1>
+    </header>
+    <main>
+        <section id="teams">
+            <!-- Example of a single team -->
+            <div class="team">
+                <h2>Team Name</h2>
+                <div class="songs">
+                    <h3>Current Goal Songs</h3>
+                    <ul>
+                        <!-- If a single song for the team -->
+                        <li>Song Title - Artist</li>
+                        <!-- If multiple songs for each player -->
+                        <li>Player Name: Song Title - Artist</li>
+                    </ul>
+                    <h3>Past Goal Songs</h3>
+                    <ul>
+                        <li>Song Title - Artist</li>
+                    </ul>
+                </div>
+                <div class="video">
+                    <h3>Current Goal Song Video</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Repeat for other teams -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 NHL Goal Songs</p>
+    </footer>
+</body>
+</html>
