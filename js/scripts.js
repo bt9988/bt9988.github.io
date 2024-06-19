@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("Team page loaded");
+  console.log("Document loaded");
 
   // Get teamId from URL parameter
   const urlParams = new URLSearchParams(window.location.search);
@@ -7,9 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!teamId) {
     console.error("No team ID found in URL");
+    // Optionally, redirect to the homepage or handle the error
+    // Example: window.location.href = 'index.html';
     return;
   }
 
+  // Continue with your code for fetching team data and updating the DOM
+  fetchTeamData(teamId);
+});
+
+function fetchTeamData(teamId) {
+  // Example function to fetch team data based on teamId
+  // Implement your logic here to fetch and display team details
+  console.log("Fetching data for team:", teamId);
+
+  // Example: Fetching team data from a JSON file or API
   fetch('assets/data/teams.json')
     .then(response => {
       if (!response.ok) {
@@ -18,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then(data => {
-      console.log("Data loaded:", data);
       const team = data.teams.find(t => t.id === teamId);
 
       if (!team) {
@@ -45,9 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       console.error("Error loading teams.json:", error);
     });
-});
-
-function toggleMenu() {
-  const menuLinks = document.getElementById('menu-links');
-  menuLinks.classList.toggle('hidden');
 }
