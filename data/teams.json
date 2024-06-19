@@ -2,11 +2,11 @@
   "teams": [
     {
       "id": "team1",
-      "name": "Anaheim Ducks",
+      "name": "Team 1",
       "logo": "team1.png",
       "goalSong": {
-        "title": "Song",
-        "artist": "Blur",
+        "title": "Song Title 1",
+        "artist": "Artist 1",
         "youtube": "https://www.youtube.com/embed/example1",
         "links": [
           { "platform": "Spotify", "url": "https://open.spotify.com/example1" },
