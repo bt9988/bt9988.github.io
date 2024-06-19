@@ -24,12 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
         teamLink.href = `team.html?team=${team.id}`;
         teamLink.innerText = team.name;
         menuLinks.appendChild(teamLink);
+
+        // Optionally, you can add more details for each team in a tooltip or modal
+        teamButton.addEventListener('click', () => {
+          // Example: Show details in a modal
+          showTeamDetails(team);
+        });
       });
     })
     .catch(error => {
       console.error("Error loading teams.json:", error);
     });
 });
+
+function showTeamDetails(team) {
+  // Example: Implement your modal or tooltip to show team details including goal song information
+  console.log("Showing details for team:", team);
+  // Access team.goalSong.title, team.goalSong.artist, team.goalSong.youtube, and team.goalSong.links
+}
 
 function toggleMenu() {
   const menuLinks = document.getElementById('menu-links');
