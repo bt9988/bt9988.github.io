@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const urlParams = new URLSearchParams(window.location.search);
   const teamId = urlParams.get('team');
+
   console.log("Team ID from URL:", teamId);
 
   if (!teamId) {
@@ -32,11 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('song-artist').innerText = `Artist: ${team.goalSong.artist}`;
 
       const streamingLinks = document.getElementById('streaming-links');
-      console.log("Streaming links element:", streamingLinks);
-
       streamingLinks.innerHTML = ''; // Clear existing links
       team.goalSong.links.forEach(link => {
-        console.log("Adding link:", link);
         const linkElement = document.createElement('a');
         linkElement.href = link.url;
         linkElement.innerText = link.platform;
