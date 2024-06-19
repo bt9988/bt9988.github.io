@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Name - NHL Goal Song</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
             </div>
             <nav>
                 <ul class="nav-list" id="nav-list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <!-- Links to other team pages will be dynamically generated -->
                 </ul>
             </nav>
@@ -39,7 +39,7 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('mobile-menu');
@@ -50,9 +50,9 @@
             });
 
             // Fetch team data based on URL parameter
-            const teamName = window.location.hash.substring(1); // Get team name from URL hash
+            const teamName = window.location.pathname.split('/').pop().replace('.html', '');
 
-            fetch('team/teams.json')
+            fetch('../team/teams.json')
                 .then(response => response.json())
                 .then(data => {
                     const teamData = data[teamName];
