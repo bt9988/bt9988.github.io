@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Document loaded");
 
-  fetch('data/teams.json')
+  fetch('assets/data/teams.json')
     .then(response => {
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
@@ -17,10 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Processing team:", team);
         const teamButton = document.createElement('div');
         teamButton.className = 'team-button';
-        teamButton.innerHTML = `<img src="assets/images/team-logos/${team.logo}" alt="${team.name}">`;
-        teamButton.addEventListener('click', () => {
-          window.location.href = `team.html?team=${team.id}`;
-        });
+        teamButton.innerHTML = `<a href="team.html?team=${team.id}"><img src="assets/images/team-logos/${team.logo}" alt="${team.name}"></a>`;
         teamsContainer.appendChild(teamButton);
 
         const teamLink = document.createElement('a');
