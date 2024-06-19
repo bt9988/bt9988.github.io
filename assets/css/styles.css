@@ -1,65 +1,59 @@
+/* styles.css */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #000;
+  background-color: #333;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
-.menu .hamburger {
+.hamburger {
+  font-size: 24px;
   cursor: pointer;
 }
 
-#menu-links {
-  display: flex;
-  gap: 10px;
+nav {
+  text-align: center;
+  margin-top: 10px;
 }
 
-.hidden {
+nav.hidden {
   display: none;
 }
 
 main {
   padding: 20px;
-  text-align: center;
-}
-
-.teams-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 }
 
 .team-button {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  width: 100px;
-  cursor: pointer;
+  margin: 10px;
 }
 
 .team-button img {
-  max-width: 100%;
+  max-width: 100px; /* Adjust size as needed */
+  display: block;
+  margin: 0 auto;
 }
 
-@media (max-width: 600px) {
-  .teams-container {
-    justify-content: space-around;
-  }
+a {
+  color: #333;
+  text-decoration: none;
+}
 
-  .team-button {
-    flex: 0 0 22%;
-  }
+a:hover {
+  text-decoration: underline;
 }
