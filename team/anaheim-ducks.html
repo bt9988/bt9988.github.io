@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Name - NHL Goal Song</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
@@ -17,8 +17,8 @@
             </div>
             <nav>
                 <ul class="nav-list" id="nav-list">
-                    <li><a href="#">Home</a></li>
-                    <!-- Add links to other team pages -->
+                    <li><a href="../index.html">Home</a></li>
+                    <!-- Links to other team pages will be dynamically generated -->
                 </ul>
             </nav>
         </div>
@@ -39,7 +39,38 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+
+            menuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+            });
+
+            // Fetch team data based on URL parameter
+            const teamName = window.location.pathname.split('/').pop().replace('.html', '');
+
+            fetch('../teams.json')
+                .then(response => response.json())
+                .then(data => {
+                    const teamData = data[teamName];
+                    document.getElementById('team-name').textContent = teamData.teamName;
+                    document.getElementById('song-name').textContent = teamData.songName;
+                    document.getElementById('song-artist').textContent = teamData.artist;
+
+                    // Embed YouTube video
+                    const youtubeVideoContainer = document.getElementById('youtube-video');
+                    const youtubeEmbed = document.createElement('iframe');
+                    youtubeEmbed.width = "560";
+                    youtubeEmbed.height = "315";
+                    youtubeEmbed.src = teamData.youtubeLink;
+                    youtubeEmbed.allowFullscreen = true;
+                    youtubeVideoContainer.appendChild(youtubeEmbed);
+                })
+                .catch(error => console.error('Error fetching team data:', error));
+        });
+    </script>
 </body>
 </html>
-
