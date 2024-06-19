@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Document loaded");
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const teamId = urlParams.get('team');
+
+  if (!teamId) {
+    console.error("No team ID found in URL");
+    return;
+  }
+
   fetch('data/teams.json')
     .then(response => {
       if (!response.ok) {
@@ -10,31 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       console.log("Data loaded:", data);
-      const teamsContainer = document.getElementById('teams-container');
-      const menuLinks = document.getElementById('menu-links');
+      const team = data.teams.find(t => t.id === teamId);
+      if (!team) {
+        console.error("Team not found");
+        return;
+      }
 
-      data.teams.forEach(team => {
-        console.log("Processing team:", team);
-        const teamButton = document.createElement('div');
-        teamButton.className = 'team-button';
-        teamButton.innerHTML = `<img src="assets/images/team-logos/${team.logo}" alt="${team.name}">`;
-        teamButton.addEventListener('click', () => {
-          window.location.href = `team.html?team=${team.id}`;
-        });
-        teamsContainer.appendChild(teamButton);
+      console.log("Displaying team:", team);
 
-        const teamLink = document.createElement('a');
-        teamLink.href = `team.html?team=${team.id}`;
-        teamLink.innerText = team.name;
-        menuLinks.appendChild(teamLink);
-      });
-    })
-    .catch(error => {
-      console.error("Error loading teams.json:", error);
-    });
-});
+      document.getElementById('team-name').innerText = team.name;
+      document.getElementById('song-title').innerText = `Song Title: ${team.goalSong.title}`;
+      document.getElementById('song-artist').innerText = `Artist: ${team.goalSong.artist}`;
 
-function toggleMenu() {
-  const menuLinks = document.getElementById('menu-links');
-  menuLinks.classList.toggle('hidden');
-}
+      const streamingLinks = document.getElementById('streaming-links');
+      streamingLinks.innerHTML = ''; // Clear existing links
+      team.goalSong.links.forEach(link => {
+        const linkElement = document.createElement('a');
+        lin
