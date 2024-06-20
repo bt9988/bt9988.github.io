@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function populateTeams(teams) {
         const teamButtonsContainer = document.querySelector('.team-buttons');
+        if (!teamButtonsContainer) return;
+
         teamButtonsContainer.innerHTML = '';
         teams.forEach(team => {
             const button = document.createElement('button');
@@ -24,14 +26,19 @@ document.addEventListener("DOMContentLoaded", function() {
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
         const teamName = urlParams.get('team');
-        if (teamName) {
-            const team = teams.find(t => t.name === teamName);
-            if (team) {
-                document.getElementById('team-name').textContent = team.name;
-                document.getElementById('song-name').textContent = team.currentGoalSong.name;
-                document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
-                document.querySelector('#youtube-video iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
-            }
-        }
+        if (!teamName) return;
+
+        const team = teams.find(t => t.name === teamName);
+        if (!team) return;
+
+        const teamNameElement = document.getElementById('team-name');
+        const songNameElement = document.getElementById('song-name');
+        const artistNameElement = document.getElementById('artist-name');
+        const youtubeIframe = document.querySelector('#youtube-video iframe');
+
+        if (teamNameElement) teamNameElement.textContent = team.name;
+        if (songNameElement) songNameElement.textContent = team.currentGoalSong.name;
+        if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
+        if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
     }
 });
