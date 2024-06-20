@@ -277,6 +277,15 @@
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
         }
+    },
+    {
+        "name": "Winnipeg Jets",
+        "logo": "images/winnipeg-jets.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
     }
 
 ]
