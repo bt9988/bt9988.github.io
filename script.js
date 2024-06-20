@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!team) return;
 
         // Update page title dynamically
-        document.title = `${team.name} | Team Page | 🚨 NHL Goal Songs 🚨`;
+        document.title = `${team.name} | 🚨 NHL Goal Songs 🚨`;
 
         document.getElementById('team-name').textContent = team.name;
         document.getElementById('team-name-placeholder').textContent = team.name;
