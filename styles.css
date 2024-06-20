@@ -18,13 +18,6 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    flex: 1;
 }
 
 header h1 {
@@ -35,12 +28,10 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
 }
 
 nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
@@ -57,7 +48,6 @@ nav ul li a:hover {
 .menu-toggle {
     display: none;
     cursor: pointer;
-    font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -69,12 +59,7 @@ nav ul li a:hover {
     
     nav {
         display: none;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #333;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        clear: both;
     }
 
     nav.active {
@@ -82,19 +67,13 @@ nav ul li a:hover {
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: flex-end;
+        display: block;
+        text-align: center;
     }
 
     nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        padding: 10px 20px;
-        width: 100%;
-        text-align: right;
+        display: block;
+        margin: 10px 0;
     }
 }
 
@@ -176,4 +155,17 @@ nav ul li a:hover {
     height: 100%;
     border: none;
     border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .team-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-button {
+        width: 100%;
+        max-width: 200px;
+    }
 }
