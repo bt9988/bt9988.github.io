@@ -42,8 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
         if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
-        if (dynamicParagraph) {
-            dynamicParagraph.textContent = `The current goal song for the NHL's ${team.name} is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
-        }
+   
     }
 });
