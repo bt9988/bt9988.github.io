@@ -82,7 +82,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .team-button {
