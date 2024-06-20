@@ -9,70 +9,30 @@
 <body>
     <header>
         <div class="container">
-            <h1>NHL Goal Songs</h1>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="logo">
+                <h1>NHL Goal Songs</h1>
             </div>
             <nav>
-                <ul class="nav-list" id="nav-list">
+                <ul class="menu">
                     <li><a href="#">Home</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Teams</a>
+                        <ul class="sub-menu">
+                            <!-- Teams will be dynamically populated here -->
+                        </ul>
+                    </li>
                 </ul>
+                <div class="menu-toggle">&#9776;</div>
             </nav>
         </div>
     </header>
-    
-    <main>
-        <div class="container">
-            <section class="team-buttons">
-                <!-- Team buttons will be dynamically generated here -->
-            </section>
-        </div>
-    </main>
+
+    <div class="container">
+        <section class="team-buttons">
+            <!-- Team buttons will be dynamically populated here -->
+        </section>
+    </div>
 
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('mobile-menu');
-            const navList = document.getElementById('nav-list');
-            const teamButtonsContainer = document.querySelector('.team-buttons');
-
-            menuToggle.addEventListener('click', function() {
-                navList.classList.toggle('active');
-            });
-
-            // Fetch teams data and dynamically generate buttons
-            fetch('team/teams.json')
-                .then(response => response.json())
-                .then(data => {
-                    // Update navigation menu with team links
-                    const navList = document.getElementById('nav-list');
-                    Object.keys(data).forEach(team => {
-                        const teamName = data[team].teamName;
-                        const teamLink = document.createElement('a');
-                        teamLink.href = `team.html?team=${team}`;
-                        teamLink.textContent = teamName;
-                        const listItem = document.createElement('li');
-                        listItem.appendChild(teamLink);
-                        navList.appendChild(listItem);
-
-                        // Create buttons for each team on homepage
-                        const teamButton = document.createElement('button');
-                        teamButton.classList.add('team-button');
-                        teamButton.textContent = teamName;
-                        teamButton.setAttribute('data-team', team); // Keep track of the team name
-                        teamButtonsContainer.appendChild(teamButton);
-
-                        // Add click event listener to each team button
-                        teamButton.addEventListener('click', function() {
-                            const teamName = teamButton.getAttribute('data-team');
-                            window.location.href = `team.html?team=${team}`; // Navigate to team.html with team parameter
-                        });
-                    });
-                })
-                .catch(error => console.error('Error fetching teams.json:', error));
-        });
-    </script>
 </body>
 </html>
