@@ -1,26 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('teams.json')
-        .then(response => response.json())
-        .then(data => {
-            populateTeams(data);
-            setupTeamPage(data);
-        })
-        .catch(error => console.error('Error fetching team data:', error));
+document.addEventListener("DOMContentLoaded", async function() {
+    try {
+        const response = await fetch('teams.json');
+        const data = await response.json();
+        
+        populateTeams(data);
+        setupTeamPage(data);
+    } catch (error) {
+        console.error('Error fetching team data:', error);
+    }
 
     function populateTeams(teams) {
         const teamButtonsContainer = document.querySelector('.team-buttons');
         if (!teamButtonsContainer) return;
 
-        teamButtonsContainer.innerHTML = '';
-        teams.forEach(team => {
-            const button = document.createElement('button');
-            button.className = 'team-button';
-            button.innerHTML = `<img src="${team.logo}" alt="${team.name}"><span>${team.name}</span>`;
-            button.addEventListener('click', () => {
-                window.location.href = `team.html?team=${encodeURIComponent(team.name)}`;
-            });
-            teamButtonsContainer.appendChild(button);
-        });
+        teamButtonsContainer.innerHTML = teams.map(team => {
+            return `<button class="team-button" onclick="navigateToTeam('${team.name}')">
+                        <img src="${team.logo}" alt="${team.name}">
+                        <span>${team.name}</span>
+                    </button>`;
+        }).join('');
     }
 
     function setupTeamPage(teams) {
@@ -31,21 +29,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
-        const teamNameElement = document.getElementById('team-name');
-        const teamNamePlaceholder = document.getElementById('team-name-placeholder');
-        const songNameElement = document.getElementById('song-name');
-        const artistNameElement = document.getElementById('artist-name');
-        const youtubeIframe = document.getElementById('youtube-iframe');
+        document.getElementById('team-name').textContent = team.name;
+        document.getElementById('team-name-placeholder').textContent = team.name;
+        document.getElementById('song-name').textContent = team.currentGoalSong.name;
+        document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+        document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+
         const dynamicParagraph = document.getElementById('dynamicParagraph');
-
-        if (teamNameElement) teamNameElement.textContent = team.name;
-        if (teamNamePlaceholder) teamNamePlaceholder.textContent = team.name;
-        if (songNameElement) songNameElement.textContent = team.currentGoalSong.name;
-        if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
-        if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
-
-        // Update the dynamic paragraph with the current song sentence
-        const currentSongSentence = `The current goal song for the NHL's ${team.name} is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
-        if (dynamicParagraph) dynamicParagraph.textContent = currentSongSentence;
+        if (dynamicParagraph) {
+            dynamicParagraph.textContent = `The current goal song for the NHL's ${team.name} is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
+        }
     }
+
+    // Function to navigate to team page with the team name as query parameter
+    window.navigateToTeam = function(teamName) {
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    };
 });
