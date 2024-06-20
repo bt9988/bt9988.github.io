@@ -35,17 +35,22 @@ header h1 {
 }
 
 .main-content {
-    flex: 1; /* Take remaining space */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
 .description {
-    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
+}
+
+.team-info {
+    margin-top: 20px;
 }
 
 .team-buttons {
