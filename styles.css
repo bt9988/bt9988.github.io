@@ -82,8 +82,8 @@ header h1 {
 }
 
 .team-button:hover {
-    background-color: #f7931e; /* Orange background on hover */
-    color: #fff;
+background-color: #f0f0f0; /* Light grey background on hover */
+    color: #333; /* Change text color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
