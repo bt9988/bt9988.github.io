@@ -3,14 +3,14 @@
         "teamName": "Anaheim Ducks",
         "songName": "Bro Hymn",
         "artist": "Pennywise",
-        "youtubeLink": "hhttps://www.youtube.com/embed/d-ucCippEeM?si=7UWQAwEF63aL3z4D"
+        "youtubeLink": "hhttps://www.youtube.com/embed/d-ucCippEeM?si=7UWQAwEF63aL3z4D",
         "logo": "team/images/anaheim-ducks.png"
     },
     "boston-bruins": {
         "teamName": "Boston Bruins",
         "songName": "Song Name 2",
         "artist": "Artist 2",
-        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_2"
+        "youtubeLink": "https://www.youtube.com/embed/VIDEO_ID_2",
         "logo": "/images/boston-bruins.png"
     },
     "buffalo-sabres": {
