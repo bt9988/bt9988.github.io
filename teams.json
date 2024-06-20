@@ -34,6 +34,33 @@
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
         }
+    },
+        {
+        "name": "Carolina Hurricanes",
+        "logo": "images/carolina-hurricanes.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+        {
+        "name": "Chicago Blackhawks",
+        "logo": "images/chicago-blackhawks.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+        {
+        "name": "Colorado Avalanche",
+        "logo": "images/colorado-avalanche.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
     }
 
 ]
