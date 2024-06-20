@@ -156,3 +156,9 @@ header h1 {
         margin: 5px;
     }
 }
+
+@media (max-width: 960px) {
+    .description {
+        text-align: center;
+    }
+}
