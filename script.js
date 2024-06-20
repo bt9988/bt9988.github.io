@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         teams.forEach(team => {
             const button = document.createElement('button');
             button.className = 'team-button';
-            button.innerHTML = `<img src="${team.logo}" alt="${team.name}"> ${team.name}`;
+            button.innerHTML = `<img src="${team.logo}" alt="${team.name}"><span>${team.name}</span>`;
             button.addEventListener('click', () => {
                 window.location.href = `team.html?team=${encodeURIComponent(team.name)}`;
             });
