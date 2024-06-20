@@ -10,6 +10,10 @@ body {
     padding: 0;
     color: #333; /* Main text color */
 }
+.description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
 
 .container {
     max-width: 960px;
