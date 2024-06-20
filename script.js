@@ -32,17 +32,19 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!team) return;
 
         const teamNameElement = document.getElementById('team-name');
+        const teamNamePlaceholder = document.getElementById('team-name-placeholder');
         const songNameElement = document.getElementById('song-name');
         const artistNameElement = document.getElementById('artist-name');
-        const youtubeIframe = document.querySelector('#youtube-video iframe');
-        const dynamicParagraph = document.getElementById('dynamic-paragraph');
+        const youtubeIframe = document.getElementById('youtube-iframe');
+        const dynamicParagraph = document.getElementById('dynamicParagraph');
 
         if (teamNameElement) teamNameElement.textContent = team.name;
+        if (teamNamePlaceholder) teamNamePlaceholder.textContent = team.name;
         if (songNameElement) songNameElement.textContent = team.currentGoalSong.name;
         if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
         if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
-        // Update the sentence dynamically
+        // Update the dynamic paragraph with the current song sentence
         const currentSongSentence = `The current goal song for the NHL's ${team.name} is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
         if (dynamicParagraph) dynamicParagraph.textContent = currentSongSentence;
     }
