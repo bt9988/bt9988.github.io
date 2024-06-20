@@ -16,6 +16,24 @@
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
         }
+    },
+    {
+        "name": "Buffalo Sabres",
+        "logo": "images/buffalo-sabres.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Calgary Flames",
+        "logo": "images/calgary-flames.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
     }
 
 ]
