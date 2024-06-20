@@ -9,12 +9,9 @@ body {
     margin: 0;
     padding: 0;
     color: #333; /* Main text color */
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -24,10 +21,6 @@ header {
     text-align: center;
 }
 
-header .logo {
-    flex: 1;
-}
-
 header h1 {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -35,7 +28,12 @@ header h1 {
     font-weight: 700;
 }
 
-/* Description block */
+main {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    margin-bottom: 40px; /* Add space at the bottom */
+}
+
 .description {
     background-color: #fff;
     padding: 20px;
@@ -45,13 +43,6 @@ header h1 {
     text-align: center;
 }
 
-.description p {
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
-
-/* Team buttons section */
 .team-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +73,7 @@ header h1 {
 }
 
 .team-button:hover {
-background-color: #f0f0f0; /* Light grey background on hover */
+    background-color: #f0f0f0; /* Light grey background on hover */
     color: #888; /* Lighter grey for text color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -101,65 +92,26 @@ background-color: #f0f0f0; /* Light grey background on hover */
     font-weight: bold; /* Make the team name bold */
 }
 
-/* Team page specific styles */
-.team-info {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.team-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-#current-song {
-    margin-bottom: 20px;
-}
-
-#current-song p {
-    font-size: 1.2rem;
-    margin: 10px 0;
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
     font-family: 'Roboto', sans-serif;
 }
 
-#current-song strong {
-    font-weight: bold;
-}
-
-#youtube-video {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Aspect ratio for 16:9 */
-    margin-top: 20px;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#youtube-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
-}
-
+/* Responsive adjustments */
 @media (max-width: 480px) {
-    .team-button {
-        margin: 5px;
+    header h1 {
+        font-size: 1.5rem;
     }
-}
 
-@media (max-width: 960px) {
     .description {
-        text-align: center;
+        font-size: 1rem;
     }
 }
