@@ -58,7 +58,7 @@ header h1 {
     flex-direction: column;
     align-items: center;
     width: 100px; /* Adjust the size as needed */
-    height: 115px; /* Adjust the size as needed */
+    height: 110px; /* Adjust the size as needed */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -73,7 +73,7 @@ header h1 {
 .team-button img {
     width: 30px; /* Adjust size of team logo */
     height: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     border-radius: 40%;
 }
 
