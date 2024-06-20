@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
+        // Update page title dynamically
         document.title = `${team.name} | Team Page | 🚨 NHL Goal Songs 🚨`;
+
         document.getElementById('team-name').textContent = team.name;
         document.getElementById('team-name-placeholder').textContent = team.name;
         document.getElementById('song-name').textContent = team.currentGoalSong.name;
