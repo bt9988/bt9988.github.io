@@ -10,10 +10,6 @@ body {
     padding: 0;
     color: #333; /* Main text color */
 }
-.description {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
 
 .container {
     max-width: 960px;
@@ -37,6 +33,22 @@ header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
+}
+
+/* Description block */
+.description {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description p {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 /* Team buttons section */
@@ -142,5 +154,5 @@ header h1 {
 @media (max-width: 480px) {
     .team-button {
         margin: 5px;
-
+    }
 }
