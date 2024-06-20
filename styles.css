@@ -137,17 +137,6 @@ header h1 {
 
 @media (max-width: 480px) {
     .team-button {
-        width: 110px; /* Adjust the size for smaller screens */
-        height: 110px;
-        margin: 1px;
-    }
+        margin: 5px;
 
-    .team-button img {
-        width: 30px; /* Adjust size of team logo for smaller screens */
-        height: 30px;
-    }
-
-    .team-button span {
-        font-size: 0.8rem; /* Adjust font size for smaller screens */
-    }
 }
