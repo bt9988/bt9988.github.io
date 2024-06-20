@@ -133,3 +133,13 @@ footer p {
         height: 100px; /* Adjust the size as needed */
     }
 }
+
+/* Larger YouTube video */
+#youtube-video {
+    margin-top: 20px;
+}
+
+#youtube-iframe {
+    width: 100%; /* Full width */
+    height: 480px; /* Adjust height as needed */
+}
