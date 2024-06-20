@@ -3,8 +3,8 @@
         "name": "Anaheim Ducks",
         "logo": "images/anaheim-ducks.png",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Bro Hymn",
+            "artist": "Pennywise",
             "youtubeID": "d-ucCippEeM"
         }
     },
@@ -210,18 +210,18 @@
         "name": "Seattle Kraken",
         "logo": "images/seattle-kraken.png",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+            "name": "Lithium",
+            "artist": "Nirvana",
+            "youtubeID": "pkcJEvMcnEg"
         }
     },
     {
         "name": "St Louis Blues",
         "logo": "images/st-louis-blues.png",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+            "name": "Let's Go Blues",
+            "artist": "The Urge",
+            "youtubeID": "I6VRMG4ybDA"
         }
     },
     {
