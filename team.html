@@ -1,40 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Page | 🚨 NHL Goal Songs 🚨</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>🚨 NHL Goal Songs 🚨</h1>
-            </div>
-        </div>
-    </header>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('teams.json')
+        .then(response => response.json())
+        .then(data => {
+            populateTeams(data);
+            setupTeamPage(data);
+        })
+        .catch(error => console.error('Error fetching team data:', error));
 
-    <div class="container main-content">
-        <section class="team-info">
-            <h2 id="team-name">Team Name</h2>
-            <div id="current-song">
-                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is <strong><span id="song-name"></span></strong> by <strong><span id="artist-name"></span></strong>.</p>
-            </div>
-            <p id="dynamicParagraph"></p>
-            <p id="currentSongSentence"></p>
-            <div id="youtube-video">
-                <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-    </div>
+    function populateTeams(teams) {
+        const teamButtonsContainer = document.querySelector('.team-buttons');
+        if (!teamButtonsContainer) return;
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 NHL Goal Songs. All rights reserved.</p>
-        </div>
-    </footer>
+        teamButtonsContainer.innerHTML = '';
+        teams.forEach(team => {
+            const button = document.createElement('button');
+            button.className = 'team-button';
+            button.innerHTML = `<img src="${team.logo}" alt="${team.name}"><span>${team.name}</span>`;
+            button.addEventListener('click', () => {
+                window.location.href = `team.html?team=${encodeURIComponent(team.name)}`;
+            });
+            teamButtonsContainer.appendChild(button);
+        });
+    }
 
-    <script src="script.js"></script>
-</body>
-</html>
+    function setupTeamPage(teams) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const teamName = urlParams.get('team');
+        if (!teamName) return;
+
+        const team = teams.find(t => t.name === teamName);
+        if (!team) return;
+
+        const teamNameElement = document.getElementById('team-name');
+        const teamNamePlaceholder = document.getElementById('team-name-placeholder');
+        const songNameElement = document.getElementById('song-name');
+        const artistNameElement = document.getElementById('artist-name');
+        const youtubeIframe = document.getElementById('youtube-iframe');
+        const dynamicParagraph = document.getElementById('dynamicParagraph');
+
+        if (teamNameElement) teamNameElement.textContent = team.name;
+        if (teamNamePlaceholder) teamNamePlaceholder.textContent = team.name;
+        if (songNameElement) songNameElement.textContent = team.currentGoalSong.name;
+        if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
+        if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+
+        // Update the dynamic paragraph with the current song sentence
+        const currentSongSentence = `The current goal song for the NHL's ${team.name} is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
+        if (dynamicParagraph) dynamicParagraph.textContent = currentSongSentence;
+    }
+});
