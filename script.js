@@ -23,26 +23,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-function setupTeamPage(teams) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const teamName = urlParams.get('team');
-    if (!teamName) return;
+    function setupTeamPage(teams) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const teamName = urlParams.get('team');
+        if (!teamName) return;
 
-    const team = teams.find(t => t.name === teamName);
-    if (!team) return;
+        const team = teams.find(t => t.name === teamName);
+        if (!team) return;
 
-    const teamNameElement = document.getElementById('team-name');
-    const songNameElement = document.getElementById('song-name');
-    const artistNameElement = document.getElementById('artist-name');
-    const youtubeIframe = document.querySelector('#youtube-video iframe');
-    const dynamicParagraph = document.getElementById('dynamic-paragraph');
+        const teamNameElement = document.getElementById('team-name');
+        const songNameElement = document.getElementById('song-name');
+        const artistNameElement = document.getElementById('artist-name');
+        const youtubeIframe = document.querySelector('#youtube-video iframe');
+        const dynamicParagraph = document.getElementById('dynamic-paragraph');
 
-    if (teamNameElement) teamNameElement.textContent = team.name;
-    if (songNameElement) songNameElement.textContent = team.currentGoalSong.name;
-    if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
-    if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
-    if (dynamicParagraph) dynamicParagraph.textContent = `The current goal song for ${team.name}'s team is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
-}
+        if (teamNameElement) teamNameElement.textContent = team.name;
+        if (songNameElement) songNameElement.textContent = team.currentGoalSong.name;
+        if (artistNameElement) artistNameElement.textContent = team.currentGoalSong.artist;
+        if (youtubeIframe) youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
+        if (dynamicParagraph) {
+            dynamicParagraph.textContent = `The current goal song for the NHL's ${team.name} is ${team.currentGoalSong.name} by ${team.currentGoalSong.artist}.`;
+        }
     }
 });
