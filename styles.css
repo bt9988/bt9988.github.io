@@ -1,3 +1,64 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Main text color */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    flex: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Description block */
+.description {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description p {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Team buttons section */
+.team-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .team-button {
     background-color: #fff;
     color: #333;
@@ -8,7 +69,7 @@
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,27 +82,84 @@
 }
 
 .team-button:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
+background-color: #f0f0f0; /* Light grey background on hover */
     color: #888; /* Lighter grey for text color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-button img {
-    max-width: 100%; /* Ensure the logo does not exceed its container's width */
-    max-height: 100%; /* Ensure the logo does not exceed its container's height */
-    width: auto; /* Allow the logo to resize proportionally */
-    height: auto; /* Allow the logo to resize proportionally */
-    margin-bottom: 5px; /* Adjust margin as needed */
+    width: 30px; /* Adjust size of team logo */
+    height: 30px;
+    margin-bottom: 0px;
     border-radius: 0%;
-    transition: filter 0.3s ease; /* Smooth transition for filter property */
 }
 
-.team-button:hover img {
-    filter: grayscale(100%); /* Grayscale the team logo on hover */
+.team-button span {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Make the team name bold */
+}
+
+/* Team page specific styles */
+.team-info {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.team-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#current-song {
+    margin-bottom: 20px;
+}
+
+#current-song p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#current-song strong {
+    font-weight: bold;
+}
+
+#youtube-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio for 16:9 */
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
 }
 
 @media (max-width: 480px) {
     .team-button {
         margin: 5px;
+    }
+}
+
+@media (max-width: 960px) {
+    .description {
+        text-align: center;
     }
 }
