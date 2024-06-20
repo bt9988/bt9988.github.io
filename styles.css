@@ -114,4 +114,14 @@ footer p {
     .description {
         font-size: 1rem;
     }
+.team-button {
+    
+    padding: 10px;
+    margin: 5px;
+
+    width: 120px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+
+}
+    
 }
