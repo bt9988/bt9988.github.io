@@ -35,7 +35,7 @@
             "youtubeID": "d-ucCippEeM"
         }
     },
-        {
+    {
         "name": "Carolina Hurricanes",
         "logo": "images/carolina-hurricanes.png",
         "currentGoalSong": {
@@ -44,7 +44,7 @@
             "youtubeID": "d-ucCippEeM"
         }
     },
-        {
+    {
         "name": "Chicago Blackhawks",
         "logo": "images/chicago-blackhawks.png",
         "currentGoalSong": {
@@ -53,9 +53,225 @@
             "youtubeID": "d-ucCippEeM"
         }
     },
-        {
+    {
         "name": "Colorado Avalanche",
         "logo": "images/colorado-avalanche.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Columbus Blue Jackets",
+        "logo": "images/columbus-blue-jackets.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Dallas Stars",
+        "logo": "images/dallas-stars.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Detroit Red Wings",
+        "logo": "images/detroit-red-wings.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Edmonton Oilers",
+        "logo": "images/edmonton-oilers.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Florida Panthers",
+        "logo": "images/florida-panthers.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Los Angeles Kings",
+        "logo": "images/los-angeles-kings.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Minnesota Wild",
+        "logo": "images/minnesota-wild.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Montreal Canadiens",
+        "logo": "images/montreal-canadiens.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Nashville Predators",
+        "logo": "images/nashville-predators.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "New Jersey Devils",
+        "logo": "images/new-jersey-devils.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "New York Islanders",
+        "logo": "images/new-york-islanders.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "New York Rangers",
+        "logo": "images/new-york-rangers.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Ottawa Senators",
+        "logo": "images/ottawa-senators.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Philadelphia Flyers",
+        "logo": "images/philadelphia-flyers.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Pittsburgh Penguins",
+        "logo": "images/pittsburgh-penguins.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "San Jose Sharks",
+        "logo": "images/san-jose-sharks.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Seattle Kraken",
+        "logo": "images/seattle-kraken.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "St Louis Blues",
+        "logo": "images/st-louis-blues.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Tampa Bay Lightning",
+        "logo": "images/tampa-bay-lightning.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Toronto Maple Leafs",
+        "logo": "images/toronto-maple-leafs.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Utah Hockey Club",
+        "logo": "images/utah-hockey-club.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Vancouver Canucks",
+        "logo": "images/vancouver-canucks.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Vegas Golden Knights",
+        "logo": "images/vegas-golden-knights.png",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
+        }
+    },
+    {
+        "name": "Washington Capitals",
+        "logo": "images/washington-capitals.png",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
