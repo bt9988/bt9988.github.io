@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         
         populateTeams(teams);
         setupTeamPage(teams);
+        populateDropdown(teams);
     } catch (error) {
         console.error('Error fetching team data:', error);
     }
@@ -37,6 +38,15 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('song-name').textContent = team.currentGoalSong.name;
         document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
         document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+    }
+
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (!dropdownContent) return;
+
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
     }
 
     // Function to navigate to team page with the team name as query parameter
