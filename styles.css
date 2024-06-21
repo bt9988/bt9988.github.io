@@ -6,7 +6,9 @@ body {
     margin: 0;
     padding: 0;
     color: #333; /* Main text color */
-
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -36,13 +38,11 @@ header .nav-link {
     color: #fff;
     text-decoration: none;
     margin-left: 20px;
-    align: left;
 }
 
 header .dropdown {
     position: relative;
     display: inline-block;
-    align: left;
 }
 
 header .dropbtn {
