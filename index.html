@@ -4,24 +4,31 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goal Jams | Tracking Every NHL Goal Song</title>
+    <title>Team Page | Goal Jams | Tracking Every NHL Goal Song</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <img src="goaljams.png" alt="Goal Jams Logo" class="logo">
     </header>
-    <main>
-        <p class="description">
-            Welcome to NHL Goal Songs! This site is dedicated to showing hockey fans current and past goal songs for NHL teams.
-        </p>
-        <div class="team-buttons">
-            <!-- Team buttons will be populated here by JavaScript -->
-        </div>
-    </main>
+
+    <div class="container main-content">
+        <section class="team-info">
+            <h2 id="team-name">Team Name</h2>
+            <div id="current-song">
+                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is <strong><span id="song-name"></span></strong> by <strong><span id="artist-name"></span></strong>.</p>
+            </div>
+
+            <div id="youtube-video">
+                <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+
     <footer>
         <p>&copy; 2024 NHL Goal Songs. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
