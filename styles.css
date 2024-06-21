@@ -38,6 +38,7 @@ header .logo {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    flex: 1; /* Ensure the main content area grows to fill the available space */
 }
 
 .description {
@@ -107,6 +108,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px; /* Provide space between team-info section and footer */
+    height: 50px; /* Ensure consistent footer height */
 }
 
 footer p {
@@ -131,15 +133,4 @@ footer p {
         width: 120px; /* Adjust the size as needed */
         height: 100px; /* Adjust the size as needed */
     }
-}
-
-
-/* Larger YouTube video */
-#youtube-video {
-    margin-top: 20px;
-}
-
-#youtube-iframe {
-    width: 100%; /* Full width */
-    height: 350px; /* Adjust height as needed */
 }
