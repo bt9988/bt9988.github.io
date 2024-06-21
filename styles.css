@@ -22,7 +22,7 @@ header .header-content {
     justify-content: start;
     align: left;
     align-items: center;
-    padding: 0 20px; /* Adjusted padding for better alignment */
+    padding: 0 200px; /* Adjusted padding for better alignment */
 }
 
 header .logo {
