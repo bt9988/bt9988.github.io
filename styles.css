@@ -23,6 +23,8 @@ header {
 
 header .logo {
     max-height: 50px; /* Adjust as needed */
+    margin: 0 auto; /* Center the logo */
+    display: block; /* Make sure the logo is a block element */
 }
 
 .container {
@@ -116,7 +118,7 @@ footer p {
 /* Responsive adjustments */
 @media (max-width: 480px) {
     header .logo {
-        max-height: 55px; /* Adjust as needed for smaller screens */
+        max-height: 40px; /* Adjust as needed for smaller screens */
     }
 
     .description {
@@ -130,6 +132,7 @@ footer p {
         height: 100px; /* Adjust the size as needed */
     }
 }
+
 
 /* Larger YouTube video */
 #youtube-video {
