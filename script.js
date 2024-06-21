@@ -54,3 +54,19 @@ document.addEventListener("DOMContentLoaded", async function() {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     };
 });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdown = document.querySelector('.dropdown');
+        
+        dropbtn.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function() {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
