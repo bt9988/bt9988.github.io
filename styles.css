@@ -38,11 +38,13 @@ header .nav-link {
     color: #fff;
     text-decoration: none;
     margin-left: 20px;
+    align: left;
 }
 
 header .dropdown {
     position: relative;
     display: inline-block;
+    align: left;
 }
 
 header .dropbtn {
