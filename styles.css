@@ -40,7 +40,7 @@ header nav {
 header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 20px; /* Adjust margin to create space between logo and links */
 }
 
 header .dropdown {
