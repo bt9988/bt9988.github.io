@@ -6,9 +6,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333; /* Main text color */
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+
 }
 
 header {
