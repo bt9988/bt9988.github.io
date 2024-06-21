@@ -21,11 +21,8 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
+header .logo {
+    max-height: 50px; /* Adjust as needed */
 }
 
 .container {
@@ -118,8 +115,8 @@ footer p {
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
+    header .logo {
+        max-height: 40px; /* Adjust as needed for smaller screens */
     }
 
     .description {
@@ -132,14 +129,4 @@ footer p {
         width: 120px; /* Adjust the size as needed */
         height: 100px; /* Adjust the size as needed */
     }
-}
-
-/* Larger YouTube video */
-#youtube-video {
-    margin-top: 20px;
-}
-
-#youtube-iframe {
-    width: 100%; /* Full width */
-    height: 350px; /* Adjust height as needed */
 }
