@@ -19,7 +19,7 @@ header {
 
 header .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align: left;
     align-items: center;
     padding: 0 20px; /* Adjusted padding for better alignment */
