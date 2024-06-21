@@ -36,8 +36,8 @@ header nav {
 header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
-    margin-right: 40px; /* Added margin to increase space between Home and Teams */
+    margin-left: 25px;
+    margin-right: 25px; /* Added margin to increase space between Home and Teams */
 }
 
 header .dropdown {
