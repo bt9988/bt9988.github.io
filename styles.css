@@ -1,61 +1,198 @@
-/* Example CSS styles */
-.header-nav {
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Main text color */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 10px 0;
+}
+
+header nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
-.header-nav .logo {
-    max-height: 50px; /* Adjust logo size */
+header .logo {
+    max-height: 50px;
+    margin: 0 20px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-link {
+header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 1rem;
+    margin: 0 20px;
 }
 
-.dropdown {
+header .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: 20px;
 }
 
-.dropbtn {
-    background-color: transparent;
-    color: #fff;
+header .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
 }
 
-.dropdown-content {
+header .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.dropdown-content a {
-    color: #fff;
+header .dropdown-content a {
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+header .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+header .dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-content {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1; /* Ensure the main content area grows to fill the available space */
+}
+
+.description {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-info {
+    margin-top: 20px;
+}
+
+.team-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.team-button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    width: 120px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #888; /* Lighter grey for text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-button img {
+    width: 30px; /* Adjust size of team logo */
+    height: 30px;
+    margin-bottom: 0px;
+    border-radius: 0%;
+}
+
+.team-button span {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Make the team name bold */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Provide space between team-info section and footer */
+    height: 50px; /* Ensure consistent footer height */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    header .logo {
+        max-height: 40px; /* Adjust as needed for smaller screens */
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .team-button {
+        padding: 10px;
+        margin: 5px;
+        width: 120px; /* Adjust the size as needed */
+        height: 100px; /* Adjust the size as needed */
+    }
+}
+
+/* Larger YouTube video */
+#youtube-video {
+    margin-top: 20px;
+}
+
+#youtube-iframe {
+    width: 100%; /* Full width */
+    height: 350px; /* Adjust height as needed */
+}
