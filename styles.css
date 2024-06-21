@@ -23,7 +23,7 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between; /* Ensure items are evenly spaced */
 }
 
 header .logo {
@@ -31,10 +31,15 @@ header .logo {
     margin: 0 20px;
 }
 
+header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
 header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 header .dropdown {
