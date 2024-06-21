@@ -22,13 +22,14 @@ header {
 
 header .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 0 20px; /* Added padding to align items better */
 }
 
 header .logo {
     max-height: 50px;
+    margin-right: 20px; /* Add margin to separate logo from navigation */
 }
 
 header nav {
