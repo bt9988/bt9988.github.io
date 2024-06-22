@@ -40,47 +40,33 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
     }
 
-function populateDropdown(teams) {
-    const dropdownContent = document.querySelector('.dropdown-content');
-    if (!dropdownContent) return;
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (!dropdownContent) return;
 
-    // Separate teams into Eastern and Western conferences
-    const easternTeams = teams.filter(team => team.conference === 'Eastern');
-    const westernTeams = teams.filter(team => team.conference === 'Western');
-
-    // Create HTML structure for dropdown content
-    const dropdownHTML = `
-        <div class="conference-column">
-            <div class="conference-header">Eastern Conference</div>
-            ${easternTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
-        </div>
-        <div class="conference-column">
-            <div class="conference-header">Western Conference</div>
-            ${westernTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
-        </div>
-    `;
-
-    // Update dropdown content with the constructed HTML
-    dropdownContent.innerHTML = dropdownHTML;
-}
-
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
+    }
 
     // Function to navigate to team page with the team name as query parameter
     window.navigateToTeam = function(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     };
-
-    const dropbtn = document.querySelector('.dropbtn');
-    const dropdown = document.querySelector('.dropdown');
-
-    dropbtn.addEventListener('click', function(event) {
-        event.stopPropagation();
-        dropdown.classList.toggle('show');
-    });
-
-    document.addEventListener('click', function() {
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-        }
-    });
 });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdown = document.querySelector('.dropdown');
+        
+        dropbtn.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function() {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
