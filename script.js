@@ -44,29 +44,45 @@ document.addEventListener("DOMContentLoaded", async function() {
         const dropdownContent = document.querySelector('.dropdown-content');
         if (!dropdownContent) return;
 
-        dropdownContent.innerHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
-        }).join('');
+        const easternConference = document.createElement('div');
+        easternConference.className = 'dropdown-column';
+        easternConference.innerHTML = '<h3>Eastern Conference</h3>';
+        const westernConference = document.createElement('div');
+        westernConference.className = 'dropdown-column';
+        westernConference.innerHTML = '<h3>Western Conference</h3>';
+
+        teams.forEach(team => {
+            const teamLink = document.createElement('a');
+            teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
+            teamLink.textContent = team.name;
+
+            if (team.conference === 'Eastern') {
+                easternConference.appendChild(teamLink);
+            } else if (team.conference === 'Western') {
+                westernConference.appendChild(teamLink);
+            }
+        });
+
+        dropdownContent.appendChild(easternConference);
+        dropdownContent.appendChild(westernConference);
     }
 
     // Function to navigate to team page with the team name as query parameter
     window.navigateToTeam = function(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     };
-});
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropbtn = document.querySelector('.dropbtn');
-        const dropdown = document.querySelector('.dropdown');
-        
-        dropbtn.addEventListener('click', function(event) {
-            event.stopPropagation();
-            dropdown.classList.toggle('show');
-        });
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdown = document.querySelector('.dropdown');
 
-        document.addEventListener('click', function() {
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            }
-        });
+    dropbtn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdown.classList.toggle('show');
     });
+
+    document.addEventListener('click', function() {
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    });
+});
