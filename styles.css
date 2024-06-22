@@ -69,11 +69,13 @@ header .dropdown-content {
 header .dropdown-content .conference-column {
     flex: 1;
     padding: 10px;
+    min-width: 140px; /* Adjust column width as needed */
 }
 
 header .dropdown-content .conference-header {
     font-weight: bold;
     margin-bottom: 10px;
+    flex-basis: 100%; /* Ensure headers take full width */
 }
 
 header .dropdown-content a {
@@ -89,7 +91,7 @@ header .dropdown-content a:hover {
 }
 
 header .dropdown:hover .dropdown-content {
-    display: block;
+    display: flex; /* Ensure content displays when dropdown is hovered */
 }
 
 header .dropdown:hover .dropbtn {
@@ -213,5 +215,5 @@ footer p {
 }
 
 header .dropdown.show .dropdown-content {
-    display: block;
+    display: flex; /* Ensure content displays when dropdown is shown */
 }
