@@ -2,6 +2,7 @@
     {
         "name": "Anaheim Ducks",
         "logo": "images/anaheim-ducks.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Bro Hymn",
             "artist": "Pennywise",
@@ -11,6 +12,7 @@
     {
         "name": "Boston Bruins",
         "logo": "images/boston-bruins.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -20,6 +22,7 @@
     {
         "name": "Buffalo Sabres",
         "logo": "images/buffalo-sabres.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -29,6 +32,7 @@
     {
         "name": "Calgary Flames",
         "logo": "images/calgary-flames.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -38,6 +42,7 @@
     {
         "name": "Carolina Hurricanes",
         "logo": "images/carolina-hurricanes.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -47,6 +52,7 @@
     {
         "name": "Chicago Blackhawks",
         "logo": "images/chicago-blackhawks.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Chelsea Dagger",
             "artist": "The Fratellis",
@@ -56,6 +62,7 @@
     {
         "name": "Colorado Avalanche",
         "logo": "images/colorado-avalanche.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -65,6 +72,7 @@
     {
         "name": "Columbus Blue Jackets",
         "logo": "images/columbus-blue-jackets.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -74,6 +82,7 @@
     {
         "name": "Dallas Stars",
         "logo": "images/dallas-stars.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -83,6 +92,7 @@
     {
         "name": "Detroit Red Wings",
         "logo": "images/detroit-red-wings.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -92,6 +102,7 @@
     {
         "name": "Edmonton Oilers",
         "logo": "images/edmonton-oilers.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -101,6 +112,7 @@
     {
         "name": "Florida Panthers",
         "logo": "images/florida-panthers.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -110,6 +122,7 @@
     {
         "name": "Los Angeles Kings",
         "logo": "images/los-angeles-kings.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -119,6 +132,7 @@
     {
         "name": "Minnesota Wild",
         "logo": "images/minnesota-wild.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -128,6 +142,7 @@
     {
         "name": "Montreal Canadiens",
         "logo": "images/montreal-canadiens.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -137,6 +152,7 @@
     {
         "name": "Nashville Predators",
         "logo": "images/nashville-predators.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -146,6 +162,7 @@
     {
         "name": "New Jersey Devils",
         "logo": "images/new-jersey-devils.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -155,6 +172,7 @@
     {
         "name": "New York Islanders",
         "logo": "images/new-york-islanders.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -164,6 +182,7 @@
     {
         "name": "New York Rangers",
         "logo": "images/new-york-rangers.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -173,6 +192,7 @@
     {
         "name": "Ottawa Senators",
         "logo": "images/ottawa-senators.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song 2",
             "artist": "Blur",
@@ -182,6 +202,7 @@
     {
         "name": "Philadelphia Flyers",
         "logo": "images/philadelphia-flyers.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -191,6 +212,7 @@
     {
         "name": "Pittsburgh Penguins",
         "logo": "images/pittsburgh-penguins.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -200,6 +222,7 @@
     {
         "name": "San Jose Sharks",
         "logo": "images/san-jose-sharks.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -209,6 +232,7 @@
     {
         "name": "Seattle Kraken",
         "logo": "images/seattle-kraken.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Lithium",
             "artist": "Nirvana",
@@ -218,6 +242,7 @@
     {
         "name": "St Louis Blues",
         "logo": "images/st-louis-blues.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Let's Go Blues",
             "artist": "The Urge",
@@ -227,6 +252,7 @@
     {
         "name": "Tampa Bay Lightning",
         "logo": "images/tampa-bay-lightning.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -236,6 +262,7 @@
     {
         "name": "Toronto Maple Leafs",
         "logo": "images/toronto-maple-leafs.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -245,6 +272,7 @@
     {
         "name": "Utah Hockey Club",
         "logo": "images/utah-hockey-club.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -254,6 +282,7 @@
     {
         "name": "Vancouver Canucks",
         "logo": "images/vancouver-canucks.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -263,6 +292,7 @@
     {
         "name": "Vegas Golden Knights",
         "logo": "images/vegas-golden-knights.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -272,6 +302,7 @@
     {
         "name": "Washington Capitals",
         "logo": "images/washington-capitals.png",
+        "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
@@ -281,6 +312,7 @@
     {
         "name": "Winnipeg Jets",
         "logo": "images/winnipeg-jets.png",
+        "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
             "artist": "Artist Name",
