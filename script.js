@@ -40,32 +40,30 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
     }
 
-    function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        if (!dropdownContent) return;
+function populateDropdown(teams) {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (!dropdownContent) return;
 
-        const easternConference = document.createElement('div');
-        easternConference.className = 'dropdown-column';
-        easternConference.innerHTML = '<h3>Eastern Conference</h3>';
-        const westernConference = document.createElement('div');
-        westernConference.className = 'dropdown-column';
-        westernConference.innerHTML = '<h3>Western Conference</h3>';
+    // Separate teams into Eastern and Western conferences
+    const easternTeams = teams.filter(team => team.conference === 'Eastern');
+    const westernTeams = teams.filter(team => team.conference === 'Western');
 
-        teams.forEach(team => {
-            const teamLink = document.createElement('a');
-            teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
-            teamLink.textContent = team.name;
+    // Create HTML structure for dropdown content
+    const dropdownHTML = `
+        <div class="conference-column">
+            <div class="conference-header">Eastern Conference</div>
+            ${easternTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
+        </div>
+        <div class="conference-column">
+            <div class="conference-header">Western Conference</div>
+            ${westernTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
+        </div>
+    `;
 
-            if (team.conference === 'Eastern') {
-                easternConference.appendChild(teamLink);
-            } else if (team.conference === 'Western') {
-                westernConference.appendChild(teamLink);
-            }
-        });
+    // Update dropdown content with the constructed HTML
+    dropdownContent.innerHTML = dropdownHTML;
+}
 
-        dropdownContent.appendChild(easternConference);
-        dropdownContent.appendChild(westernConference);
-    }
 
     // Function to navigate to team page with the team name as query parameter
     window.navigateToTeam = function(teamName) {
