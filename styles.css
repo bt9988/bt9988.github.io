@@ -36,8 +36,8 @@ header nav {
 header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin-left: 22px;
-    margin-right: 22px; /* Added margin to increase space between Home and Teams */
+    margin-left: 30px;
+    margin-right: 10px; /* Added margin to increase space between Home and Teams */
 }
 
 header .dropdown {
@@ -58,7 +58,7 @@ header .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 135px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -163,8 +163,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px; /* Provide space between team-info section and footer */
     height: 50px; /* Ensure consistent footer height */
+    flex-shrink: 0; /* Ensure footer stays at the bottom */
 }
 
 footer p {
@@ -186,33 +186,6 @@ footer p {
     .team-button {
         padding: 10px;
         margin: 5px;
-    }
-
-    header .dropdown-content {
-        position: fixed;
-        top: 50px; /* Adjust to match the height of your header */
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 50px); /* Full height minus the header */
-        background-color: #fff;
-        overflow-y: auto;
-        box-shadow: none;
-        display: none;
-        z-index: 1000;
-    }
-
-    header .dropdown-content a {
-        padding: 15px;
-        font-size: 18px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    header .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    header .dropdown:hover .dropbtn {
-        background-color: #333;
     }
 }
 
