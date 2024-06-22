@@ -58,24 +58,9 @@ header .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 300px; /* Adjust width as needed */
+    min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    display: flex; /* Ensure flex layout for columns */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    gap: 20px; /* Gap between columns */
-}
-
-header .dropdown-content .conference-column {
-    flex: 1;
-    padding: 10px;
-    min-width: 140px; /* Adjust column width as needed */
-}
-
-header .dropdown-content .conference-header {
-    font-weight: bold;
-    margin-bottom: 10px;
-    flex-basis: 100%; /* Ensure headers take full width */
 }
 
 header .dropdown-content a {
@@ -91,7 +76,7 @@ header .dropdown-content a:hover {
 }
 
 header .dropdown:hover .dropdown-content {
-    display: flex; /* Ensure content displays when dropdown is hovered */
+    display: block;
 }
 
 header .dropdown:hover .dropbtn {
@@ -201,6 +186,7 @@ footer p {
     .team-button {
         padding: 10px;
         margin: 5px;
+
     }
 }
 
@@ -215,5 +201,5 @@ footer p {
 }
 
 header .dropdown.show .dropdown-content {
-    display: flex; /* Ensure content displays when dropdown is shown */
+    display: block;
 }
