@@ -14,9 +14,9 @@
         "logo": "images/boston-bruins.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+            "name": "Kernkraft 400",
+            "artist": "Zombie Nation",
+            "youtubeID": "z5LW07FTJbI"
         }
     },
     {
@@ -94,9 +94,9 @@
         "logo": "images/detroit-red-wings.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+            "name": "Without Me",
+            "artist": "Eminem",
+            "youtubeID": "YVkUvmDQ3HY"
         }
     },
     {
@@ -134,9 +134,9 @@
         "logo": "images/minnesota-wild.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+            "name": "Shout",
+            "artist": "The Isley Brothers",
+            "youtubeID": "rWRsJ-mDU5o"
         }
     },
     {
