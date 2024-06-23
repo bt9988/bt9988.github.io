@@ -35,10 +35,9 @@ header nav {
 
 header .nav-link {
     color: #fff;
-    font-size: 11px;
     text-decoration: none;
-    margin-left: 30px;
-    margin-right: 10px; /* Added margin to increase space between Home and Teams */
+    margin-left: 22px;
+    margin-right: 22px; /* Added margin to increase space between Home and Teams */
 }
 
 header .dropdown {
@@ -59,7 +58,7 @@ header .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 135px;
+    min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -76,18 +75,18 @@ header .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-header .dropdown:hover .dropdown-content {
+header .dropdown-content.show {
     display: block;
-}
-
-header .dropdown:hover .dropbtn {
-    background-color: #555;
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+}
+
+main {
+    flex: 1; /* Ensure the main content area grows to fill the available space */
 }
 
 .main-content {
@@ -164,8 +163,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    height: 50px; /* Ensure consistent footer height */
-    flex-shrink: 0; /* Ensure footer stays at the bottom */
+    margin-top: 20px; /* Provide space between team-info section and footer */
 }
 
 footer p {
@@ -188,15 +186,29 @@ footer p {
         padding: 10px;
         margin: 5px;
     }
-}
 
-header .nav-link {
-    font-size: 11px;
-}
+    header .dropdown-content {
+        position: fixed;
+        top: 50px; /* Adjust to match the height of your header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 50px); /* Full height minus the header */
+        background-color: #fff;
+        overflow-y: auto;
+        box-shadow: none;
+        display: none;
+        z-index: 1000;
+    }
 
+    header .dropdown-content a {
+        padding: 15px;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+    }
 
-header .dropbtn {
-    font-size: 11px;
+    header .dropdown-content.show {
+        display: block;
+    }
 }
 
 /* Larger YouTube video */
@@ -207,8 +219,4 @@ header .dropbtn {
 #youtube-iframe {
     width: 100%; /* Full width */
     height: 350px; /* Adjust height as needed */
-}
-
-header .dropdown.show .dropdown-content {
-    display: block;
 }
