@@ -60,20 +60,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         const dropdownContent = document.querySelector('.dropdown-content');
         if (!dropdownContent) return;
 
-        // Separate teams by conference
-        const easternTeams = teams.filter(team => team.conference === 'Eastern');
-        const westernTeams = teams.filter(team => team.conference === 'Western');
-
-        dropdownContent.innerHTML = `
-            <div class="conference-column">
-                <h3>Eastern Conference</h3>
-                ${easternTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
-            </div>
-            <div class="conference-column">
-                <h3>Western Conference</h3>
-                ${westernTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
-            </div>
-        `;
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
     }
 
     // Function to navigate to team page with the team name as query parameter
