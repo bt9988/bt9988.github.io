@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
             previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
                 return `
-                    <p>In ${song.year}, the ${team.name} used <strong>${song.name}</strong> by <strong>${song.artist}</strong>.</p>
+                    <p>In the ${song.year} season, the ${team.name} used <strong>${song.name}</strong> by <strong>${song.artist}</strong>.</p>
                 `;
             }).join('');
         } else {
