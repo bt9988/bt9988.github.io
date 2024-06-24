@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 `;
             }).join('');
         } else {
-            previousSongsContainer.innerHTML = `<p>No previous goal songs found for ${team.name}.</p>`;
+            previousSongsContainer.innerHTML = `<p>No previous goal songs are currently listed for ${team.name}. Check back soon!</p>`;
         }
     }
 
