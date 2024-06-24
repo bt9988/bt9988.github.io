@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('team-name-previous').textContent = team.name;
         document.getElementById('song-name').textContent = team.currentGoalSong.name;
         document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+        document.getElementById('2022-song-name').textContent = team.2022GoalSong.name;
+        document.getElementById('2022-artist-name').textContent = team.2022GoalSong.artist;
         document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
     }
 
