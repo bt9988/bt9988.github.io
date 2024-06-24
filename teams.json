@@ -1,9 +1,9 @@
-[
+const teams = [
     {
         "name": "Anaheim Ducks",
         "logo": "images/anaheim-ducks.png",
         "conference": "Western",
-                "2022GoalSong": {
+        "2022GoalSong": {
             "name": "Bro Hymn 2022",
             "artist": "Pennywise 2022",
             "youtubeID": "d-ucCippEeM"
@@ -13,10 +13,6 @@
             "artist": "Pennywise",
             "youtubeID": "d-ucCippEeM"
         }
-
-        
-        
-        
     },
     {
         "name": "Boston Bruins",
@@ -273,60 +269,78 @@
         "logo": "images/toronto-maple-leafs.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
-        }
-    },
-    {
-        "name": "Utah Hockey Club",
-        "logo": "images/utah-hockey-club.png",
-        "conference": "Western",
-        "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
-        }
-    },
-    {
-        "name": "Vancouver Canucks",
-        "logo": "images/vancouver-canucks.png",
-        "conference": "Western",
-        "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
-        }
-    },
-    {
-        "name": "Vegas Golden Knights",
-        "logo": "images/vegas-golden-knights.png",
-        "conference": "Western",
-        "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
-        }
-    },
-    {
-        "name": "Washington Capitals",
-        "logo": "images/washington-capitals.png",
-        "conference": "Eastern",
-        "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
-        }
-    },
-    {
-        "name": "Winnipeg Jets",
-        "logo": "images/winnipeg-jets.png",
-        "conference": "Western",
-        "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
-        }
+        "name": "Song Name",
+        "artist": "Artist Name",
+        "youtubeID": "d-ucCippEeM"
     }
+},
+{
+    "name": "Utah Hockey Club",
+    "logo": "images/utah-hockey-club.png",
+    "conference": "Western",
+    "currentGoalSong": {
+        "name": "Song Name",
+        "artist": "Artist Name",
+        "youtubeID": "d-ucCippEeM"
+    }
+},
+{
+    "name": "Vancouver Canucks",
+    "logo": "images/vancouver-canucks.png",
+    "conference": "Western",
+    "currentGoalSong": {
+        "name": "Song Name",
+        "artist": "Artist Name",
+        "youtubeID": "d-ucCippEeM"
+    }
+},
+{
+    "name": "Vegas Golden Knights",
+    "logo": "images/vegas-golden-knights.png",
+    "conference": "Western",
+    "currentGoalSong": {
+        "name": "Song Name",
+        "artist": "Artist Name",
+        "youtubeID": "d-ucCippEeM"
+    }
+},
+{
+    "name": "Washington Capitals",
+    "logo": "images/washington-capitals.png",
+    "conference": "Eastern",
+    "currentGoalSong": {
+        "name": "Song Name",
+        "artist": "Artist Name",
+        "youtubeID": "d-ucCippEeM"
+    }
+},
+{
+    "name": "Winnipeg Jets",
+    "logo": "images/winnipeg-jets.png",
+    "conference": "Western",
+    "currentGoalSong": {
+        "name": "Song Name",
+        "artist": "Artist Name",
+        "youtubeID": "d-ucCippEeM"
+    }
+}
+];
 
-]
+// Example usage:
+// Accessing the logo path of the first team
+console.log(teams[0].logo);
+
+// Accessing the current goal song details of the second team
+console.log(teams[1].currentGoalSong.name);
+console.log(teams[1].currentGoalSong.artist);
+console.log(teams[1].currentGoalSong.youtubeID);
+
+// Accessing the 2022 goal song details of the first team
+console.log(teams[0]["2022GoalSong"].name);
+console.log(teams[0]["2022GoalSong"].artist);
+console.log(teams[0]["2022GoalSong"].youtubeID);
+
+// You can access other properties similarly
+
+// Exporting the 'teams' array for use in other modules
+export default teams;
