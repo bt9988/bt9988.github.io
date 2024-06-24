@@ -36,19 +36,22 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('team-name').textContent = team.name;
         document.getElementById('team-name-placeholder').textContent = team.name;
 
-        // Display current goal song (assuming it's the latest year by default)
+        // Display current goal song
         const currentGoalSong = team.currentGoalSong;
         document.getElementById('song-name').textContent = currentGoalSong.name;
         document.getElementById('artist-name').textContent = currentGoalSong.artist;
         document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${currentGoalSong.youtubeID}`;
 
         // Display previous goal songs (if any)
-        if (team['2022GoalSong']) {
-            const previousGoalSong2022 = team['2022GoalSong'];
-            const previousSongsContainer = document.getElementById('previous-songs');
-            previousSongsContainer.innerHTML = `
-                <p>The Anaheim Ducks previously used <strong>${previousGoalSong2022.name}</strong> by <strong>${previousGoalSong2022.artist}</strong> as their goal song in 2022.</p>
-            `;
+        const previousSongsContainer = document.getElementById('previous-songs');
+        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
+            previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
+                return `
+                    <p>In ${song.year}, the ${team.name} used <strong>${song.name}</strong> by <strong>${song.artist}</strong>.</p>
+                `;
+            }).join('');
+        } else {
+            previousSongsContainer.innerHTML = `<p>No previous goal songs found for ${team.name}.</p>`;
         }
     }
 
