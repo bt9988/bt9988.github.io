@@ -56,7 +56,7 @@ header .dropbtn {
 }
 
 header .dropdown-content {
-    display: none;
+    display: none; /* Hide dropdown by default */
     position: absolute;
     background-color: #f9f9f9;
     min-width: 320px;
