@@ -22,6 +22,7 @@ header .header-content {
     display: flex;
     justify-content: start;
     align-items: center;
+    font-size: 14px;
     padding: 0 20px; /* Adjusted padding for better alignment */
 }
 
