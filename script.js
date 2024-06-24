@@ -1,19 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const dropbtn = document.querySelector('.dropbtn');
-    const dropdown = document.querySelector('.dropdown-content');
-    
-    dropbtn.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent dropdown from closing on click inside
-        dropdown.classList.toggle('show'); // Toggle the 'show' class on dropdown content
-    });
-
-    document.addEventListener('click', function() {
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show'); // Close dropdown if clicked outside
-        }
-    });
-});
-
 document.addEventListener("DOMContentLoaded", async function() {
     try {
         const response = await fetch('teams.json');
@@ -70,3 +54,19 @@ document.addEventListener("DOMContentLoaded", async function() {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     };
 });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdown = document.querySelector('.dropdown');
+        
+        dropbtn.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function() {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
