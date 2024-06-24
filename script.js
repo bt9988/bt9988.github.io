@@ -35,11 +35,21 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         document.getElementById('team-name').textContent = team.name;
         document.getElementById('team-name-placeholder').textContent = team.name;
-        document.getElementById('team-name-previous').textContent = team.name;
-        document.getElementById('song-name').textContent = team.currentGoalSong.name;
-        document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
 
-        document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+        // Display current goal song (assuming it's the latest year by default)
+        const currentGoalSong = team.currentGoalSong;
+        document.getElementById('song-name').textContent = currentGoalSong.name;
+        document.getElementById('artist-name').textContent = currentGoalSong.artist;
+        document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${currentGoalSong.youtubeID}`;
+
+        // Display previous goal songs (if any)
+        if (team['2022GoalSong']) {
+            const previousGoalSong2022 = team['2022GoalSong'];
+            const previousSongsContainer = document.getElementById('previous-songs');
+            previousSongsContainer.innerHTML = `
+                <p>The Anaheim Ducks previously used <strong>${previousGoalSong2022.name}</strong> by <strong>${previousGoalSong2022.artist}</strong> as their goal song in 2022.</p>
+            `;
+        }
     }
 
     function populateDropdown(teams) {
@@ -55,20 +65,19 @@ document.addEventListener("DOMContentLoaded", async function() {
     window.navigateToTeam = function(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     };
-});
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropbtn = document.querySelector('.dropbtn');
-        const dropdown = document.querySelector('.dropdown');
+    // Dropdown functionality
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdown = document.querySelector('.dropdown');
         
-        dropbtn.addEventListener('click', function(event) {
-            event.stopPropagation();
-            dropdown.classList.toggle('show');
-        });
-
-        document.addEventListener('click', function() {
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
-            }
-        });
+    dropbtn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        dropdown.classList.toggle('show');
     });
+
+    document.addEventListener('click', function() {
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    });
+});
