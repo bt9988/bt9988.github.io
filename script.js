@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdown = document.querySelector('.dropdown-content');
+    
+    dropbtn.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent dropdown from closing on click inside
+        dropdown.classList.toggle('show'); // Toggle the 'show' class on dropdown content
+    });
+
+    document.addEventListener('click', function() {
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show'); // Close dropdown if clicked outside
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", async function() {
     try {
         const response = await fetch('teams.json');
@@ -44,15 +60,16 @@ document.addEventListener("DOMContentLoaded", async function() {
         const dropdownContent = document.querySelector('.dropdown-content');
         if (!dropdownContent) return;
 
-        const easternTeams = teams.filter(team => team.conference === "Eastern");
-        const westernTeams = teams.filter(team => team.conference === "Western");
+        // Separate teams by conference
+        const easternTeams = teams.filter(team => team.conference === 'Eastern');
+        const westernTeams = teams.filter(team => team.conference === 'Western');
 
         dropdownContent.innerHTML = `
-            <div class="dropdown-column">
+            <div class="conference-column">
                 <h3>Eastern Conference</h3>
                 ${easternTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
             </div>
-            <div class="dropdown-column">
+            <div class="conference-column">
                 <h3>Western Conference</h3>
                 ${westernTeams.map(team => `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`).join('')}
             </div>
@@ -63,20 +80,4 @@ document.addEventListener("DOMContentLoaded", async function() {
     window.navigateToTeam = function(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     };
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const dropbtn = document.querySelector('.dropbtn');
-    const dropdown = document.querySelector('.dropdown-content');
-    
-    dropbtn.addEventListener('click', function(event) {
-        event.stopPropagation();
-        dropdown.classList.toggle('show');
-    });
-
-    document.addEventListener('click', function() {
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-        }
-    });
 });
