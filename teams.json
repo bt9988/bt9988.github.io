@@ -3,16 +3,17 @@
         "name": "Anaheim Ducks",
         "logo": "images/anaheim-ducks.png",
         "conference": "Western",
+                "2022GoalSong": {
+            "name": "Bro Hymn 2022",
+            "artist": "Pennywise 2022",
+            "youtubeID": "d-ucCippEeM"
+        },
         "currentGoalSong": {
             "name": "Bro Hymn",
             "artist": "Pennywise",
             "youtubeID": "d-ucCippEeM"
         }
-        "2022GoalSong": {
-            "name": "Bro Hymn 2022",
-            "artist": "Pennywise 2022",
-            "youtubeID": "d-ucCippEeM"
-        }
+
         
         
         
