@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         const response = await fetch('teams.json');
         const teams = await response.json();
         
+        console.log('Teams data:', teams); // Log fetched data
+        
         populateTeams(teams);
         setupTeamPage(teams);
         populateDropdown(teams);
@@ -30,6 +32,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
+        console.log('Selected team:', team); // Log selected team
+
         // Update page title dynamically
         document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
 
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const previousSongsContainer = document.getElementById('previous-songs');
         if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
             previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
+                console.log('Processing song:', song); // Log each song
                 return `
                     <p>In the ${song.years.join(', ')} season${song.years.length > 1 ? 's' : ''}, the ${team.name} used <strong>${song.name}</strong> by <strong>${song.artist}</strong>.</p>
                 `;
