@@ -62,6 +62,47 @@ document.addEventListener("DOMContentLoaded", async function() {
         }).join('');
     }
 
+    // Define navigateToTeam globally
+function navigateToTeam(teamName) {
+    window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+}
+
+document.addEventListener("DOMContentLoaded", async function() {
+    try {
+        const response = await fetch('teams.json');
+        const teams = await response.json();
+
+        console.log('Teams data:', teams); // Log fetched data
+
+        populateTeams(teams);
+        populateDropdown(teams);
+    } catch (error) {
+        console.error('Error fetching team data:', error);
+    }
+
+    function populateTeams(teams) {
+        const teamButtonsContainer = document.querySelector('.team-buttons');
+        if (!teamButtonsContainer) return;
+
+        teamButtonsContainer.innerHTML = teams.map(team => {
+            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
+                        <img src="${team.logo}" alt="${team.name}">
+                        <span>${team.name}</span>
+                    </button>`;
+        }).join('');
+    }
+
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (!dropdownContent) return;
+
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
+    }
+});
+
+
     function navigateToTeam(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     }
