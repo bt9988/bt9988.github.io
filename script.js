@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     try {
         const response = await fetch('teams.json');
         const teams = await response.json();
-        
+
         console.log('Teams data:', teams); // Log fetched data
-        
+
         populateTeams(teams);
         setupTeamPage(teams);
         populateDropdown(teams);
@@ -37,55 +37,28 @@ document.addEventListener("DOMContentLoaded", async function() {
         // Update page title dynamically
         document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
 
+        // Set current song details
         document.getElementById('team-name').textContent = team.name;
         document.getElementById('team-name-placeholder').textContent = team.name;
+        document.getElementById('song-name').textContent = team.currentGoalSong.name;
+        document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
 
-        // Display current goal song
-        const currentGoalSong = team.currentGoalSong;
-        document.getElementById('song-name').textContent = currentGoalSong.name;
-        document.getElementById('artist-name').textContent = currentGoalSong.artist;
-        document.getElementById('youtube-iframe').src = `https://www.youtube.com/embed/${currentGoalSong.youtubeID}`;
+        const youtubeIframe = document.getElementById('youtube-iframe');
+        youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
-        // Display previous goal songs (if any)
-        const previousSongsContainer = document.getElementById('previous-songs');
-        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
+        // Set previous songs details
+        if (team.previousGoalSongs) {
+            const previousSongsContainer = document.getElementById('previous-songs');
             previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
-                console.log('Processing song:', song); // Log each song
-                return `
-                    <p>In the ${song.years.join(', ')} season${song.years.length > 1 ? 's' : ''}, the ${team.name} used <strong>${song.name}</strong> by <strong>${song.artist}</strong>.</p>
-                `;
+                return `<p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
             }).join('');
-        } else {
-            previousSongsContainer.innerHTML = `<p>No previous goal songs are currently listed for the ${team.name}. Check back soon!</p>`;
         }
     }
 
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
-        if (!dropdownContent) return;
-
         dropdownContent.innerHTML = teams.map(team => {
             return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
         }).join('');
     }
-
-    // Function to navigate to team page with the team name as query parameter
-    window.navigateToTeam = function(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
-    };
-
-    // Dropdown functionality
-    const dropbtn = document.querySelector('.dropbtn');
-    const dropdown = document.querySelector('.dropdown');
-        
-    dropbtn.addEventListener('click', function(event) {
-        event.stopPropagation();
-        dropdown.classList.toggle('show');
-    });
-
-    document.addEventListener('click', function() {
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-        }
-    });
 });
