@@ -5,22 +5,11 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         console.log('Teams data:', teams); // Log fetched data
 
-        if (isIndexPage()) {
-            populateTeams(teams);
-            populateDropdown(teams);
-        } else if (isTeamPage()) {
-            setupTeamPage(teams);
-        }
+        populateTeams(teams);
+        setupTeamPage(teams);
+        populateDropdown(teams);
     } catch (error) {
         console.error('Error fetching team data:', error);
-    }
-
-    function isIndexPage() {
-        return window.location.pathname === '/index.html' || window.location.pathname === '/';
-    }
-
-    function isTeamPage() {
-        return window.location.pathname.startsWith('/team.html');
     }
 
     function populateTeams(teams) {
@@ -28,19 +17,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!teamButtonsContainer) return;
 
         teamButtonsContainer.innerHTML = teams.map(team => {
-            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
+            return `<button class="team-button" onclick="navigateToTeam('${team.name}')">
                         <img src="${team.logo}" alt="${team.name}">
                         <span>${team.name}</span>
                     </button>`;
-        }).join('');
-    }
-
-    function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        if (!dropdownContent) return;
-
-        dropdownContent.innerHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
         }).join('');
     }
 
@@ -49,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const teamName = urlParams.get('team');
         if (!teamName) return;
 
-        const team = teams.find(t => t.name === decodeURIComponent(teamName));
+        const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
         console.log('Selected team:', team); // Log selected team
@@ -75,7 +55,54 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     }
 
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
+    }
+
     function navigateToTeam(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
+});
+
+// Define navigateToTeam globally
+function navigateToTeam(teamName) {
+    window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+}
+
+document.addEventListener("DOMContentLoaded", async function() {
+    try {
+        const response = await fetch('teams.json');
+        const teams = await response.json();
+
+        console.log('Teams data:', teams); // Log fetched data
+
+        populateTeams(teams);
+        populateDropdown(teams);
+    } catch (error) {
+        console.error('Error fetching team data:', error);
+    }
+
+    function populateTeams(teams) {
+        const teamButtonsContainer = document.querySelector('.team-buttons');
+        if (!teamButtonsContainer) return;
+
+        teamButtonsContainer.innerHTML = teams.map(team => {
+            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
+                        <img src="${team.logo}" alt="${team.name}">
+                        <span>${team.name}</span>
+                    </button>`;
+        }).join('');
+    }
+
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (!dropdownContent) return;
+
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
     }
 });
