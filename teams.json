@@ -30,7 +30,19 @@
             "name": "Kernkraft 400",
             "artist": "Zombie Nation",
             "youtubeID": "z5LW07FTJbI"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Buffalo Sabres",
@@ -40,7 +52,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Calgary Flames",
@@ -50,7 +74,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Carolina Hurricanes",
@@ -60,7 +96,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Chicago Blackhawks",
@@ -70,7 +118,19 @@
             "name": "Chelsea Dagger",
             "artist": "The Fratellis",
             "youtubeID": "sEXHeTcxQy4"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Colorado Avalanche",
@@ -80,7 +140,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Columbus Blue Jackets",
@@ -90,7 +162,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Dallas Stars",
@@ -100,7 +184,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Detroit Red Wings",
@@ -110,7 +206,19 @@
             "name": "Without Me",
             "artist": "Eminem",
             "youtubeID": "YVkUvmDQ3HY"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Edmonton Oilers",
@@ -120,7 +228,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Florida Panthers",
@@ -130,7 +250,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Los Angeles Kings",
@@ -140,7 +272,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Minnesota Wild",
@@ -150,7 +294,19 @@
             "name": "Shout",
             "artist": "The Isley Brothers",
             "youtubeID": "rWRsJ-mDU5o"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Montreal Canadiens",
@@ -160,7 +316,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Nashville Predators",
@@ -170,7 +338,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "New Jersey Devils",
@@ -180,7 +360,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "New York Islanders",
@@ -190,7 +382,19 @@
             "name": "Crowd Chant",
             "artist": "Joe Satriani",
             "youtubeID": "eoWtsVXPExs"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "New York Rangers",
@@ -200,7 +404,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Ottawa Senators",
@@ -210,7 +426,19 @@
             "name": "Song 2",
             "artist": "Blur",
             "youtubeID": "Bz4l9_bzfZM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Philadelphia Flyers",
@@ -220,7 +448,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Pittsburgh Penguins",
@@ -230,7 +470,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "San Jose Sharks",
@@ -240,7 +492,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Seattle Kraken",
@@ -250,7 +514,19 @@
             "name": "Lithium",
             "artist": "Nirvana",
             "youtubeID": "pkcJEvMcnEg"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "St Louis Blues",
@@ -260,7 +536,19 @@
             "name": "Let's Go Blues",
             "artist": "The Urge",
             "youtubeID": "I6VRMG4ybDA"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Tampa Bay Lightning",
@@ -270,7 +558,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Toronto Maple Leafs",
@@ -280,7 +580,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Utah Hockey Club",
@@ -290,7 +602,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Vancouver Canucks",
@@ -300,7 +624,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Vegas Golden Knights",
@@ -310,7 +646,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Washington Capitals",
@@ -320,7 +668,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     },
     {
         "name": "Winnipeg Jets",
@@ -330,7 +690,19 @@
             "name": "Song Name",
             "artist": "Artist Name",
             "youtubeID": "d-ucCippEeM"
-        }
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Bro Hymn 2",
+                "artist": "Pennywise 2",
+                "years": [2021, 2020, 2019]
+            },
+            {
+                "name": "Bro Hymn 3",
+                "artist": "Pennywise 3",
+                "years": [1985, 1999, 1988]                
+            }
+        ]
     }
 
 ]
