@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!teamButtonsContainer) return;
 
         teamButtonsContainer.innerHTML = teams.map(team => {
-            return `<button class="team-button" onclick="navigateToTeam('${team.name}')">
+            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
                         <img src="${team.logo}" alt="${team.name}">
                         <span>${team.name}</span>
                     </button>`;
