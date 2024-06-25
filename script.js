@@ -1,7 +1,7 @@
 // Define navigateToTeam globally
-function navigateToTeam(teamName) {
+window.navigateToTeam = function(teamName) {
     window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
-}
+};
 
 document.addEventListener("DOMContentLoaded", async function() {
     try {
