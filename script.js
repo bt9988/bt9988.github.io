@@ -1,3 +1,8 @@
+// Define navigateToTeam globally
+function navigateToTeam(teamName) {
+    window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+}
+
 document.addEventListener("DOMContentLoaded", async function() {
     try {
         const response = await fetch('teams.json');
@@ -60,9 +65,5 @@ document.addEventListener("DOMContentLoaded", async function() {
         dropdownContent.innerHTML = teams.map(team => {
             return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
         }).join('');
-    }
-
-    function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     }
 });
