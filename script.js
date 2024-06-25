@@ -21,12 +21,19 @@ document.addEventListener("DOMContentLoaded", async function() {
         const teamButtonsContainer = document.querySelector('.team-buttons');
         if (!teamButtonsContainer) return;
 
-        teamButtonsContainer.innerHTML = teams.map(team => {
-            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
-                        <img src="${team.logo}" alt="${team.name}">
-                        <span>${team.name}</span>
-                    </button>`;
-        }).join('');
+        // Clear existing content
+        teamButtonsContainer.innerHTML = '';
+
+        teams.forEach(team => {
+            const button = document.createElement('button');
+            button.classList.add('team-button');
+            button.innerHTML = `
+                <img src="${team.logo}" alt="${team.name}">
+                <span>${team.name}</span>
+            `;
+            button.addEventListener('click', () => navigateToTeam(team.name));
+            teamButtonsContainer.appendChild(button);
+        });
     }
 
     function setupTeamPage(teams) {
