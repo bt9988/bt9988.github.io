@@ -61,4 +61,8 @@ document.addEventListener("DOMContentLoaded", async function() {
             return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
         }).join('');
     }
+
+    function navigateToTeam(teamName) {
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
 });
