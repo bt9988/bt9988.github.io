@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         if (isIndexPage()) {
             populateTeams(teams);
-            setupTeamColumns(teams);
         } else if (isTeamPage()) {
             setupTeamPage(teams);
         }
@@ -29,31 +28,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!teamButtonsContainer) return;
 
         teamButtonsContainer.innerHTML = teams.map(team => {
-            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
-                        <img src="${team.logo}" alt="${team.name}">
-                        <span>${team.name}</span>
-                    </button>`;
-        }).join('');
-    }
-
-    function setupTeamColumns(teams) {
-        const teamColumnsContainer = document.getElementById('team-columns');
-        if (!teamColumnsContainer) return;
-
-        const westernTeams = teams.filter(team => team.conference === 'Western');
-        const easternTeams = teams.filter(team => team.conference === 'Eastern');
-
-        const westernColumn = createTeamColumn(westernTeams);
-        const easternColumn = createTeamColumn(easternTeams);
-
-        teamColumnsContainer.innerHTML = `
-            <div class="team-column">${westernColumn}</div>
-            <div class="team-column">${easternColumn}</div>
-        `;
-    }
-
-    function createTeamColumn(teams) {
-        return teams.map(team => {
             return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
                         <img src="${team.logo}" alt="${team.name}">
                         <span>${team.name}</span>
@@ -105,23 +79,4 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // Ensure navigateToTeam is available globally
     window.navigateToTeam = navigateToTeam;
-
-    // Toggle dropdown for TEAMS button
-    function toggleTeamsDropdown() {
-        const dropdown = document.getElementById('teams-dropdown');
-        dropdown.classList.toggle('show');
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            const dropdowns = document.getElementsByClassName('dropdown-content');
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
 });
