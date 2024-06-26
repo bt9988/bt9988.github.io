@@ -14,8 +14,8 @@
             <nav>
                 <a href="index.html" class="nav-link">HOME</a>
                 <div class="dropdown">
-                    <button class="dropbtn">TEAMS</button>
-                    <div class="dropdown-content">
+                    <button class="dropbtn" onclick="toggleTeamsDropdown()">TEAMS</button>
+                    <div class="dropdown-content" id="teams-dropdown">
                         <!-- JavaScript will populate team links here -->
                     </div>
                 </div>
@@ -26,8 +26,8 @@
         <p class="description">
             Welcome to Goal Jams! This site is dedicated to showing hockey fans the current and past goal songs for all of the NHL teams.
         </p>
-        <div class="team-buttons">
-            <!-- Team buttons will be populated here by JavaScript -->
+        <div class="team-columns" id="team-columns">
+            <!-- Columns will be populated dynamically -->
         </div>
     </main>
     <footer>
