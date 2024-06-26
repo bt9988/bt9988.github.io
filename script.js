@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     if (team.previousGoalSongs) {
         const previousSongsContainer = document.getElementById('previous-songs');
         previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
-            return `<p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
+            return `<p>The ${team.name} have previously used the following goal song(s):</p><p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
         }).join('');
     }
 }
