@@ -36,40 +36,42 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function setupTeamPage(teams) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const teamName = urlParams.get('team');
-        if (!teamName) return;
+    const urlParams = new URLSearchParams(window.location.search);
+    const teamName = urlParams.get('team');
+    if (!teamName) return;
 
-        const team = teams.find(t => t.name === decodeURIComponent(teamName));
-        if (!team) return;
+    const team = teams.find(t => t.name === decodeURIComponent(teamName));
+    if (!team) return;
 
-        console.log('Selected team:', team); // Log selected team
+    console.log('Selected team:', team); // Log selected team
 
-        // Update page title dynamically
-        document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
+    // Update page title dynamically
+    document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
 
-        // Set current song details
-        document.getElementById('team-name').textContent = team.name;
-        document.getElementById('team-name-placeholder').textContent = team.name;
-        document.getElementById('song-name').textContent = team.currentGoalSong.name;
-        document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+    // Set current song details
+    const teamNameWithSong = document.getElementById('team-name-with-song');
+    teamNameWithSong.textContent = `${team.name} Goal Song`; // Update the H2 text
 
-        // Set Spotify iframe
-        const spotifyIframe = document.getElementById('spotify-iframe');
-        spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+    document.getElementById('team-name-placeholder').textContent = team.name;
+    document.getElementById('song-name').textContent = team.currentGoalSong.name;
+    document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
 
-        // Set YouTube iframe
-        const youtubeIframe = document.getElementById('youtube-iframe');
-        youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+    // Set Spotify iframe
+    const spotifyIframe = document.getElementById('spotify-iframe');
+    spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
 
-        // Set previous songs details
-        if (team.previousGoalSongs) {
-            const previousSongsContainer = document.getElementById('previous-songs');
-            previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
-                return `<p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
-            }).join('');
-        }
+    // Set YouTube iframe
+    const youtubeIframe = document.getElementById('youtube-iframe');
+    youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+
+    // Set previous songs details
+    if (team.previousGoalSongs) {
+        const previousSongsContainer = document.getElementById('previous-songs');
+        previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
+            return `<p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
+        }).join('');
     }
+}
 
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
