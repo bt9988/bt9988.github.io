@@ -72,8 +72,8 @@
         "logo": "images/calgary-flames.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "TNT",
+            "artist": "AC/DC",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -94,8 +94,8 @@
         "logo": "images/carolina-hurricanes.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Raise Up",
+            "artist": "Petey Pablo",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -138,8 +138,8 @@
         "logo": "images/colorado-avalanche.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Chase the Sun",
+            "artist": "Planet Funk",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -182,8 +182,8 @@
         "logo": "images/dallas-stars.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Puck Off",
+            "artist": "Pantera",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -226,8 +226,8 @@
         "logo": "images/edmonton-oilers.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Fluxland",
+            "artist": "XL",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -248,8 +248,8 @@
         "logo": "images/florida-panthers.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Move Your Body",
+            "artist": "Ownboss ft. Sevek",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
