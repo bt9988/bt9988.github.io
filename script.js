@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('song-name').textContent = team.currentGoalSong.name;
         document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
 
+        // Set Spotify iframe
+        const spotifyIframe = document.getElementById('spotify-iframe');
+        spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+
+        // Set YouTube iframe
         const youtubeIframe = document.getElementById('youtube-iframe');
         youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
