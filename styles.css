@@ -90,7 +90,6 @@ main {
     flex: 1; /* Ensure the main content area grows to fill the available space */
     display: flex;
     justify-content: center;
-    align-items: center; /* Center align items vertically */
 }
 
 .main-content {
@@ -112,7 +111,7 @@ main {
     text-align: center;
     max-width: 620px; /* Limit the width to 620px */
     width: 100%; /* Ensure the content is responsive */
-    margin: 0 auto; /* Center the content */
+    margin: 0 auto 20px auto; /* Center the content and add bottom margin */
 }
 
 .team-info {
