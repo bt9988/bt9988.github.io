@@ -310,8 +310,8 @@
         "logo": "images/montreal-canadiens.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Canadiens Goal Song",
+            "artist": "Antoine Beck",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -354,8 +354,8 @@
         "logo": "images/new-jersey-devils.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Howl",
+            "artist": "The Gaslight Anthem",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -398,8 +398,8 @@
         "logo": "images/new-york-rangers.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Slap Shot",
+            "artist": "Ray Castoldi",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -442,8 +442,8 @@
         "logo": "images/philadelphia-flyers.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Ain’t Talking About Love",
+            "artist": "Van Halen",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -464,8 +464,8 @@
         "logo": "images/pittsburgh-penguins.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Party Hard",
+            "artist": "Andrew W.K.",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -486,8 +486,8 @@
         "logo": "images/san-jose-sharks.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Get Ready for This",
+            "artist": "2 Unlimited",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -574,8 +574,8 @@
         "logo": "images/toronto-maple-leafs.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Dup Dup",
+            "artist": "Mickie Krause",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -640,8 +640,8 @@
         "logo": "images/vegas-golden-knights.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Vegas Lights",
+            "artist": "Panic! At the Disco",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -662,8 +662,8 @@
         "logo": "images/washington-capitals.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Rock the Red",
+            "artist": "White Ford Bronco",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
@@ -684,8 +684,8 @@
         "logo": "images/winnipeg-jets.png",
         "conference": "Western",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
+            "name": "Gonna Celebrate",
+            "artist": "The Phantoms",
             "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
