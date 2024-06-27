@@ -71,7 +71,7 @@ function setupTeamPage(teams) {
             return `<p>The ${team.name} have previously used the following goal song(s):</p><p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
         }).join('');
     } else {
-        previousSongsContainer.innerHTML = `<p>There are no previous goal songs here for ${team.name}</p>`;
+        previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
     }
 }
 
