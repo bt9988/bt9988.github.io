@@ -27,21 +27,21 @@
 
     <div class="container main-content">
         <section class="team-info">
-    <h2 id="team-name-with-song">Goal Song</h2>
+            <h2 id="team-name-with-song">Goal Song</h2>
 
-    <div id="current-song">
-        <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is <strong><span id="song-name"></span></strong> by <strong><span id="artist-name"></span></strong>.</p>
-    </div>
+            <div id="current-song">
+                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is <strong><span id="song-name"></span></strong> by <strong><span id="artist-name"></span></strong>.</p>
+            </div>
 
-    <div id="youtube-video">
-        <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+            <div id="youtube-video">
+                <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
-    <!-- Spotify Embed -->
-    <div id="spotify-player">
-        <iframe id="spotify-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-</section>
+            <!-- Spotify Embed -->
+            <div id="spotify-player">
+                <iframe id="spotify-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
 
         <section class="team-info">
             <h2>Previous Goal Songs</h2>
@@ -53,7 +53,15 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Goal Jams. All rights reserved.</p>
+        <div class="footer-links">
+            <p>&copy; 2024 Goal Jams. All rights reserved.</p>
+            <div class="team-list">
+                <p>All NHL Teams:</p>
+                <ul class="team-names">
+                    <!-- JavaScript will populate team names here -->
+                </ul>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
