@@ -15,8 +15,10 @@
                 "artist": "Zombie Nation",
                 "years": [2005]
             }
+
         ]
     },
+    
     {
         "name": "Boston Bruins",
         "logo": "images/boston-bruins.png",
@@ -154,17 +156,9 @@
         "logo": "images/columbus-blue-jackets.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "songs": [
-                {
-                    "name": "For Those About to Rock",
-                    "artist": "AC/DC",
-                    "youtubeID": "O4UT57_7gsA"
-                },
-                {
-                    "name": "The Whip",
-                    "artist": "Locksley",
-                }
-            ]
+            "name": "For Those About to Rock + The Whip",
+            "artist": "AC/DC + Locksley",
+            "youtubeID": "O4UT57_7gsA"
         },
         "previousGoalSongs": [
             {
