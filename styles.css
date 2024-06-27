@@ -111,7 +111,7 @@ main {
     text-align: center;
     max-width: 620px; /* Limit the width to 620px */
     width: 100%; /* Ensure the content is responsive */
-    margin: 0 auto 20px auto; /* Center the content and add bottom margin */
+    margin: 0 auto; /* Center the content */
 }
 
 .team-info {
