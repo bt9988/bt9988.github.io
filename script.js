@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }).join('');
     }
 
-    function setupTeamPage(teams) {
+function setupTeamPage(teams) {
     const urlParams = new URLSearchParams(window.location.search);
     const teamName = urlParams.get('team');
     if (!teamName) return;
@@ -64,12 +64,14 @@ document.addEventListener("DOMContentLoaded", async function() {
     const youtubeIframe = document.getElementById('youtube-iframe');
     youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
-    // Set previous songs details
-    if (team.previousGoalSongs) {
-        const previousSongsContainer = document.getElementById('previous-songs');
+    // Set previous songs details or display a message if there are none
+    const previousSongsContainer = document.getElementById('previous-songs');
+    if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
         previousSongsContainer.innerHTML = team.previousGoalSongs.map(song => {
             return `<p>The ${team.name} have previously used the following goal song(s):</p><p><strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})</p>`;
         }).join('');
+    } else {
+        previousSongsContainer.innerHTML = `<p>There are no previous goal songs here for ${team.name}</p>`;
     }
 }
 
