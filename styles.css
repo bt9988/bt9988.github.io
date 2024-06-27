@@ -1,4 +1,3 @@
-
 /* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -89,6 +88,8 @@ header .dropdown-content.show {
 
 main {
     flex: 1; /* Ensure the main content area grows to fill the available space */
+    display: flex;
+    justify-content: center;
 }
 
 .main-content {
@@ -97,6 +98,9 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     flex: 1; /* Ensure the main content area grows to fill the available space */
+    max-width: 620px; /* Limit the width to 620px */
+    width: 100%; /* Ensure the content is responsive */
+    margin: 0 auto; /* Center the content */
 }
 
 .description {
