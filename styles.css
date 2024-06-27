@@ -86,12 +86,6 @@ header .dropdown-content.show {
     padding: 20px;
 }
 
-main {
-    flex: 1; /* Ensure the main content area grows to fill the available space */
-    display: flex;
-    justify-content: center;
-}
-
 .main-content {
     background-color: #fff;
     border-radius: 5px;
@@ -101,14 +95,6 @@ main {
     max-width: 620px; /* Limit the width to 620px */
     width: 100%; /* Ensure the content is responsive */
     margin: 0 auto; /* Center the content */
-}
-
-.description {
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .team-info {
@@ -178,51 +164,40 @@ footer p {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Responsive adjustments */
-@media (max-width: 480px) {
-    header .logo {
-        max-height: 40px; /* Adjust as needed for smaller screens */
-    }
-
-    .description {
-        font-size: 1rem;
-    }
-
-    .team-button {
-        padding: 10px;
-        margin: 5px;
-    }
-
-    header .dropdown-content {
-        position: fixed;
-        top: 50px; /* Adjust to match the height of your header */
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 50px); /* Full height minus the header */
-        background-color: #fff;
-        overflow-y: auto;
-        box-shadow: none;
-        display: none;
-        z-index: 1000;
-    }
-
-    header .dropdown-content a {
-        padding: 15px;
-        font-size: 18px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    header .dropdown-content.show {
-        display: block;
-    }
+/* Styles for footer team list */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Larger YouTube video */
-#youtube-video {
-    margin-top: 20px;
+.team-list {
+    margin-top: 10px;
 }
 
-#youtube-iframe {
-    width: 100%; /* Full width */
-    height: 350px; /* Adjust height as needed */
+.team-names {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-names li {
+    margin: 5px;
+}
+
+.team-names a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.team-names a:hover {
+    background-color: #fff;
+    color: #333;
 }
