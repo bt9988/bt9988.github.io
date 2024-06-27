@@ -156,9 +156,9 @@
         "logo": "images/columbus-blue-jackets.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+            "name": "For Those About to Rock + The Whip",
+            "artist": "AC/DC + Locksley",
+            "youtubeID": "https://www.youtube.com/watch?v=O4UT57_7gsA"
         },
         "previousGoalSongs": [
             {
