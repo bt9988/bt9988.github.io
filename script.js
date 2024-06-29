@@ -79,28 +79,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else {
             previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
         }
-
-        // Set individual goal songs details
-        const individualSongsContainer = document.getElementById('individual-songs');
-        if (team.individualGoalSongs && team.individualGoalSongs.length > 0) {
-            const songsList = document.createElement('ul'); // Create <ul> element
-            team.individualGoalSongs.forEach(song => {
-                const songItem = document.createElement('li'); // Create <li> for each song
-                songItem.innerHTML = `<strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}`;
-                songsList.appendChild(songItem); // Append each song as <li> to <ul>
-            });
-            // Update the header for individual songs with team name
-            individualSongsContainer.innerHTML = `<p>Individual goal songs for ${team.name}:</p>`;
-            individualSongsContainer.appendChild(songsList); // Append <ul> to container
-        } else {
-            individualSongsContainer.innerHTML = `<p>There are no individual goal songs listed for ${team.name}.</p>`;
-        }
-
-        // Add link to goal songs info if available
-        if (team.goalSongsInfo) {
-            const goalSongsInfoContainer = document.getElementById('goal-songs-info');
-            goalSongsInfoContainer.innerHTML = `<a href="${team.goalSongsInfo}" target="_blank">More about ${team.name}'s goal songs</a>`;
-        }
     }
 
     function populateDropdown(teams) {
