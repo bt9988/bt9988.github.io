@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -32,13 +33,13 @@ header .logo {
 header nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
 }
 
 header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin-left: 22px;
-    margin-right: 22px; /* Added margin to increase space between Home and Teams */
+    margin: 0 10px; /* Adjusted margin for better spacing */
 }
 
 header .dropdown {
@@ -84,12 +85,14 @@ header .dropdown-content.show {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+    width: 100%; /* Ensure container is responsive */
 }
 
 main {
     flex: 1; /* Ensure the main content area grows to fill the available space */
     display: flex;
     justify-content: center;
+    width: 100%; /* Ensure main content is responsive */
 }
 
 .main-content {
@@ -101,6 +104,7 @@ main {
     max-width: 620px; /* Limit the width to 620px */
     width: 100%; /* Ensure the content is responsive */
     margin: 0 auto; /* Center the content */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .description {
@@ -109,6 +113,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-info {
@@ -120,6 +125,8 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+    width: 100%; /* Ensure team buttons are responsive */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button {
@@ -142,6 +149,7 @@ main {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button:hover {
@@ -155,6 +163,7 @@ main {
     height: 30px;
     margin-bottom: 0px;
     border-radius: 0%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button span {
@@ -191,6 +200,8 @@ footer p {
     .team-button {
         padding: 10px;
         margin: 5px;
+        width: 100px; /* Ensure team button is responsive */
+        height: 100px; /* Ensure team button is responsive */
     }
 
     header .dropdown-content {
@@ -225,4 +236,20 @@ footer p {
 #youtube-iframe {
     width: 100%; /* Full width */
     height: 350px; /* Adjust height as needed */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Responsive footer links */
+footer .team-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .team-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 5px 0;
 }
