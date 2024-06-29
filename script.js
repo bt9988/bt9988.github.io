@@ -95,6 +95,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else {
             individualSongsContainer.innerHTML = `<p>There are no individual goal songs listed for ${team.name}.</p>`;
         }
+
+        // Add link to goal songs info if available
+        if (team.goalSongsInfo) {
+            const goalSongsInfoContainer = document.getElementById('goal-songs-info');
+            goalSongsInfoContainer.innerHTML = `<a href="${team.goalSongsInfo}" target="_blank">More about ${team.name}'s goal songs</a>`;
+        }
     }
 
     function populateDropdown(teams) {
