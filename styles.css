@@ -200,8 +200,8 @@ footer p {
     .team-button {
         padding: 10px;
         margin: 5px;
-        width: 100px; /* Ensure team button is responsive */
-        height: 100px; /* Ensure team button is responsive */
+        width: 110px; /* Ensure team button is responsive */
+        height: 110px; /* Ensure team button is responsive */
     }
 
     header .dropdown-content {
