@@ -46,8 +46,12 @@
         "name": "Buffalo Sabres",
         "logo": "images/buffalo-sabres.png",
         "conference": "Eastern",
-        "individualGoalSongs": true
-
+        "individualGoalSongs": true,
+        "goalSongsInfo": "https://example.com/buffalo-sabres-goal-songs",
+        "currentGoalSong": {
+            "name": "Song Name",
+            "artist": "Artist Name",
+            "youtubeID": "d-ucCippEeM"
         },
         "previousGoalSongs": [
             {
