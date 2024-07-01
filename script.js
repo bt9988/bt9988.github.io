@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
 
         // Set individual goal songs details
+        const individualSongsSection = document.querySelector('section.team-info:nth-of-type(3)');
         const individualSongsContainer = document.getElementById('individual-songs');
         if (team.individualGoalSongs && team.individualGoalSongs.length > 0) {
             const songsList = document.createElement('ul'); // Create <ul> element
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else if (team.individualGoalSongs) {
             individualSongsContainer.innerHTML = `<p>The ${team.name} currently use different goal songs for each player. Learn more <a href="${team.goalSongsInfo}" target="_blank">here</a>.</p>`;
         } else {
-            individualSongsContainer.innerHTML = `<p>There are no individual goal songs listed for ${team.name}.</p>`;
+            individualSongsSection.style.display = 'none'; // Hide the section if individualGoalSongs is not true
         }
     }
 
