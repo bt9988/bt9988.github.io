@@ -48,19 +48,21 @@ document.addEventListener("DOMContentLoaded", async function() {
         // Update page title dynamically
         document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
 
-        // Elements for the current goal song section
-        const currentSongSection = document.querySelector('section.team-info:nth-of-type(1)');
+        // Set current song details
         const teamNameWithSong = document.getElementById('team-name-with-song');
-        const teamNamePlaceholder = document.getElementById('team-name-placeholder');
-        const songName = document.getElementById('song-name');
-        const artistName = document.getElementById('artist-name');
-        const spotifyIframe = document.getElementById('spotify-iframe');
-        const youtubeIframe = document.getElementById('youtube-iframe');
+        teamNameWithSong.textContent = `${team.name} Goal Song`; // Update the H2 text
 
-        // Elements for the individual goal songs section
-        const individualSongsSection = document.querySelector('section.team-info:nth-of-type(3)');
-        const individualSongsHeader = individualSongsSection.querySelector('h2');
-        const individualSongsContainer = document.getElementById('individual-songs');
+        document.getElementById('team-name-placeholder').textContent = team.name;
+        document.getElementById('song-name').textContent = team.currentGoalSong.name;
+        document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+
+        // Set Spotify iframe
+        const spotifyIframe = document.getElementById('spotify-iframe');
+        spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+
+        // Set YouTube iframe
+        const youtubeIframe = document.getElementById('youtube-iframe');
+        youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
 
         // Set previous songs details or display a message if there are none
         const previousSongsContainer = document.getElementById('previous-songs');
@@ -78,10 +80,9 @@ document.addEventListener("DOMContentLoaded", async function() {
             previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
         }
 
+        // Set individual goal songs details
+        const individualSongsContainer = document.getElementById('individual-songs');
         if (team.individualGoalSongs && team.individualGoalSongs.length > 0) {
-            // Hide the current goal song section
-            currentSongSection.style.display = 'none';
-
             const songsList = document.createElement('ul'); // Create <ul> element
             team.individualGoalSongs.forEach(song => {
                 const songItem = document.createElement('li'); // Create <li> for each song
@@ -92,25 +93,9 @@ document.addEventListener("DOMContentLoaded", async function() {
             individualSongsContainer.innerHTML = `<p>Individual goal songs for ${team.name}:</p>`;
             individualSongsContainer.appendChild(songsList); // Append <ul> to container
         } else if (team.individualGoalSongs) {
-            // Hide the current goal song section
-            currentSongSection.style.display = 'none';
-
             individualSongsContainer.innerHTML = `<p>The ${team.name} currently use different goal songs for each player. Learn more <a href="${team.goalSongsInfo}" target="_blank">here</a>.</p>`;
         } else {
-            // Hide the individual goal songs section entirely
-            individualSongsSection.style.display = 'none';
-
-            // Set current song details
-            teamNameWithSong.textContent = `${team.name} Goal Song`; // Update the H2 text
-            teamNamePlaceholder.textContent = team.name;
-            songName.textContent = team.currentGoalSong.name;
-            artistName.textContent = team.currentGoalSong.artist;
-
-            // Set Spotify iframe
-            spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
-
-            // Set YouTube iframe
-            youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            individualSongsContainer.innerHTML = `<p>There are no individual goal songs listed for ${team.name}.</p>`;
         }
     }
 
