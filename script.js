@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         // Elements for the individual goal songs section
         const individualSongsSection = document.querySelector('section.team-info:nth-of-type(3)');
+        const individualSongsHeader = individualSongsSection.querySelector('h2');
         const individualSongsContainer = document.getElementById('individual-songs');
 
         // Set previous songs details or display a message if there are none
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             individualSongsContainer.innerHTML = `<p>The ${team.name} currently use different goal songs for each player. Learn more <a href="${team.goalSongsInfo}" target="_blank">here</a>.</p>`;
         } else {
-            // Hide the individual goal songs section
+            // Hide the individual goal songs section entirely
             individualSongsSection.style.display = 'none';
 
             // Set current song details
