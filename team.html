@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949"
+     crossorigin="anonymous"></script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +17,32 @@
     </header>
 
     <div class="container main-content">
-        <section class="individual-goal-songs-section team-info">
+
+        <section class="team-info individual-goal-songs-section">
             <h2>Individual Goal Songs</h2>
+            <div id="individual-songs-info">
+                <!-- Info about individual goal songs will be populated here -->
+            </div>
+            <div id="individual-songs-playlist">
+                <!-- Spotify playlist for individual goal songs will be embedded here -->
+            </div>
             <div id="individual-songs">
                 <!-- Individual goal songs will be populated here -->
             </div>
         </section>
 
-        <section class="current-goal-song-section team-info">
+        <section class="team-info current-goal-song-section">
             <h2 id="team-name-with-song">Goal Song</h2>
+
             <div id="current-song">
                 <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is <strong><span id="song-name"></span></strong> by <strong><span id="artist-name"></span></strong>.</p>
             </div>
+
             <div id="youtube-video">
                 <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+
+            <!-- Spotify Embed -->
             <div id="spotify-player">
                 <iframe id="spotify-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -43,6 +55,7 @@
                 <!-- Previous songs will be populated here -->
             </div>
         </section>
+
     </div>
 
     <footer>
