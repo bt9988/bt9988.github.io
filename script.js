@@ -102,4 +102,21 @@ document.addEventListener("DOMContentLoaded", async function() {
             previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
             previousSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed
+            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
+        }
+    }
+
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropdownContent.innerHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
+    }
+
+    function navigateToTeam(teamName) {
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
+
+    // Ensure navigateToTeam is available globally
+    window.navigateToTeam = navigateToTeam;
+});
