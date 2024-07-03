@@ -57,18 +57,18 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             // Populate individual goal songs details
             const individualSongsContainer = document.getElementById('individual-songs');
-            if (team.individualGoalSongs.length > 0) {
-                const songsList = document.createElement('ul'); // Create <ul> element
-                team.individualGoalSongs.forEach(song => {
-                    const songItem = document.createElement('li'); // Create <li> for each song
-                    songItem.innerHTML = `<strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}`;
-                    songsList.appendChild(songItem); // Append each song as <li> to <ul>
-                });
-                individualSongsContainer.innerHTML = `<p>Individual goal songs for ${team.name}:</p>`;
-                individualSongsContainer.appendChild(songsList); // Append <ul> to container
-            } else {
-                individualSongsContainer.innerHTML = `<p>The ${team.name} currently use different goal songs for each player. Learn more <a href="${team.goalSongsInfo}" target="_blank">here</a>.</p>`;
-            }
+            const songsList = document.createElement('ul'); // Create <ul> element
+            team.individualGoalSongsDetails.forEach(song => {
+                const songItem = document.createElement('li'); // Create <li> for each song
+                songItem.innerHTML = `
+                    <strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}
+                    <div>
+                        <iframe src="https://open.spotify.com/embed/track/${song.spotifyID}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>`;
+                songsList.appendChild(songItem); // Append each song as <li> to <ul>
+            });
+            individualSongsContainer.innerHTML = `<p>Individual goal songs for ${team.name}:</p>`;
+            individualSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
             // Show current goal song section and hide individual goal songs section
             individualGoalSongsSection.style.display = 'none';
@@ -102,21 +102,4 @@ document.addEventListener("DOMContentLoaded", async function() {
             previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
             previousSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
-        }
-    }
-
-    function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        dropdownContent.innerHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
-        }).join('');
-    }
-
-    function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
-    }
-
-    // Ensure navigateToTeam is available globally
-    window.navigateToTeam = navigateToTeam;
-});
+            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed
