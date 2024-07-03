@@ -687,25 +687,36 @@
     {
         "name": "Washington Capitals",
         "logo": "images/washington-capitals.png",
-        "conference": "Eastern",
-        "currentGoalSong": {
-            "name": "Rock the Red",
-            "artist": "White Ford Bronco",
-            "youtubeID": "d-ucCippEeM",
-            "spotifyID": "2L064GzOFONclWq4wud5qA"
-        },
-        "previousGoalSongs": [
+        "individualGoalSongs": true,
+        "goalSongsInfo": "https://example.com/buffalo-sabres-goal-songs",
+        "individualGoalSongsPlaylist": "3fW5Y77XZvvJ9JTYxkN7US",
+        "individualGoalSongsDetails": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "player": "Player 1",
+                "name": "Song 1",
+                "artist": "Artist 1",
+                "spotifyID": "spotify_track_id_1"
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "player": "Player 2",
+                "name": "Song 2",
+                "artist": "Artist 2",
+                "spotifyID": "spotify_track_id_2"
             }
-        ]
+        ],
+        "previousGoalSongs": [
+            {
+                "name": "Previous Song 1",
+                "artist": "Previous Artist 1",
+                "years": [2020, 2021]
+            }
+        ],
+        "currentGoalSong": {
+            "name": "Current Song",
+            "artist": "Current Artist",
+            "spotifyID": "spotify_current_song_id",
+            "youtubeID": "youtube_current_song_id"
+        }
     },
     {
         "name": "Winnipeg Jets",
