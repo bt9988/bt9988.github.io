@@ -60,11 +60,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             const songsList = document.createElement('ul'); // Create <ul> element
             team.individualGoalSongsDetails.forEach(song => {
                 const songItem = document.createElement('li'); // Create <li> for each song
-                songItem.innerHTML = `
-                    <strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}
-                    <div>
-                        <iframe src="https://open.spotify.com/embed/track/${song.spotifyID}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </div>`;
+                songItem.innerHTML = `<strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}`;
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
             individualSongsContainer.innerHTML = `<p>Individual goal songs for ${team.name}:</p>`;
