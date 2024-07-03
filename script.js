@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
 
         // Elements for the current goal song section
-        const currentSongSection = document.querySelector('section.team-info:nth-of-type(1)');
+        const currentSongSection = document.querySelector('.current-goal-song-section');
         const teamNameWithSong = document.getElementById('team-name-with-song');
         const teamNamePlaceholder = document.getElementById('team-name-placeholder');
         const songName = document.getElementById('song-name');
@@ -58,24 +58,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         const youtubeIframe = document.getElementById('youtube-iframe');
 
         // Elements for the individual goal songs section
-        const individualSongsSection = document.querySelector('section.team-info:nth-of-type(3)');
+        const individualSongsSection = document.querySelector('.individual-goal-songs-section');
         const individualSongsContainer = document.getElementById('individual-songs');
-
-        // Set previous songs details or display a message if there are none
-        const previousSongsContainer = document.getElementById('previous-songs');
-        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
-            const songsList = document.createElement('ul'); // Create <ul> element
-            team.previousGoalSongs.forEach(song => {
-                const songItem = document.createElement('li'); // Create <li> for each song
-                songItem.innerHTML = `<strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})`;
-                songsList.appendChild(songItem); // Append each song as <li> to <ul>
-            });
-            // Update the header for previous songs with team name
-            previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
-            previousSongsContainer.appendChild(songsList); // Append <ul> to container
-        } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
-        }
 
         if (team.individualGoalSongs && team.individualGoalSongs.length > 0) {
             // Hide the current goal song section
@@ -105,6 +89,22 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             // Set YouTube iframe
             youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+        }
+
+        // Set previous songs details or display a message if there are none
+        const previousSongsContainer = document.getElementById('previous-songs');
+        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
+            const songsList = document.createElement('ul'); // Create <ul> element
+            team.previousGoalSongs.forEach(song => {
+                const songItem = document.createElement('li'); // Create <li> for each song
+                songItem.innerHTML = `<strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})`;
+                songsList.appendChild(songItem); // Append each song as <li> to <ul>
+            });
+            // Update the header for previous songs with team name
+            previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
+            previousSongsContainer.appendChild(songsList); // Append <ul> to container
+        } else {
+            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
         }
     }
 
