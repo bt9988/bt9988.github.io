@@ -55,6 +55,16 @@ document.addEventListener("DOMContentLoaded", async function() {
             individualGoalSongsSection.style.display = 'block';
             currentGoalSongSection.style.display = 'none';
 
+            // Populate individual goal songs info
+            const individualSongsInfo = document.getElementById('individual-songs-info');
+            individualSongsInfo.innerHTML = `The ${team.name} currently use individual goal songs for each player.`;
+
+            // Embed Spotify playlist
+            const individualSongsPlaylist = document.getElementById('individual-songs-playlist');
+            if (team.individualGoalSongsPlaylist) {
+                individualSongsPlaylist.innerHTML = `<iframe src="https://open.spotify.com/embed/playlist/${team.individualGoalSongsPlaylist}" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+            }
+
             // Populate individual goal songs details
             const individualSongsContainer = document.getElementById('individual-songs');
             const songsList = document.createElement('ul'); // Create <ul> element
@@ -63,7 +73,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                 songItem.innerHTML = `<strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}`;
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
-            individualSongsContainer.innerHTML = `<p>Individual goal songs for ${team.name}:</p>`;
             individualSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
             // Show current goal song section and hide individual goal songs section
