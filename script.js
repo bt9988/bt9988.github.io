@@ -45,12 +45,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         console.log('Selected team:', team); // Log selected team
 
-        // Display the team logo
-        const teamLogoContainer = document.getElementById('team-logo-container');
-        if (teamLogoContainer) {
-            teamLogoContainer.innerHTML = `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
-        }
-
         // Hide sections by default
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
         const currentGoalSongSection = document.querySelector('.current-goal-song-section');
