@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             populateTeams(teams);
         } else if (isTeamPage()) {
             setupTeamPage(teams);
+            populateTeamLogos(teams);
         }
         populateDropdown(teams);
     } catch (error) {
@@ -109,6 +110,15 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else {
             previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
         }
+    }
+
+    function populateTeamLogos(teams) {
+        const teamLogoContainer = document.getElementById('team-logo-container');
+        if (!teamLogoContainer) return;
+
+        teamLogoContainer.innerHTML = teams.map(team => {
+            return `<img src="${team.logo}" alt="${team.name}">`;
+        }).join('');
     }
 
     function populateDropdown(teams) {
