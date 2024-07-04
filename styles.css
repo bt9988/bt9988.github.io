@@ -124,23 +124,6 @@ main {
     margin-top: 20px; /* Add padding above Spotify playlist */
 }
 
-.team-logos {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; /* Add some space below the team logos */
-}
-
-.team-logo-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.team-logo-container img {
-    max-width: 80px;
-    margin: 10px;
-}
-
 .team-buttons {
     display: flex;
     flex-wrap: wrap;
