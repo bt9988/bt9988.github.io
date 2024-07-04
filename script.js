@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             populateTeams(teams);
         } else if (isTeamPage()) {
             setupTeamPage(teams);
-            populateTeamLogos(teams);
         }
         populateDropdown(teams);
     } catch (error) {
@@ -45,6 +44,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!team) return;
 
         console.log('Selected team:', team); // Log selected team
+
+        // Display the team logo
+        const teamLogoContainer = document.getElementById('team-logo-container');
+        if (teamLogoContainer) {
+            teamLogoContainer.innerHTML = `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
+        }
 
         // Hide sections by default
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
@@ -110,15 +115,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else {
             previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
         }
-    }
-
-    function populateTeamLogos(teams) {
-        const teamLogoContainer = document.getElementById('team-logo-container');
-        if (!teamLogoContainer) return;
-
-        teamLogoContainer.innerHTML = teams.map(team => {
-            return `<img src="${team.logo}" alt="${team.name}">`;
-        }).join('');
     }
 
     function populateDropdown(teams) {
