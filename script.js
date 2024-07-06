@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
             previousSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
+            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for the ${team.name}.</p>`;
         }
     }
 
