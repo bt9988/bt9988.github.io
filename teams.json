@@ -662,16 +662,7 @@
             "spotifyID": "0zewUY3RSh8yaV7q66Okem"
         },
         "previousGoalSongs": [
-            {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
-            },
-            {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
-            }
+            
         ]
     },
     {
