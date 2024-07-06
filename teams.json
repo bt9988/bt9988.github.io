@@ -470,7 +470,7 @@
         "logo": "images/philadelphia-flyers.png",
         "conference": "Eastern",
         "currentGoalSong": {
-            "name": "Ain’t Talking About Love",
+            "name": "Ain’t Talkin' 'bout Love",
             "artist": "Van Halen",
             "youtubeID": "qtwBFz6lfrY",
             "spotifyID": "6fybp4N6eW3bsFAvARxyVe"
@@ -645,9 +645,9 @@
                 "years": [2019, 2020, 2021, 2022, 2023]
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Holiday",
+                "artist": "Green Day",
+                "years": [2011, 2018, 2019]                
             }
         ]
     },
