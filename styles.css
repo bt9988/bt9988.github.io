@@ -1,3 +1,18 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Main text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Team-specific colors */
 :root {
     --primary-color: #ffffff; /* default primary color */
     --secondary-color: #000000; /* default secondary color */
@@ -8,24 +23,43 @@ body {
     color: var(--secondary-color);
 }
 
-.header-content {
-    background-color: var(--primary-color);
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
-.team-logo-container {
-    text-align: center;
-    margin: 20px 0;
+header .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 20px; /* Adjusted padding for better alignment */
 }
 
-.team-logo {
-    max-width: 100px;
+header .logo {
+    max-height: 65px;
 }
 
-h2, .team-info p, .team-info ul {
-    color: var(--secondary-color);
+header nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
 }
 
-button.team-button {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+header .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px; /* Adjusted margin for better spacing */
 }
+
+header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font
