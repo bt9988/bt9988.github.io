@@ -85,6 +85,8 @@
     {
         "name": "Calgary Flames",
         "logo": "images/calgary-flames.png",
+        "primaryColor": "#D2001C", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "TNT",
