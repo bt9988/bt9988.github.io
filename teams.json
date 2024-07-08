@@ -135,6 +135,8 @@
     {
         "name": "Chicago Blackhawks",
         "logo": "images/chicago-blackhawks.png",
+        "primaryColor": "#CF0A2C", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Chelsea Dagger",
@@ -158,6 +160,8 @@
     {
         "name": "Colorado Avalanche",
         "logo": "images/colorado-avalanche.png",
+        "primaryColor": "#6F263D", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Chase the Sun",
@@ -181,6 +185,8 @@
     {
         "name": "Columbus Blue Jackets",
         "logo": "images/columbus-blue-jackets.png",
+        "primaryColor": "#002654", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "For Those About to Rock + The Whip",
@@ -203,6 +209,8 @@
     {
         "name": "Dallas Stars",
         "logo": "images/dallas-stars.png",
+        "primaryColor": "#006847", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Puck Off",
@@ -226,6 +234,8 @@
     {
         "name": "Detroit Red Wings",
         "logo": "images/detroit-red-wings.png",
+        "primaryColor": "#CE1126", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Without Me",
@@ -249,6 +259,8 @@
     {
         "name": "Edmonton Oilers",
         "logo": "images/edmonton-oilers.png",
+        "primaryColor": "#041E42", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Fluxland",
@@ -272,6 +284,8 @@
     {
         "name": "Florida Panthers",
         "logo": "images/florida-panthers.png",
+        "primaryColor": "#041E42", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Move Your Body",
@@ -295,6 +309,8 @@
     {
         "name": "Los Angeles Kings",
         "logo": "images/los-angeles-kings.png",
+        "primaryColor": "#111111", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Power Ride",
@@ -318,6 +334,8 @@
     {
         "name": "Minnesota Wild",
         "logo": "images/minnesota-wild.png",
+        "primaryColor": "#154734", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Shout",
@@ -341,6 +359,8 @@
     {
         "name": "Montreal Canadiens",
         "logo": "images/montreal-canadiens.png",
+        "primaryColor": "#AF1E2D", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Canadiens Goal Song",
@@ -364,6 +384,8 @@
     {
         "name": "Nashville Predators",
         "logo": "images/nashville-predators.png",
+        "primaryColor": "#FFB81C", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
@@ -386,6 +408,8 @@
     {
         "name": "New Jersey Devils",
         "logo": "images/new-jersey-devils.png",
+        "primaryColor": "#CE1126", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Howl",
@@ -409,6 +433,8 @@
     {
         "name": "New York Islanders",
         "logo": "images/new-york-islanders.png",
+        "primaryColor": "#00539B", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Crowd Chant",
@@ -432,6 +458,8 @@
     {
         "name": "New York Rangers",
         "logo": "images/new-york-rangers.png",
+        "primaryColor": "#0038A8", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Slap Shot",
@@ -455,6 +483,8 @@
     {
         "name": "Ottawa Senators",
         "logo": "images/ottawa-senators.png",
+        "primaryColor": "#DA1A32", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Song 2",
@@ -478,6 +508,8 @@
     {
         "name": "Philadelphia Flyers",
         "logo": "images/philadelphia-flyers.png",
+        "primaryColor": "#F74902", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Ain’t Talkin' 'bout Love",
@@ -501,6 +533,8 @@
     {
         "name": "Pittsburgh Penguins",
         "logo": "images/pittsburgh-penguins.png",
+        "primaryColor": "#FCB514", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Party Hard",
@@ -524,6 +558,8 @@
     {
         "name": "San Jose Sharks",
         "logo": "images/san-jose-sharks.png",
+        "primaryColor": "#006D75", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Get Ready for This",
@@ -547,6 +583,8 @@
     {
         "name": "Seattle Kraken",
         "logo": "images/seattle-kraken.png",
+        "primaryColor": "#001628", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Lithium",
@@ -560,6 +598,8 @@
     {
         "name": "St Louis Blues",
         "logo": "images/st-louis-blues.png",
+        "primaryColor": "#002F87", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Let's Go Blues",
@@ -583,6 +623,8 @@
     {
         "name": "Tampa Bay Lightning",
         "logo": "images/tampa-bay-lightning.png",
+        "primaryColor": "#002868", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Goons",
@@ -606,6 +648,8 @@
     {
         "name": "Toronto Maple Leafs",
         "logo": "images/toronto-maple-leafs.png",
+        "primaryColor": "#00205B", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Düp Düp",
@@ -629,6 +673,8 @@
     {
         "name": "Utah Hockey Club",
         "logo": "images/utah-hockey-club.png",
+        "primaryColor": "#69a6dd", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Song Name",
@@ -641,6 +687,8 @@
     {
         "name": "Vancouver Canucks",
         "logo": "images/vancouver-canucks.png",
+        "primaryColor": "#00205B", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Don't You Forget About Me",
@@ -664,6 +712,8 @@
     {
         "name": "Vegas Golden Knights",
         "logo": "images/vegas-golden-knights.png",
+        "primaryColor": "#B4975A", 
+        "secondaryColor": "#000",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Vegas Lights",
@@ -678,6 +728,8 @@
     {
         "name": "Washington Capitals",
         "logo": "images/washington-capitals.png",
+        "primaryColor": "#041E42", 
+        "secondaryColor": "#000",
         "individualGoalSongs": true,
         "goalSongsInfo": "https://example.com/buffalo-sabres-goal-songs",
         "individualGoalSongsPlaylist": "3fW5Y77XZvvJ9JTYxkN7US",
@@ -712,6 +764,8 @@
     {
         "name": "Winnipeg Jets",
         "logo": "images/winnipeg-jets.png",
+        "primaryColor": "#041E42", 
+        "secondaryColor": "#000",
         "individualGoalSongs": true,
         "goalSongsInfo": "https://example.com/buffalo-sabres-goal-songs",
         "individualGoalSongsPlaylist": "3fW5Y77XZvvJ9JTYxkN7US",
