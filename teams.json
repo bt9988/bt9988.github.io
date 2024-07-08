@@ -110,6 +110,8 @@
     {
         "name": "Carolina Hurricanes",
         "logo": "images/carolina-hurricanes.png",
+        "primaryColor": "#CE1126", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Raise Up",
