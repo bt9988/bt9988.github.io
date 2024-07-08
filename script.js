@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             // Populate individual goal songs info
             const individualSongsInfo = document.getElementById('individual-songs-info');
-            individualSongsInfo.innerHTML = `The ${team.name} currently use individual goal songs for each player.`;
+            individualSongsInfo.innerHTML = `The NHL's <strong>${team.name}</strong> currently use individual goal songs for each player.`;
 
             // Embed Spotify playlist
             const individualSongsPlaylist = document.getElementById('individual-songs-playlist');
