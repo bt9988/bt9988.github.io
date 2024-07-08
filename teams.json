@@ -49,6 +49,8 @@
     {
         "name": "Buffalo Sabres",
         "logo": "images/buffalo-sabres.png",
+        "primaryColor": "#003087", 
+        "secondaryColor": "#000",
         "individualGoalSongs": true,
         "goalSongsInfo": "https://example.com/buffalo-sabres-goal-songs",
         "individualGoalSongsPlaylist": "0MjSB5baViRuWvJFErX9tx",
