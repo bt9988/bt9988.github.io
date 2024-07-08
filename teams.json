@@ -24,6 +24,8 @@
     {
         "name": "Boston Bruins",
         "logo": "images/boston-bruins.png",
+        "primaryColor": "#FFB81C", 
+        "secondaryColor": "#000",
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Kernkraft 400",
