@@ -45,6 +45,16 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         console.log('Selected team:', team); // Log selected team
 
+        // Display the team logo
+        const teamLogoContainer = document.getElementById('team-logo-container');
+        if (teamLogoContainer) {
+            teamLogoContainer.innerHTML = `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
+        }
+
+        // Apply team colors to the page
+        document.documentElement.style.setProperty('--primary-color', team.primaryColor);
+        document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
+
         // Hide sections by default
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
         const currentGoalSongSection = document.querySelector('.current-goal-song-section');
@@ -107,7 +117,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
             previousSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for the ${team.name}.</p>`;
+            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
         }
     }
 
