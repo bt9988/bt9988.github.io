@@ -347,7 +347,7 @@
             {
                 "name": "Let's Go Crazy",
                 "artist": "Prince",
-                "years": [2016, 2017, 2018]
+                "years": ["2016-2018"]
             },
             {
                 "name": "Jump Around",
