@@ -171,15 +171,26 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Rock and Roll, Part 2",
+                "artist": "Gary Glitter",
+                "years": ["1996-2006","2007-2011"]
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Song 2",
+                "artist": "Blur,
+                "years": ["2006-2007"]                
+            },
+            {
+                "name": "Born To Rage",
+                "artist": "Dada,
+                "years": ["2015-2016"]                
+            },
+            {
+                "name": "Delirious",
+                "artist": "Steve Aoki,
+                "years": ["2016-2017"]                
             }
+            
         ]
     },
     {
