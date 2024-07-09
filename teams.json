@@ -705,12 +705,12 @@
             {
                 "name": "Ain't Talkin' 'bout Love",
                 "artist": "Van Halen",
-                "years": [2019, 2020, 2021, 2022, 2023]
+                "years": ["2019-2023"]
             },
             {
                 "name": "Holiday",
                 "artist": "Green Day",
-                "years": [2011, 2018, 2019]                
+                "years": [2011, "2018-2019"]                
             }
         ]
     },
