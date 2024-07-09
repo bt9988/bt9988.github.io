@@ -345,6 +345,11 @@
         },
         "previousGoalSongs": [
             {
+               "name": "Crowd Chant",
+                "artist": "Joe Satriani",
+                "years": ["2000-2016", "2018-2020"]  
+            },
+            {
                 "name": "Let's Go Crazy",
                 "artist": "Prince",
                 "years": ["2016-2018"]
@@ -352,12 +357,7 @@
             {
                 "name": "Jump Around",
                 "artist": "House of Pain",
-                "years": [2021, 2022]
-            },
-            {
-                "name": "Crowd Chant",
-                "artist": "Joe Satriani",
-                "years": ["2000-2016", "2018-2020"]                
+                "years": ["2021-2022"]            
             }
         ]
     },
