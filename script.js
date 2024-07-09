@@ -114,10 +114,10 @@ document.addEventListener("DOMContentLoaded", async function() {
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
             // Update the header for previous songs with team name
-            previousSongsContainer.innerHTML = `<p>The ${team.name} have previously used the following tracks for their goal songs:</p>`;
+            previousSongsContainer.innerHTML = `<p>The <strong>${team.name}</strong> have previously used the following goal songs:</p>`;
             previousSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for ${team.name}.</p>`;
+            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for <strong>${team.name}</strong>.</p>`;
         }
     }
 
