@@ -135,6 +135,12 @@ main {
     margin-top: 20px; /* Add padding above Spotify playlist */
 }
 
+.team-info.previous-goal-songs-section {
+    margin-top: 40px; /* Adjust spacing between sections */
+    padding-top: 40px; /* Optional: Add padding for additional spacing */
+    border-top: 1px solid #ccc; /* Optional: Add a border to visually separate sections */
+}
+
 .team-buttons {
     display: flex;
     flex-wrap: wrap;
