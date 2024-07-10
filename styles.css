@@ -108,7 +108,7 @@ main {
 
 .main-content {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     flex: 1; /* Ensure the main content area grows to fill the available space */
