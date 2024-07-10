@@ -89,39 +89,31 @@ document.addEventListener("DOMContentLoaded", async function() {
             individualGoalSongsSection.style.display = 'none';
             currentGoalSongSection.style.display = 'block';
 
-            // Populate current goal songs details
+            // Handle current goal songs display based on array length
             const currentSongsContainer = document.getElementById('current-songs');
-            currentSongsContainer.innerHTML = ''; // Clear existing content
+            if (team.currentGoalSongs && team.currentGoalSongs.length > 0) {
+                // Construct the sentence for one or two current songs
+                let songText = `The current goal song${team.currentGoalSongs.length > 1 ? 's' : ''} for the NHL's <strong>${team.name}</strong> are `;
+                team.currentGoalSongs.forEach((song, index) => {
+                    songText += `<strong>${song.name}</strong> by ${song.artist}`;
+                    if (index < team.currentGoalSongs.length - 1) {
+                        songText += ' and ';
+                    } else {
+                        songText += '.';
+                    }
+                });
+                currentSongsContainer.innerHTML = `<p>${songText}</p>`;
+                
+                // Display YouTube video for the first song
+                const youtubeIframe = document.getElementById('youtube-iframe');
+                youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSongs[0].youtubeID}`;
 
-            if (team.currentGoalSongs.length === 1) {
-                const song = team.currentGoalSongs[0];
-                currentSongsContainer.innerHTML = `
-                    <p>The current goal song for the NHL's <strong>${team.name}</strong> is <strong>${song.name}</strong> by <strong>${song.artist}</strong>.</p>
-                    <div class="youtube-video">
-                        <iframe src="https://www.youtube.com/embed/${song.youtubeID}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="spotify-player">
-                        <iframe src="https://open.spotify.com/embed/track/${song.spotifyID}?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                `;
-            } else if (team.currentGoalSongs.length === 2) {
-                const song1 = team.currentGoalSongs[0];
-                const song2 = team.currentGoalSongs[1];
-                currentSongsContainer.innerHTML = `
-                    <p>The current goal songs for the NHL's <strong>${team.name}</strong> are <strong>${song1.name}</strong> by <strong>${song1.artist}</strong> and <strong>${song2.name}</strong> by <strong>${song2.artist}</strong>.</p>
-                    <div class="youtube-video">
-                        <iframe src="https://www.youtube.com/embed/${song1.youtubeID}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="spotify-player">
-                        <iframe src="https://open.spotify.com/embed/track/${song1.spotifyID}?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                    <div class="youtube-video">
-                        <iframe src="https://www.youtube.com/embed/${song2.youtubeID}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="spotify-player">
-                        <iframe src="https://open.spotify.com/embed/track/${song2.spotifyID}?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                `;
+                // Display Spotify player for the first song
+                const spotifyIframe = document.getElementById('spotify-iframe');
+                spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSongs[0].spotifyID}`;
+            } else {
+                // If no current goal songs are listed
+                currentSongsContainer.innerHTML = `<p>There are no current goal songs listed for <strong>${team.name}</strong>.</p>`;
             }
         }
 
