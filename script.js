@@ -45,12 +45,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         console.log('Selected team:', team); // Log selected team
 
-        // Display the team logo
-        const teamLogoContainer = document.getElementById('team-logo-container');
-        if (teamLogoContainer) {
-            teamLogoContainer.innerHTML = `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
-        }
-
         // Apply team colors to the page
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
@@ -106,8 +100,11 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             // Set Spotify iframe
             const spotifyIframe = document.getElementById('spotify-iframe');
-            if (team.currentGoalSong) {
+            if (team.currentGoalSong && team.currentGoalSong.spotifyID) {
                 spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+                spotifyIframe.style.display = 'block';
+            } else {
+                spotifyIframe.style.display = 'none';
             }
 
             // Set YouTube iframe
