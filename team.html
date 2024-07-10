@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949"
+     crossorigin="anonymous"></script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Page | Goal Jams | Tracking Every NHL Goal Song</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67F3BG6VWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-67F3BG6VWP');
+</script>
+    
 <body>
     <header>
         <div class="header-content">
@@ -34,23 +45,24 @@
         <section class="team-info current-goal-song-section">
             <h2 id="team-name-with-song">Goal Song</h2>
 
-            <div id="current-songs">
-                <!-- Current goal songs will be populated here -->
+            <div id="current-song">
+                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is <strong><span id="song-name"></span></strong> by <strong><span id="artist-name"></span></strong>.</p>
             </div>
 
             <div id="youtube-video">
-                <!-- YouTube video for current goal songs will be embedded here -->
+                <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <!-- Spotify Embed -->
             <div id="spotify-player">
-                <!-- Spotify player for current goal songs will be embedded here -->
+                <iframe id="spotify-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </section>
 
         <section class="team-info">
-            <h2>Goal Song History</h2>
+            <h2 id="team-name-with-song">Goal Song History</h2>
             <div id="previous-songs">
+                <p>The <strong><span id="team-name-placeholder"></span></strong> have previously used the following tracks for their goal songs:</p>
                 <!-- Previous songs will be populated here -->
             </div>
         </section>
