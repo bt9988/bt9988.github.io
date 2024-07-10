@@ -587,8 +587,15 @@
             {
                 "name": "Rock and Roll, Part 2",
                 "artist": "Gary Glitter",
-                "years": ["????-2005","2006-2015"]
+                "years": ["2001-2005","2006-2015"]
             },
+
+                {
+                "name": "Let’s Go",
+                "artist": "Sixx: A.M.",
+                "years": ["2015-2016"]
+            },
+    
             {
                 "name": "Holiday",
                 "artist": "Green Day",
