@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.log('Selected team:', team); // Log selected team
 
         // Display the team logo
-        const teamLogoContainer = document.getElementById('team-logo-container');
+        const teamLogoContainer = document.querySelector('.header-content');
         if (teamLogoContainer) {
-            teamLogoContainer.innerHTML = `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
+            teamLogoContainer.innerHTML += `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
         }
 
         // Apply team colors to the page
