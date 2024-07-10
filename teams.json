@@ -281,9 +281,9 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Stadium Love",
+                "artist": "Metric",
+                "years": ["????"]
             },
             {
                 "name": "Bro Hymn 3",
@@ -331,14 +331,9 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
-            },
-            {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Rock and Roll, Part 2",
+                "artist": "Gary Glitter",
+                "years": ["????-2009"]
             }
         ]
     },
@@ -435,15 +430,26 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Devils Rule",
+                "artist": "Rich Andruska",
+                "years": ["????"]
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "This Is Our House",
+                "artist": "Bon Jovi",
+                "years": ["????"]                
+            },
+            {
+                "name": "Seven Nation Army",
+                "artist": "The White Stripes",
+                "years": ["????"]                
+            },
+            {
+                "name": "Rock and Roll, Part 2",
+                "artist": "Gary Glitter",
+                "years": ["????"]                
             }
+            
         ]
     },
     {
@@ -510,14 +516,14 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Wake Me Up",
+                "artist": "Avicii",
+                "years": ["????"]
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Break Away",
+                "artist": "CFO$",
+                "years": ["????"]                
             }
         ]
     },
@@ -535,9 +541,9 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Booyah",
+                "artist": "Showtek ft. We Are Loud & Sonny Wilson",
+                "years": ["????"]
             },
             {
                 "name": "Bro Hymn 3",
@@ -560,14 +566,14 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Kernkraft 400",
+                "artist": "Zombie Nation",
+                "years": ["????"]
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Song 2",
+                "artist": "Blur",
+                "years": ["????"]                
             }
         ]
     },
@@ -657,9 +663,9 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Fluxland",
+                "artist": "XL",
+                "years": ["????"]
             },
             {
                 "name": "Bro Hymn 3",
@@ -682,9 +688,9 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Let's Shake",
+                "artist": "Teenage Head",
+                "years": ["????"]
             },
             {
                 "name": "Bro Hymn 3",
@@ -808,9 +814,9 @@
         ],
         "previousGoalSongs": [
             {
-                "name": "Previous Song 1",
-                "artist": "Previous Artist 1",
-                "years": [2020, 2021]
+                "name": "Hell Yeah",
+                "artist": "Rev Theory",
+                "years": ["2011-????"]
             }
         ],
         "currentGoalSong": {
