@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.log('Selected team:', team); // Log selected team
 
         // Display the team logo
-        const teamLogoContainer = document.querySelector('.header-content');
+        const teamLogoContainer = document.getElementById('team-logo-container');
         if (teamLogoContainer) {
-            teamLogoContainer.innerHTML += `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
+            teamLogoContainer.innerHTML = `<img src="${team.logo}" alt="${team.name} Logo" class="team-logo">`;
         }
 
         // Apply team colors to the page
@@ -92,16 +92,29 @@ document.addEventListener("DOMContentLoaded", async function() {
             // Populate current goal song details
             document.getElementById('team-name-with-song').textContent = `${team.name} Goal Song`;
             document.getElementById('team-name-placeholder').textContent = team.name;
-            document.getElementById('song-name').textContent = team.currentGoalSong.name;
-            document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+
+            // Handle multiple current goal songs
+            if (team.currentGoalSongs && team.currentGoalSongs.length > 0) {
+                const currentSongsText = team.currentGoalSongs.map(song => {
+                    return `<strong>${song.name}</strong> by ${song.artist}`;
+                }).join(' and ');
+                document.getElementById('song-name').innerHTML = currentSongsText;
+            } else if (team.currentGoalSong) {
+                document.getElementById('song-name').textContent = team.currentGoalSong.name;
+                document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+            }
 
             // Set Spotify iframe
             const spotifyIframe = document.getElementById('spotify-iframe');
-            spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+            if (team.currentGoalSong) {
+                spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+            }
 
             // Set YouTube iframe
             const youtubeIframe = document.getElementById('youtube-iframe');
-            youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            if (team.currentGoalSong) {
+                youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            }
         }
 
         // Populate previous songs details or display a message if there are none
@@ -114,10 +127,10 @@ document.addEventListener("DOMContentLoaded", async function() {
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
             // Update the header for previous songs with team name
-            previousSongsContainer.innerHTML = `<p>The <strong>${team.name}</strong> have previously used the following goal songs:</p>`;
+            document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
             previousSongsContainer.appendChild(songsList); // Append <ul> to container
         } else {
-            previousSongsContainer.innerHTML = `<p>There are no previous goal songs listed for <strong>${team.name}</strong>.</p>`;
+            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
         }
     }
 
