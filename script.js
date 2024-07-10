@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", async function() {
             const songsList = document.createElement('ul'); // Create <ul> element
             team.previousGoalSongs.forEach(song => {
                 const songItem = document.createElement('li'); // Create <li> for each song
-                songItem.innerHTML = `<strong>${song.name}</strong> by ${song.artist} (${song.years.join(', ')})`;
+                let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
+                songItem.innerHTML = `<strong>${song.name}</strong> by ${song.artist}${years}`;
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
             // Update the header for previous songs with team name
