@@ -92,16 +92,29 @@ document.addEventListener("DOMContentLoaded", async function() {
             // Populate current goal song details
             document.getElementById('team-name-with-song').textContent = `${team.name} Goal Song`;
             document.getElementById('team-name-placeholder').textContent = team.name;
-            document.getElementById('song-name').textContent = team.currentGoalSong.name;
-            document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+
+            // Handle multiple current goal songs
+            if (team.currentGoalSongs && team.currentGoalSongs.length > 0) {
+                const currentSongsText = team.currentGoalSongs.map(song => {
+                    return `<strong>${song.name}</strong> by ${song.artist}`;
+                }).join(' and ');
+                document.getElementById('song-name').innerHTML = currentSongsText;
+            } else if (team.currentGoalSong) {
+                document.getElementById('song-name').textContent = team.currentGoalSong.name;
+                document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+            }
 
             // Set Spotify iframe
             const spotifyIframe = document.getElementById('spotify-iframe');
-            spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+            if (team.currentGoalSong) {
+                spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+            }
 
             // Set YouTube iframe
             const youtubeIframe = document.getElementById('youtube-iframe');
-            youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            if (team.currentGoalSong) {
+                youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            }
         }
 
         // Populate previous songs details or display a message if there are none
