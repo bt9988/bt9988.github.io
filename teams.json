@@ -403,11 +403,20 @@
         "primaryColor": "#FFB81C", 
         "secondaryColor": "#000",
         "conference": "Western",
-        "currentGoalSong": {
-            "name": "Song Name",
-            "artist": "Artist Name",
-            "youtubeID": "d-ucCippEeM"
+        "currentGoalSongs": [
+        {
+            "name": "Bro Hymn",
+            "artist": "Pennywise",
+            "youtubeID": "d-ucCippEeM",
+            "spotifyID": "1ybhXkz4S8k9fdBZNBan7L"
         },
+        {
+            "name": "Song Title 2",
+            "artist": "Artist 2",
+            "youtubeID": "anotherYoutubeID",
+            "spotifyID": "anotherSpotifyID"
+        }
+    ],
         "previousGoalSongs": [
             {
                 "name": "Bro Hymn 2",
