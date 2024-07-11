@@ -765,7 +765,12 @@
             {
                 "name": "Kernkraft 400",
                 "artist": "Zombie Nation"
+            },
+            {
+                "name": "Rock the Red",
+                "artist": "Darkest Hour"
             }
+            
         ],
         "currentGoalSong": {
             "name": "Current Song",
