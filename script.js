@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             const songsList = document.createElement('ul'); // Create <ul> element
             team.individualGoalSongsDetails.forEach(song => {
                 const songItem = document.createElement('li'); // Create <li> for each song
-                songItem.innerHTML = `<strong>${song.player}</strong> scored to <strong>${song.name}</strong> by ${song.artist}`;
+                songItem.innerHTML = `<strong>${song.player}</strong>: "${song.name}" by ${song.artist}`;
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
             individualSongsContainer.appendChild(songsList); // Append <ul> to container
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             // Handle multiple current goal songs
             if (team.currentGoalSongs && team.currentGoalSongs.length > 0) {
                 const currentSongsText = team.currentGoalSongs.map(song => {
-                    return `<strong>${song.name}</strong> by ${song.artist}`;
+                    return `"${song.name}" by ${song.artist}`;
                 }).join(' and ');
                 document.getElementById('song-name').innerHTML = currentSongsText;
             } else if (team.currentGoalSong) {
