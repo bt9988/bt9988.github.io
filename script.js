@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             team.previousGoalSongs.forEach(song => {
                 const songItem = document.createElement('li'); // Create <li> for each song
                 let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
-                songItem.innerHTML = `${song.name} by ${song.artist}${years}`;
+                songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
                 songsList.appendChild(songItem); // Append each song as <li> to <ul>
             });
             // Update the header for previous songs with team name
