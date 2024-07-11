@@ -94,14 +94,27 @@
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
+                "name": "Rock and Roll, Part 2",
+                "artist": "Gary Glitter"  
             },
             {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Disco Inferno",
+                "artist": "The Trammps
+                          
+            },
+            {
+                "name": "Shot Down In Flames",
+                "artist": "AC/DC"  
+            },
+            {
+                "name": "Barbra Streisand",
+                "artist": "Duck Sauce"
+                          
+            },
+            {
+                "name": "Righteous Smoke",
+                "artist": "Monster Truck"
+                          
             }
         ]
     },
