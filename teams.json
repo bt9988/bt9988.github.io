@@ -483,21 +483,16 @@
         "conference": "Eastern",
         "currentGoalSong": {
             "name": "Slap Shot",
-            "artist": "Ray Castoldi",
+            "artist": "Bad Apple",
             "youtubeID": "UOiNagXbQ8I",
             "spotifyID": "71deHTniRaLtMGYQpeGFQS"
         },
         "previousGoalSongs": [
             {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
-            },
-            {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
+                "name": "Rock and Roll, Part 2",
+                "artist": "Gary Glitter"
             }
+            
         ]
     },
     {
