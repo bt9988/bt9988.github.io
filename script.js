@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", async function() {
             individualGoalSongsSection.style.display = 'block';
             currentGoalSongSection.style.display = 'none';
 
+            // Set header for individual goal songs
+            document.querySelector('.individual-goal-songs-section h2').textContent = `${team.name} Goal Songs`;
+
             // Populate individual goal songs info
             const individualSongsInfo = document.getElementById('individual-songs-info');
             individualSongsInfo.innerHTML = `The NHL's <strong>${team.name}</strong> currently use individual goal songs for each player.`;
