@@ -124,7 +124,7 @@ main {
 }
 
 .description {
-    padding: 20px;
+    padding: 200px 0px 200px 0px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
