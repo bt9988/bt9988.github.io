@@ -78,20 +78,15 @@ document.addEventListener("DOMContentLoaded", async function() {
             document.getElementById('team-name-with-song').textContent = `${team.name} Goal Song`;
             document.getElementById('team-name-placeholder').textContent = team.name;
 
-            if (team.currentGoalSongs && team.currentGoalSongs.length > 0) {
-                const currentSongsText = team.currentGoalSongs.map(song => {
-                    return `"${song.name}" by ${song.artist}`;
-                }).join(' and ');
-                document.getElementById('song-name').innerHTML = currentSongsText;
-            } else if (team.currentGoalSong) {
+            if (team.currentGoalSong) {
                 document.getElementById('song-name').textContent = team.currentGoalSong.name;
                 document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
 
                 const inUseSince = team.currentGoalSong.inUseSince;
                 if (inUseSince) {
-                    document.getElementById('in-use-since').textContent = `This goal song has been in use since ${inUseSince}.`;
+                    document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>. This goal song has been in use since <span id="in-use-since">${inUseSince}</span>.`;
                 } else {
-                    document.getElementById('in-use-since').textContent = '';
+                    document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>.`;
                 }
             }
 
@@ -104,7 +99,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
 
             const youtubeIframe = document.getElementById('youtube-iframe');
-            if (team.currentGoalSong && team.currentGoalSong.youtubeID) {
+            if (team.currentGoalSong) {
                 youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
             }
         }
@@ -112,37 +107,30 @@ document.addEventListener("DOMContentLoaded", async function() {
         const previousSongsContainer = document.getElementById('previous-songs');
         if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
             const songsList = document.createElement('ul');
-Here are the final versions of `teams.json`, `team.html`, and `script.js`:
-
-### Final `teams.json` Example
-
-Ensure you have the `inUseSince` field added to the `currentGoalSong` object for a team:
-
-```json
-[
-    {
-        "name": "New York Islanders",
-        "logo": "path/to/islanders-logo.png",
-        "primaryColor": "#00539B",
-        "secondaryColor": "#F47D30",
-        "currentGoalSong": {
-            "name": "Crowd Chant",
-            "artist": "Joe Satriani",
-            "youtubeID": "videoid",
-            "spotifyID": "trackid",
-            "inUseSince": "2015"
-        },
-        "previousGoalSongs": [
-            {
-                "name": "Song 1",
-                "artist": "Artist 1",
-                "years": ["2010", "2011"]
-            },
-            {
-                "name": "Song 2",
-                "artist": "Artist 2",
-                "years": ["2012", "2013"]
-            }
-        ]
+            team.previousGoalSongs.forEach(song => {
+                const songItem = document.createElement('li');
+                let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
+                songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
+                songsList.appendChild(songItem);
+            });
+            document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
+            previousSongsContainer.appendChild(songsList);
+        } else {
+            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
+        }
     }
-]
+
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const dropdownHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
+        dropdownContent.innerHTML = dropdownHTML;
+    }
+
+    function navigateToTeam(teamName) {
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
+
+    window.navigateToTeam = navigateToTeam;
+});
