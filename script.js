@@ -86,6 +86,13 @@ document.addEventListener("DOMContentLoaded", async function() {
             } else if (team.currentGoalSong) {
                 document.getElementById('song-name').textContent = team.currentGoalSong.name;
                 document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+
+                const inUseSince = team.currentGoalSong.inUseSince;
+                if (inUseSince) {
+                    document.getElementById('in-use-since').textContent = `This goal song has been in use since ${inUseSince}.`;
+                } else {
+                    document.getElementById('in-use-since').textContent = '';
+                }
             }
 
             const spotifyIframe = document.getElementById('spotify-iframe');
@@ -97,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
 
             const youtubeIframe = document.getElementById('youtube-iframe');
-            if (team.currentGoalSong) {
+            if (team.currentGoalSong && team.currentGoalSong.youtubeID) {
                 youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
             }
         }
@@ -106,29 +113,37 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
             const songsList = document.createElement('ul');
             team.previousGoalSongs.forEach(song => {
-                const songItem = document.createElement('li');
-                let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
-                songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
-                songsList.appendChild(songItem);
-            });
-            document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
-            previousSongsContainer.appendChild(songsList);
-        } else {
-            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
-        }
-    }
+                const songItem = document.createElement('liHere are the final versions of `teams.json`, `team.html`, and `script.js`.
 
-    function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        const dropdownHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
-        }).join('');
-        dropdownContent.innerHTML = dropdownHTML;
-    }
+### Final `teams.json` Example
 
-    function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
-    }
+Ensure you have the `inUseSince` field added to the `currentGoalSong` object for a team:
 
-    window.navigateToTeam = navigateToTeam;
-});
+```json
+[
+    {
+        "name": "New York Islanders",
+        "logo": "path/to/islanders-logo.png",
+        "primaryColor": "#00539B",
+        "secondaryColor": "#F47D30",
+        "currentGoalSong": {
+            "name": "Crowd Chant",
+            "artist": "Joe Satriani",
+            "youtubeID": "videoid",
+            "spotifyID": "trackid",
+            "inUseSince": "2015"
+        },
+        "previousGoalSongs": [
+            {
+                "name": "Song 1",
+                "artist": "Artist 1",
+                "years": ["2010", "2011"]
+            },
+            {
+                "name": "Song 2",
+                "artist": "Artist 2",
+                "years": ["2012", "2013"]
+            }
+        ]
+    }
+]
