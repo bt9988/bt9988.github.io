@@ -134,9 +134,3 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     window.navigateToTeam = navigateToTeam;
 });
-
-// Dynamically set the team logo
-    const teamLogo = document.getElementById('team-logo');
-    teamLogo.src = `images/${team.logo}`; // Assuming 'team.logo' contains the filename of the logo image
-    teamLogo.alt = `${team.name} Logo`;
-}
