@@ -137,7 +137,7 @@ main {
 }
 
 .team-info.individual-goal-songs-section #individual-songs-playlist {
-    margin-top: 20px; /* Add padding above Spotify playlist */
+    margin-top: 10px; /* Add padding above Spotify playlist */
 }
 
 .team-buttons {
