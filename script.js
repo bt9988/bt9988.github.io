@@ -112,8 +112,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const previousSongsContainer = document.getElementById('previous-songs');
         if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
             const songsList = document.createElement('ul');
-            team.previousGoalSongs.forEach(song => {
-                const songItem = document.createElement('liHere are the final versions of `teams.json`, `team.html`, and `script.js`.
+Here are the final versions of `teams.json`, `team.html`, and `script.js`:
 
 ### Final `teams.json` Example
 
