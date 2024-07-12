@@ -252,7 +252,13 @@
         "previousGoalSongs": [
             {
                 "name": "Rock and Roll, Part 2",
-                "artist": "Gary Glitter"
+                "artist": "Gary Glitter",
+                "years": ["1992-2011"]
+            },
+            {
+                "name": "The Whip",
+                "artist": "Locksley",
+                "years": ["2011-2013"]
             }
         ]
     },
