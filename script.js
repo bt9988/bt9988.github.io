@@ -1,88 +1,141 @@
-function setupTeamPage(teams) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const teamName = urlParams.get('team');
-    if (!teamName) return;
+document.addEventListener("DOMContentLoaded", async function() {
+    try {
+        const response = await fetch('teams.json');
+        const teams = await response.json();
 
-    const team = teams.find(t => t.name === decodeURIComponent(teamName));
-    if (!team) return;
-
-    document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
-    document.documentElement.style.setProperty('--primary-color', team.primaryColor);
-    document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
-
-    const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
-    const currentGoalSongSection = document.querySelector('.current-goal-song-section');
-
-    if (team.individualGoalSongs) {
-        individualGoalSongsSection.style.display = 'block';
-        currentGoalSongSection.style.display = 'none';
-        document.querySelector('.individual-goal-songs-section h2').textContent = `${team.name} Goal Songs`;
-
-        const individualSongsInfo = document.getElementById('individual-songs-info');
-        individualSongsInfo.innerHTML = `The NHL's <strong>${team.name}</strong> currently use individual goal songs for each player.`;
-
-        const individualSongsPlaylist = document.getElementById('individual-songs-playlist');
-        if (team.individualGoalSongsPlaylist) {
-            individualSongsPlaylist.innerHTML = `<iframe src="https://open.spotify.com/embed/playlist/${team.individualGoalSongsPlaylist}" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+        if (isIndexPage()) {
+            populateTeams(teams);
+        } else if (isTeamPage()) {
+            setupTeamPage(teams);
         }
+        populateDropdown(teams);
+    } catch (error) {
+        console.error('Error fetching team data:', error);
+    }
 
-        const individualSongsContainer = document.getElementById('individual-songs');
-        const songsList = document.createElement('ul');
-        team.individualGoalSongsDetails.forEach(song => {
-            const songItem = document.createElement('li');
-            songItem.innerHTML = `<strong>${song.player}</strong>: "${song.name}" by ${song.artist}`;
-            songsList.appendChild(songItem);
-        });
-        individualSongsContainer.appendChild(songsList);
-    } else {
-        individualGoalSongsSection.style.display = 'none';
-        currentGoalSongSection.style.display = 'block';
+    function isIndexPage() {
+        return window.location.pathname === '/index.html' || window.location.pathname === '/';
+    }
 
-        document.getElementById('team-name-with-song').textContent = `${team.name} Goal Song`;
-        document.getElementById('team-name-placeholder').textContent = team.name;
+    function isTeamPage() {
+        return window.location.pathname.startsWith('/team.html');
+    }
 
-        if (team.currentGoalSong) {
-            document.getElementById('song-name').textContent = team.currentGoalSong.name;
-            document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+    function populateTeams(teams) {
+        const teamButtonsContainer = document.querySelector('.team-buttons');
+        if (!teamButtonsContainer) return;
 
-            const inUseSince = team.currentGoalSong.inUseSince;
-            if (inUseSince) {
-                document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>. This goal song has been in use since <span id="in-use-since">${inUseSince}</span>.`;
+        const teamButtonsHTML = teams.map(team => {
+            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
+                        <img src="${team.logo}" alt="${team.name}" loading="lazy">
+                        <span>${team.name}</span>
+                    </button>`;
+        }).join('');
+
+        teamButtonsContainer.innerHTML = teamButtonsHTML;
+    }
+
+    function setupTeamPage(teams) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const teamName = urlParams.get('team');
+        if (!teamName) return;
+
+        const team = teams.find(t => t.name === decodeURIComponent(teamName));
+        if (!team) return;
+
+        document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
+        document.documentElement.style.setProperty('--primary-color', team.primaryColor);
+        document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
+
+        const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
+        const currentGoalSongSection = document.querySelector('.current-goal-song-section');
+
+        if (team.individualGoalSongs) {
+            individualGoalSongsSection.style.display = 'block';
+            currentGoalSongSection.style.display = 'none';
+            document.querySelector('.individual-goal-songs-section h2').textContent = `${team.name} Goal Songs`;
+
+            const individualSongsInfo = document.getElementById('individual-songs-info');
+            individualSongsInfo.innerHTML = `The NHL's <strong>${team.name}</strong> currently use individual goal songs for each player.`;
+
+            const individualSongsPlaylist = document.getElementById('individual-songs-playlist');
+            if (team.individualGoalSongsPlaylist) {
+                individualSongsPlaylist.innerHTML = `<iframe src="https://open.spotify.com/embed/playlist/${team.individualGoalSongsPlaylist}" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+            }
+
+            const individualSongsContainer = document.getElementById('individual-songs');
+            const songsList = document.createElement('ul');
+            team.individualGoalSongsDetails.forEach(song => {
+                const songItem = document.createElement('li');
+                songItem.innerHTML = `<strong>${song.player}</strong>: "${song.name}" by ${song.artist}`;
+                songsList.appendChild(songItem);
+            });
+            individualSongsContainer.appendChild(songsList);
+        } else {
+            individualGoalSongsSection.style.display = 'none';
+            currentGoalSongSection.style.display = 'block';
+
+            document.getElementById('team-name-with-song').textContent = `${team.name} Goal Song`;
+            document.getElementById('team-name-placeholder').textContent = team.name;
+
+            if (team.currentGoalSong) {
+                document.getElementById('song-name').textContent = team.currentGoalSong.name;
+                document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+
+                const inUseSince = team.currentGoalSong.inUseSince;
+                if (inUseSince) {
+                    document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>. This goal song has been in use since <span id="in-use-since">${inUseSince}</span>.`;
+                } else {
+                    document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>.`;
+                }
+            }
+
+            const spotifyIframe = document.getElementById('spotify-iframe');
+            if (team.currentGoalSong && team.currentGoalSong.spotifyID) {
+                spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+                spotifyIframe.style.display = 'block';
             } else {
-                document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>.`;
+                spotifyIframe.style.display = 'none';
+            }
+
+            const youtubeIframe = document.getElementById('youtube-iframe');
+            if (team.currentGoalSong) {
+                youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
             }
         }
 
-        const spotifyIframe = document.getElementById('spotify-iframe');
-        if (team.currentGoalSong && team.currentGoalSong.spotifyID) {
-            spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
-            spotifyIframe.style.display = 'block';
+        const previousSongsContainer = document.getElementById('previous-songs');
+        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
+            const songsList = document.createElement('ul');
+            team.previousGoalSongs.forEach(song => {
+                const songItem = document.createElement('li');
+                let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
+                songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
+                songsList.appendChild(songItem);
+            });
+            document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
+            previousSongsContainer.appendChild(songsList);
         } else {
-            spotifyIframe.style.display = 'none';
-        }
-
-        const youtubeIframe = document.getElementById('youtube-iframe');
-        if (team.currentGoalSong) {
-            youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
         }
     }
 
-    const previousSongsContainer = document.getElementById('previous-songs');
-    if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
-        const songsList = document.createElement('ul');
-        team.previousGoalSongs.forEach(song => {
-            const songItem = document.createElement('li');
-            let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
-            songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
-            songsList.appendChild(songItem);
-        });
-        document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
-        previousSongsContainer.appendChild(songsList);
-    } else {
-        document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const dropdownHTML = teams.map(team => {
+            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+        }).join('');
+        dropdownContent.innerHTML = dropdownHTML;
     }
 
-    // Dynamically set the team logo
+    function navigateToTeam(teamName) {
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
+
+    window.navigateToTeam = navigateToTeam;
+});
+
+// Dynamically set the team logo
     const teamLogo = document.getElementById('team-logo');
     teamLogo.src = `images/${team.logo}`; // Assuming 'team.logo' contains the filename of the logo image
     teamLogo.alt = `${team.name} Logo`;
