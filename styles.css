@@ -1,4 +1,9 @@
 /* Global styles */
+h2 {
+align: center;
+
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
