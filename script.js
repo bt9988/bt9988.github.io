@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
+        const teamLogo = document.getElementById('team-logo');
+        teamLogo.src = team.logo;
+        teamLogo.alt = `${team.name} Logo`;
+
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
         const currentGoalSongSection = document.querySelector('.current-goal-song-section');
 
@@ -119,11 +123,16 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function populateDropdown(teams) {
+        const dropdownLet's continue with the `script.js` and `styles.css` updates.
+
+### Updated `script.js` (continued):
+
+```javascript
+    function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
-        const dropdownHTML = teams.map(team => {
+        dropdownContent.innerHTML = teams.map(team => {
             return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
         }).join('');
-        dropdownContent.innerHTML = dropdownHTML;
     }
 
     function navigateToTeam(teamName) {
