@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             document.querySelector('.individual-goal-songs-section h2').textContent = `${team.name} Goal Songs`;
 
             const individualSongsInfo = document.getElementById('individual-songs-info');
-            individualSongsInfo.innerHTML = `The NHL's <strong>${team.name}</strong> currently use individual goal songs for each player.`;
+            individualSongsInfo.innerHTML = `The NHL's <strong>${team.name}</strong> currently use individual goal songs for each player:`;
 
             const individualSongsPlaylist = document.getElementById('individual-songs-playlist');
             if (team.individualGoalSongsPlaylist) {
