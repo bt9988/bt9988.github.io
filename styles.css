@@ -124,11 +124,12 @@ main {
 }
 
 .description {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
+    width: calc(110px * 3 + 14px * 2); /* Calculate width based on team buttons */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
