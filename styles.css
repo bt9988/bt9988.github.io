@@ -1,4 +1,9 @@
 /* Global styles */
+
+.team-info h2 {
+    text-align: center;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
