@@ -124,7 +124,7 @@ main {
 }
 
 .description {
-    padding: 20px 0px 20px 0px;
+    padding: 20px 20px 20px 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -133,7 +133,7 @@ main {
 }
 
 .team-info {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .team-info.individual-goal-songs-section #individual-songs-playlist {
