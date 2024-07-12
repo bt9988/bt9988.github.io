@@ -3,7 +3,7 @@
         "name": "Anaheim Ducks",
         "logo": "images/anaheim-ducks.png",
         "primaryColor": "#F47A38", 
-        "secondaryColor": "#000",
+        "secondaryColor": "#F47A38",
         "conference": "Western",
         "currentGoalSong": {
             "name": "Bro Hymn",
