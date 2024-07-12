@@ -89,6 +89,24 @@
                 "name": "POWER",
                 "artist": "Kanye West",
                 "spotifyID": "spotify_track_id_2"
+            },
+            {
+                "player": "Rasmus Dahlin",
+                "name": "HUMBLE",
+                "artist": "Kendrick Lamar",
+                "spotifyID": "spotify_track_id_2"
+            },
+            {
+                "player": "Jacob Bryson",
+                "name": "Narco",
+                "artist": "Blasterjaxx & Timmy Trumpet",
+                "spotifyID": "spotify_track_id_2"
+            },
+            {
+                "player": "Connor Clifton",
+                "name": "I Wanna Rock",
+                "artist": "Twisted Sister",
+                "spotifyID": "spotify_track_id_2"
             }
         ],
         "previousGoalSongs": [
