@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const team = teams.find(t => t.name === decodeURIComponent(teamName));
         if (!team) return;
 
-        document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
+        document.title = `${team.name} | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
