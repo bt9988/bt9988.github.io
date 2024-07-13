@@ -340,6 +340,11 @@
                 "name": "Rock and Roll, Part 2",
                 "artist": "Gary Glitter"
                
+            },
+            {
+                "name": "Hey, Hey Hockeytown",
+                "artist": "Joe Lynn Turner"
+               
             }
         ]
     },
@@ -364,6 +369,11 @@
             {
                 "name": "Get Out of the Way",
                 "artist": "Econoline Crush"              
+            },
+            
+            {
+                "name": "Don't Stop The Party",
+                "artist": "Pitbull"              
             }
         ]
     },
