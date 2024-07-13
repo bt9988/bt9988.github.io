@@ -107,7 +107,21 @@
                 "name": "I Wanna Rock",
                 "artist": "Twisted Sister",
                 "spotifyID": "spotify_track_id_2"
+            },
+            
+            {
+                "player": "Zemgus Girgensons",
+                "name": "Party Till We Die",
+                "artist": "MAKJ, Timmy Trumpet & Andrew W.K.",
+                "spotifyID": "spotify_track_id_2"
+            },
+            {
+                "player": "Casey Mittelstadt",
+                "name": "Juke Box Hero",
+                "artist": "Foreigner",
+                "spotifyID": "spotify_track_id_2"
             }
+            
         ],
         "previousGoalSongs": [
             {
