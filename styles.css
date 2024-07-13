@@ -1,26 +1,21 @@
 /* Global styles */
-
-.team-info h2 {
-    text-align: center;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    color: #333; /* Main text color */
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* Team-specific colors */
 :root {
-    --primary-color: #ffffff; /* default primary color */
-    --secondary-color: #000000; /* default secondary color */
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
 }
 
 body {
@@ -31,15 +26,20 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 12px 0px 2px 0px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
-    padding: 0 20px; /* Adjusted padding for better alignment */
+    width: 100%;
+    max-width: 960px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 header .logo {
@@ -49,7 +49,7 @@ header .logo {
 .hamburger-menu {
     font-size: 30px;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
 /* Side menu */
@@ -91,43 +91,22 @@ header .logo {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    width: 100%; /* Ensure container is responsive */
+    width: 100%;
 }
 
 main {
-    flex: 1; /* Ensure the main content area grows to fill the available space */
+    flex: 1;
     display: flex;
     justify-content: center;
-    width: 100%; /* Ensure main content is responsive */
-}
-
-.main-content {
-    background-color: #fff;
-    border-radius: 0px 0px 5px 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px 20px 20px;
-    flex: 1; /* Ensure the main content area grows to fill the available space */
-    max-width: 620px; /* Limit the width to 620px */
-    width: 100%; /* Ensure the content is responsive */
-    margin: 0 auto; /* Center the content */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: 100%;
 }
 
 .description {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-.team-info {
-    margin-top: 10px;
-}
-
-.team-info.individual-goal-songs-section #individual-songs-playlist {
-    margin-top: 10px; /* Add padding above Spotify playlist */
 }
 
 .team-buttons {
@@ -135,8 +114,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
-    width: 100%; /* Ensure team buttons are responsive */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: 100%;
 }
 
 .team-button {
@@ -153,102 +131,15 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
-    width: 110px; /* Adjust the size as needed */
-    height: 110px; /* Adjust the size as needed */
+    justify-content: center;
+    width: 110px;
+    height: 110px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
-    color: #888; /* Lighter grey for text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.team-button img {
-    width: 30px; /* Adjust size of team logo */
-    height: 30px;
-    margin-bottom: 0px;
-    border-radius: 0%;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-.team-button span {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold; /* Make the team name bold */
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px; /* Provide space between team-info section and footer */
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.8rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-    header .logo {
-        max-height: 50px; /* Adjust as needed for smaller screens */
-    }
-
-    .description {
-        font-size: 1rem;
-    }
-
-    .team-button {
-        padding: 10px;
-        margin: 5px;
-        width: 110px; /* Ensure team button is responsive */
-        height: 110px; /* Ensure team button is responsive */
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .side-menu {
-        width: 0;
-    }
-}
-
-/* Larger YouTube video */
-#youtube-video {
-    margin-top: 20px;
-    width: 100%;
-    height: 315px; /* Standard 16:9 ratio */
-}
-
-/* Spotify player adjustments */
-#spotify-iframe {
-    margin-top: 20px;
-    width: 100%;
-    height: 380px; /* Standard Spotify player height */
-}
-
-#current-song {
-    font-size: 1rem;
-    line-height: 1.4;
-    text-align: center;
-    margin-top: 20px; /* Add padding above current song */
-}
-
-#previous-songs {
-    list-style-type: none;
-    padding: 0;
-}
-
-#previous-songs li {
-    margin-bottom: 10px;
-}
+    background-color: #f0f0f0;
+    color: #888;
+    box-shadow: 0 4px 8
