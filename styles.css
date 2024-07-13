@@ -34,12 +34,13 @@ header {
 
 header .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 960px;
     padding: 0 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
 header .logo {
@@ -49,7 +50,8 @@ header .logo {
 .hamburger-menu {
     font-size: 30px;
     cursor: pointer;
-    display: block;
+    position: absolute;
+    left: 20px;
 }
 
 /* Side menu */
