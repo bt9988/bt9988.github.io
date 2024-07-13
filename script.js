@@ -13,15 +13,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.error('Error fetching team data:', error);
     }
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('show');
-        });
-    }
-
     function isIndexPage() {
         return window.location.pathname === '/index.html' || window.location.pathname === '/';
     }
@@ -52,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const team = teams.find(t => t.name === decodeURIComponent(teamName));
         if (!team) return;
 
-        document.title = `${team.name} | Hockey Goal Songs | Tracking Every NHL Goal Song`;
+        document.title = `${team.name} | Goal Jams | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
