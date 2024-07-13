@@ -46,56 +46,6 @@ header .logo {
     max-height: 65px;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
-}
-
-header .nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px; /* Adjusted margin for better spacing */
-}
-
-header .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-header .dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-}
-
-header .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-header .dropdown-content a {
-    color: black;
-    padding: 5px 5px;
-    font-size: 14px;
-    text-decoration: none;
-    display: block;
-}
-
-header .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-header .dropdown-content.show {
-    display: block;
-}
 
 .container {
     max-width: 960px;
