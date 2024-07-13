@@ -142,4 +142,87 @@ main {
 .team-button:hover {
     background-color: #f0f0f0;
     color: #888;
-    box-shadow: 0 4px 8
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-button img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 0%;
+}
+
+.team-button span {
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    header .logo {
+        max-height: 50px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .team-button {
+        padding: 10px;
+        margin: 5px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .side-menu {
+        width: 0;
+    }
+}
+
+/* Larger YouTube video */
+#youtube-video {
+    margin-top: 20px;
+    width: 100%;
+    height: 315px;
+}
+
+/* Spotify player adjustments */
+#spotify-iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 380px;
+}
+
+#current-song {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#previous-songs {
+    list-style-type: none;
+    padding: 0;
+}
+
+#previous-songs li {
+    margin-bottom: 10px;
+}
