@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function() {
     try {
-        const response = await fetch('teams.json');
-        const teams = await response.json();
+        const teams = await fetchTeamsData();
 
         if (isIndexPage()) {
             populateTeams(teams);
@@ -9,9 +8,10 @@ document.addEventListener("DOMContentLoaded", async function() {
             setupTeamPage(teams);
         }
         populateDropdown(teams);
-        populateSidebarTeams(teams); // New addition for sidebar navigation
+        populateSidebarTeams(teams); // Ensure sidebar navigation is populated
     } catch (error) {
         console.error('Error fetching team data:', error);
+        // Optionally handle the error here, e.g., display a message to the user
     }
 
     function isIndexPage() {
@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
+        if (!dropdownContent) return; // Added null check to prevent errors
+
         const dropdownHTML = teams.map(team => {
             return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
         }).join('');
@@ -147,7 +149,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             return data;
         } catch (error) {
             console.error('Error fetching teams data:', error);
-            return [];
+            throw error; // Propagate the error to handle it outside
         }
     }
 
