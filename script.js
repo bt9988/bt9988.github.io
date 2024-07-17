@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else if (isTeamPage()) {
             setupTeamPage(teams);
         }
-        populateDropdown(teams);
     } catch (error) {
         console.error('Error fetching team data:', error);
     }
@@ -118,14 +117,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else {
             document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
         }
-    }
-
-    function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        const dropdownHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
-        }).join('');
-        dropdownContent.innerHTML = dropdownHTML;
     }
 
     function navigateToTeam(teamName) {
