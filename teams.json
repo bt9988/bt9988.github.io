@@ -350,6 +350,10 @@
                 "name": "Hey, Hey Hockeytown",
                 "artist": "Joe Lynn Turner"
                
+            },
+            {
+             "individualGoalSongs": "TRUE"
+            
             }
         ]
     },
