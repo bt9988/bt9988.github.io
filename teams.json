@@ -997,17 +997,121 @@
         "individualGoalSongsPlaylist": "3fW5Y77XZvvJ9JTYxkN7US",
         "individualGoalSongsDetails": [
             {
-                "player": "Player 1",
-                "name": "Song 1",
-                "artist": "Artist 1",
-                "spotifyID": "spotify_track_id_1"
-            },
-            {
-                "player": "Player 2",
-                "name": "Song 2",
-                "artist": "Artist 2",
-                "spotifyID": "spotify_track_id_2"
-            }
+    "player": "Dylan DeMelo",
+    "name": "This Is How We Do It",
+    "artist": "Montell Jordan"
+},
+{
+    "player": "Neal Pionk",
+    "name": "Renegade",
+    "artist": "Styx"
+},
+{
+    "player": "Brenden Dillon",
+    "name": "Bennie and the Jets",
+    "artist": "Elton John"
+},
+{
+    "player": "Vladislav Namestnikov",
+    "name": "This Ain’t a Scene",
+    "artist": "Fall Out Boy"
+},
+{
+    "player": "Alex Iafallo",
+    "name": "Nothing But a Good Time",
+    "artist": "Poison"
+},
+{
+    "player": "Gabe Vilardi",
+    "name": "Macarena",
+    "artist": "Los Del Rio"
+},
+{
+    "player": "Rasmus Kupari",
+    "name": "Flamethrower",
+    "artist": "The J. Geils Band"
+},
+{
+    "player": "Mason Appleton",
+    "name": "Keg in the Closet",
+    "artist": "Kenny Chesney"
+},
+{
+    "player": "Nikolaj Ehlers",
+    "name": "House on Fire",
+    "artist": "Jonah Blacksmith"
+},
+{
+    "player": "Morgan Barron",
+    "name": "Home for a Rest",
+    "artist": "Spirit of the West"
+},
+{
+    "player": "Connor Hellebuyck",
+    "name": "Gangnam Style",
+    "artist": "Psy"
+},
+{
+    "player": "Laurent Brossoit",
+    "name": "Rasputin",
+    "artist": "Boney M."
+},
+{
+    "player": "Dylan Samberg",
+    "name": "Let’s Go Crazy",
+    "artist": "Prince"
+},
+{
+    "player": "Nino Niederreiter",
+    "name": "Disco Inferno",
+    "artist": "Suyz and Nora Van Elken"
+},
+{
+    "player": "Kyle Connor",
+    "name": "Hell Yeah",
+    "artist": "Rev Theory"
+},
+{
+    "player": "Nate Schmidt",
+    "name": "Party Rock Anthem",
+    "artist": "LMFAO"
+},
+{
+    "player": "Cole Perfetti",
+    "name": "Party Till We Die",
+    "artist": "Timmy Trumpet"
+},
+{
+    "player": "Josh Morrissey",
+    "name": "Magic in the Air",
+    "artist": "Magic System"
+},
+{
+    "player": "Mark Scheifele",
+    "name": "Ain’t No Mountain High Enough",
+    "artist": "Marvin Gaye"
+},
+{
+    "player": "Adam Lowry",
+    "name": "Lil Boo Thang",
+    "artist": "Paul Russell"
+},
+{
+    "player": "Logan Stanley",
+    "name": "White Horse",
+    "artist": "Chris Stapleton"
+},
+{
+    "player": "Declan Chisholm",
+    "name": "It’s Tricky",
+    "artist": "Run-DMC"
+},
+{
+    "player": "David Gustafsson",
+    "name": "Levels",
+    "artist": "Avicii"
+}
+
         ],
         "previousGoalSongs": [
             {
