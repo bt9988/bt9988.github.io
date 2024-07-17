@@ -164,7 +164,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Center content vertically */
-    width: 110px; /* Adjust the size as needed */
+    width: 150px; /* Adjust the size as needed */
     height: 110px; /* Adjust the size as needed */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -220,7 +220,7 @@ footer p {
     .team-button {
         padding: 10px;
         margin: 5px;
-        width: 110px; /* Ensure team button is responsive */
+        width: 150px; /* Ensure team button is responsive */
         height: 110px; /* Ensure team button is responsive */
     }
 
