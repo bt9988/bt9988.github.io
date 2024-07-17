@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         if (isIndexPage()) {
             populateTeams(teams);
+            populateSidebar(teams);
         } else if (isTeamPage()) {
             setupTeamPage(teams);
         }
@@ -121,6 +122,26 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function navigateToTeam(teamName) {
         window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
+
+    function populateSidebar(teams) {
+        const easternTeamsList = document.getElementById('eastern-teams');
+        const westernTeamsList = document.getElementById('western-teams');
+
+        teams.forEach(team => {
+            const teamLink = document.createElement('a');
+            teamLink.textContent = team.name;
+            teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
+
+            const listItem = document.createElement('li');
+            listItem.appendChild(teamLink);
+
+            if (team.conference === 'Eastern') {
+                easternTeamsList.appendChild(listItem);
+            } else if (team.conference === 'Western') {
+                westernTeamsList.appendChild(listItem);
+            }
+        });
     }
 
     window.navigateToTeam = navigateToTeam;
