@@ -110,11 +110,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             team.previousGoalSongs.forEach(song => {
                 const songItem = document.createElement('li');
                 let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
-                if (song.individualGoalSongs) {
-                    songItem.innerHTML = "Individual Goal Songs";
-                } else {
-                    songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
-                }
+                songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
                 songsList.appendChild(songItem);
             });
             document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
