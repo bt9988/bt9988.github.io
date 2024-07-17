@@ -1,9 +1,5 @@
 /* Global styles */
 
-.team-info h2 {
-    text-align: center;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -31,7 +27,9 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 12px 0px 2px 0px;
+    padding: 12px 0;
+    position: relative; /* Ensure header stays at the top */
+    z-index: 1000; /* Ensure header is above other content */
 }
 
 header .header-content {
@@ -39,7 +37,7 @@ header .header-content {
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    padding: 0 20px; /* Adjusted padding for better alignment */
+    padding: 0 20px;
 }
 
 header .logo {
@@ -49,27 +47,19 @@ header .logo {
 header nav {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
+    flex-wrap: wrap;
+    margin-left: auto; /* Push nav items to the right */
 }
 
 header .nav-link {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px; /* Adjusted margin for better spacing */
+    margin: 0 10px;
 }
 
 header .dropdown {
     position: relative;
     display: inline-block;
-}
-
-header .dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
 }
 
 header .dropdown-content {
@@ -83,7 +73,7 @@ header .dropdown-content {
 
 header .dropdown-content a {
     color: black;
-    padding: 5px 5px;
+    padding: 5px;
     font-size: 14px;
     text-decoration: none;
     display: block;
@@ -101,26 +91,29 @@ header .dropdown-content.show {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    width: 100%; /* Ensure container is responsive */
-    display: flex; /* Added to support flex layout */
-    flex-direction: row; /* Align sidebar and main content horizontally */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure space between sidebar and main content */
 }
 
 .sidebar {
-    width: 240px; /* Adjust sidebar width */
+    width: 240px;
     background-color: #333;
     color: #fff;
-    padding-top: 20px; /* Adjusted padding for better spacing */
+    padding-top: 20px;
+    position: sticky; /* Sticky sidebar */
+    top: 100px; /* Adjust based on your header height */
 }
 
 .main-content {
     background-color: #fff;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px 20px 20px;
-    flex: 1; /* Ensure the main content area grows to fill the available space */
-    margin-left: 20px; /* Added margin to separate sidebar and main content */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    padding: 20px;
+    flex: 1;
+    margin-left: 20px;
+    box-sizing: border-box;
 }
 
 .description {
@@ -129,15 +122,10 @@ header .dropdown-content.show {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-info {
     margin-top: 10px;
-}
-
-.team-info.individual-goal-songs-section #individual-songs-playlist {
-    margin-top: 10px; /* Add padding above Spotify playlist */
 }
 
 .team-buttons {
@@ -145,8 +133,7 @@ header .dropdown-content.show {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
-    width: 100%; /* Ensure team buttons are responsive */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: 100%;
 }
 
 .team-button {
@@ -163,34 +150,32 @@ header .dropdown-content.show {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
-    width: 120px; /* Adjust the size as needed */
-    height: 100px; /* Adjust the size as needed */
+    justify-content: center;
+    width: 120px;
+    height: 100px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
-    color: #888; /* Lighter grey for text color */
+    background-color: #f0f0f0;
+    color: #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-button img {
-    width: 35px; /* Adjust size of team logo */
+    width: 35px;
     height: 35px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border-radius: 0%;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button span {
     margin-top: 10px;
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold; /* Make the team name bold */
+    font-weight: bold;
 }
 
 footer {
@@ -198,7 +183,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px; /* Provide space between team-info section and footer */
+    margin-top: 20px;
 }
 
 footer p {
@@ -207,114 +192,19 @@ footer p {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack sidebar and main content on smaller screens */
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height on smaller screens */
-        padding-top: 20px; /* Reduced padding for smaller screens */
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        position: static; /* Static position for smaller screens */
     }
 
     .main-content {
-        margin-left: 0; /* Remove margin for main content on smaller screens */
-    }
-}
-
-/* Larger YouTube video */
-#youtube-video {
-    margin-top: 20px;
-}
-
-#youtube-iframe {
-    width: 100%; /* Full width */
-    height: 350px; /* Adjust height as needed */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-/* Responsive footer links */
-footer .team-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-footer .team-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin: 5px 0;
-}
-
-/* Additional styles for team page */
-.team-logo-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.team-logo {
-    max-width: 100px;
-}
-
-h2, .team-info p, .team-info ul {
-    color: var(--secondary-color);
-}
-
-/* Sidebar navigation styles */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 60px; /* Adjust to match your header height */
-    bottom: 0;
-    width: 240px; /* Adjust sidebar width */
-    background-color: #333;
-    color: #fff;
-    overflow-y: auto; /* Enable scrolling if sidebar height exceeds viewport */
-    z-index: 1000; /* Ensure sidebar is above other content */
-}
-
-.sidebar-header {
-    background-color: #222;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar li {
-    padding: 10px;
-}
-
-.sidebar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar a:hover {
-    background-color: #555;
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height on smaller screens */
-        padding-top: 20px; /* Reduced padding for smaller screens */
-    }
-
-    .sidebar-header {
-        position: static; /* Static position for smaller screens */
+        margin-left: 0;
     }
 }
