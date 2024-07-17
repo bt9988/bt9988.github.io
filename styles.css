@@ -208,7 +208,7 @@ footer p {
 }
 
 /* Responsive adjustments */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     header .logo {
         max-height: 50px; /* Adjust as needed for smaller screens */
     }
