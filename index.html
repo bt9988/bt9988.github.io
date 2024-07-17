@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949" crossorigin="anonymous"></script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey Goal Songs | Tracking Every NHL Goal Song</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-67F3BG6VWP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-67F3BG6VWP');
-</script>
-    
 <body>
     <header>
         <div class="header-content">
             <a href="index.html"><img src="hgs.png" alt="Hockey Goal Songs Logo" class="logo"></a>
-
         </div>
     </header>
-<main>
-    <div class="container">
-        <p class="description">
-            Welcome to Hockey Goal Songs, your definitive guide to the present and past goal anthems of NHL teams, curated for passionate hockey enthusiasts.
-        </p>
-        <div class="team-buttons">
-            <!-- Team buttons will be populated here by JavaScript -->
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <div class="sidebar-header">
+                <h3>Leagues</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#easternSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">EASTERN</a>
+                    <ul class="collapse list-unstyled" id="easternSubmenu">
+                        <!-- Eastern teams will be populated here by JavaScript -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="#westernSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">WESTERN</a>
+                    <ul class="collapse list-unstyled" id="westernSubmenu">
+                        <!-- Western teams will be populated here by JavaScript -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="container">
+            <p class="description">
+                Welcome to Hockey Goal Songs, your definitive guide to the present and past goal anthems of NHL teams, curated for passionate hockey enthusiasts.
+            </p>
+            <div class="team-buttons">
+                <!-- Team buttons will be populated here by JavaScript -->
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+
     <footer>
         <p>&copy; 2024 Hockey Goal Songs. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
