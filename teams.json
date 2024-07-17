@@ -1117,7 +1117,17 @@
             {
                 "name": "Hell Yeah",
                 "artist": "Rev Theory",
-                "years": ["2011-????"]
+                "years": ["2011-2015"]
+            },
+            {
+                "name": "Shout",
+                "artist": "The Isley Brothers",
+                "years": ["2015-2016"]
+            },
+            {
+                "name": "Jump",
+                "artist": "Van Halen",
+                "years": ["2016-2017"]
             }
         ],
         "currentGoalSong": {
