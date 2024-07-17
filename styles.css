@@ -327,7 +327,7 @@ h2, .team-info p, .team-info ul {
     text-decoration: none;
     font-size: 16px;
     display: block;
-    padding: 8px;
+    padding: 10px;
     transition: background-color 0.3s ease;
 }
 
