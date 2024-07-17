@@ -148,7 +148,33 @@
                 "name": "Started From the Bottom",
                 "artist": "Drake",
                 "spotifyID": "spotify_track_id_2"
-            }
+            },
+            {
+    "player": "JJ Peterka",
+    "name": "Freed From Desire",
+    "artist": "Gala Rizzatto"
+},
+{
+    "player": "Alex Tuch",
+    "name": "Heads Will Roll",
+    "artist": "Yeah Yeah Yeahs & A-Trak"
+},
+{
+    "player": "Dylan Cozens",
+    "name": "White Horse",
+    "artist": "Chris Stapleton"
+},
+{
+    "player": "Henri Jokiharju",
+    "name": "The Trooper",
+    "artist": "Iron Maiden"
+},
+{
+    "player": "Zach Benson",
+    "name": "Undefeated",
+    "artist": "charlieonnafriday"
+}
+
             
         ],
         "previousGoalSongs": [
