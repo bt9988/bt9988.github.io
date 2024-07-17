@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             setupTeamPage(teams);
         }
         populateSidebarTeams(teams); // Ensure sidebar navigation is populated
+        populateDropdown(teams); // Populate dropdown menu
     } catch (error) {
         console.error('Error fetching team data:', error);
         // Optionally handle the error here, e.g., display a message to the user
@@ -124,18 +125,27 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     }
 
-    function populateSidebarTeams(teams) {
+    function populateDropdown(teams) {
+        const dropdownMenu = document.querySelector('.dropdown-toggle');
+        if (!dropdownMenu) return; // Ensure the dropdown toggle element exists
+
+        const dropdownContent = document.querySelector('.collapse');
+        if (!dropdownContent) return; // Ensure the dropdown content element exists
+
         const easternTeams = teams.filter(team => team.conference === 'Eastern');
         const westernTeams = teams.filter(team => team.conference === 'Western');
 
         const easternSubmenu = document.getElementById('easternSubmenu');
         const westernSubmenu = document.getElementById('westernSubmenu');
 
+        easternSubmenu.innerHTML = ''; // Clear previous items
+        westernSubmenu.innerHTML = ''; // Clear previous items
+
         easternTeams.forEach(team => {
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.textContent = team.name;
-            a.href = `team.html?team=${encodeURIComponent(team.name)}`; // Example URL format
+            a.href = `team.html?team=${encodeURIComponent(team.name)}`;
             li.appendChild(a);
             easternSubmenu.appendChild(li);
         });
@@ -144,7 +154,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.textContent = team.name;
-            a.href = `team.html?team=${encodeURIComponent(team.name)}`; // Example URL format
+            a.href = `team.html?team=${encodeURIComponent(team.name)}`;
             li.appendChild(a);
             westernSubmenu.appendChild(li);
         });
