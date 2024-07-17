@@ -179,8 +179,8 @@ main {
 }
 
 .team-button img {
-    width: 30px; /* Adjust size of team logo */
-    height: 30px;
+    width: 35px; /* Adjust size of team logo */
+    height: 35px;
     margin-bottom: 0px;
     border-radius: 0%;
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
