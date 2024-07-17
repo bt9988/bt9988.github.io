@@ -287,3 +287,62 @@ footer .team-links a {
 h2, .team-info p, .team-info ul {
     color: var(--secondary-color);
 }
+
+/* Sidebar navigation styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 240px; /* Adjust sidebar width */
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto; /* Enable scrolling if sidebar height exceeds viewport */
+    padding-top: 60px; /* Space for header */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height on smaller screens */
+        padding-top: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .sidebar-header {
+        position: static; /* Static position for smaller screens */
+    }
+}
