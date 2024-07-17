@@ -102,13 +102,15 @@ header .dropdown-content.show {
     margin: 0 auto;
     padding: 20px;
     width: 100%; /* Ensure container is responsive */
+    display: flex; /* Added to support flex layout */
+    flex-direction: row; /* Align sidebar and main content horizontally */
 }
 
-main {
-    flex: 1; /* Ensure the main content area grows to fill the available space */
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Ensure main content is responsive */
+.sidebar {
+    width: 240px; /* Adjust sidebar width */
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px; /* Adjusted padding for better spacing */
 }
 
 .main-content {
@@ -117,14 +119,12 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px 20px 20px;
     flex: 1; /* Ensure the main content area grows to fill the available space */
-    max-width: 620px; /* Limit the width to 620px */
-    width: 100%; /* Ensure the content is responsive */
-    margin: 0 auto; /* Center the content */
+    margin-left: 20px; /* Added margin to separate sidebar and main content */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .description {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -208,43 +208,19 @@ footer p {
 }
 
 /* Responsive adjustments */
-@media (max-width: 500px) {
-    header .logo {
-        max-height: 50px; /* Adjust as needed for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and main content on smaller screens */
     }
 
-    .description {
-        font-size: 1rem;
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height on smaller screens */
+        padding-top: 20px; /* Reduced padding for smaller screens */
     }
 
-    .team-button {
-        padding: 10px;
-        margin: 5px;
-        width: 120px; /* Ensure team button is responsive */
-        height: 100px; /* Ensure team button is responsive */
-    }
-
-    header .dropdown-content {
-        position: fixed;
-        top: 50px; /* Adjust to match the height of your header */
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 50px); /* Full height minus the header */
-        background-color: #fff;
-        overflow-y: auto;
-        box-shadow: none;
-        display: none;
-        z-index: 1000;
-    }
-
-    header .dropdown-content a {
-        padding: 15px;
-        font-size: 18px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    header .dropdown-content.show {
-        display: block;
+    .main-content {
+        margin-left: 0; /* Remove margin for main content on smaller screens */
     }
 }
 
