@@ -24,9 +24,22 @@
     <header>
         <div class="header-content">
             <a href="index.html"><img src="hgs.png" alt="Hockey Goal Songs Logo" class="logo"></a>
-
         </div>
     </header>
+
+    <!-- Sidebar navigation -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <button type="button" class="sidebar-close">&times;</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="sidebar-title">EASTERN</li>
+            <ul id="eastern-teams"></ul>
+            <li class="sidebar-title">WESTERN</li>
+            <ul id="western-teams"></ul>
+        </ul>
+    </nav>
+
 <main>
     <div class="container">
         <p class="description">
@@ -37,9 +50,48 @@
         </div>
     </div>
 </main>
+
     <footer>
         <p>&copy; 2024 Hockey Goal Songs. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
+    <script>
+        // Function to open/close sidebar on mobile
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarClose = sidebar.querySelector('.sidebar-close');
+            const easternTeams = document.getElementById('eastern-teams');
+            const westernTeams = document.getElementById('western-teams');
+
+            // Populate sidebar with teams from teams.json
+            fetch('teams.json')
+                .then(response => response.json())
+                .then(teams => {
+                    teams.forEach(team => {
+                        const teamLink = document.createElement('a');
+                        teamLink.textContent = team.name;
+                        teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
+                        const listItem = document.createElement('li');
+                        listItem.appendChild(teamLink);
+                        if (team.conference === 'Eastern') {
+                            easternTeams.appendChild(listItem);
+                        } else if (team.conference === 'Western') {
+                            westernTeams.appendChild(listItem);
+                        }
+                    });
+                });
+
+            // Open sidebar when hamburger menu is clicked
+            document.querySelector('.header-content').addEventListener('click', function() {
+                sidebar.classList.add('active');
+            });
+
+            // Close sidebar when close button is clicked
+            sidebarClose.addEventListener('click', function() {
+                sidebar.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
