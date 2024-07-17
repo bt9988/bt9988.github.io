@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else if (isTeamPage()) {
             setupTeamPage(teams);
         }
-        populateDropdown(teams);
         populateSidebarTeams(teams); // Ensure sidebar navigation is populated
     } catch (error) {
         console.error('Error fetching team data:', error);
@@ -125,35 +124,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     }
 
-    function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        if (!dropdownContent) return; // Added null check to prevent errors
-
-        const dropdownHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
-        }).join('');
-        dropdownContent.innerHTML = dropdownHTML;
-    }
-
-    function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
-    }
-
-    window.navigateToTeam = navigateToTeam;
-
-    // Function to fetch teams data from teams.json
-    async function fetchTeamsData() {
-        try {
-            const response = await fetch('teams.json');
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error fetching teams data:', error);
-            throw error; // Propagate the error to handle it outside
-        }
-    }
-
-    // Function to populate EASTERN and WESTERN conference teams in the sidebar
     function populateSidebarTeams(teams) {
         const easternTeams = teams.filter(team => team.conference === 'Eastern');
         const westernTeams = teams.filter(team => team.conference === 'Western');
@@ -178,5 +148,22 @@ document.addEventListener("DOMContentLoaded", async function() {
             li.appendChild(a);
             westernSubmenu.appendChild(li);
         });
+    }
+
+    function navigateToTeam(teamName) {
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+    }
+
+    window.navigateToTeam = navigateToTeam;
+
+    async function fetchTeamsData() {
+        try {
+            const response = await fetch('teams.json');
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error fetching teams data:', error);
+            throw error;
+        }
     }
 });
