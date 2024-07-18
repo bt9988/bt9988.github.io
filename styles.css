@@ -23,7 +23,10 @@ body {
     --secondary-color: #000000; /* default secondary color */
 }
 
-
+body {
+    background-color: #f0f0f0; /* Keep the body background color neutral */
+    color: var(--secondary-color);
+}
 
 header {
     background-color: #333;
