@@ -949,17 +949,46 @@
         "individualGoalSongsPlaylist": "3fW5Y77XZvvJ9JTYxkN7US",
         "individualGoalSongsDetails": [
             {
-                "player": "Player 1",
-                "name": "Song 1",
-                "artist": "Artist 1",
-                "spotifyID": "spotify_track_id_1"
-            },
-            {
-                "player": "Player 2",
-                "name": "Song 2",
-                "artist": "Artist 2",
-                "spotifyID": "spotify_track_id_2"
-            }
+    "player": "Alex Ovechkin",
+    "name": "Shake, Rattle, and Roll",
+    "artist": "Big Joe Turner"
+},
+{
+    "player": "TJ Oshie",
+    "name": "Take Me Home, Country Roads",
+    "artist": "John Denver"
+},
+{
+    "player": "Dylan Strome",
+    "name": "The Middle",
+    "artist": "Jimmy Eat World"
+},
+{
+    "player": "Tom Wilson",
+    "name": "BOOM",
+    "artist": "Tiesto & Sevenn"
+},
+{
+    "player": "Sonny Milano",
+    "name": "The Hustle",
+    "artist": "Van McCoy"
+},
+{
+    "player": "Aliaksei Protas",
+    "name": "Thunder",
+    "artist": "Imagine Dragons"
+},
+{
+    "player": "Connor McMichael",
+    "name": "Let it Rock",
+    "artist": "Kevin Rudolf"
+},
+{
+    "player": "Matthew Phillips",
+    "name": "Home",
+    "artist": "Phillip Phillips"
+}
+
         ],
         "previousGoalSongs": [
             {
