@@ -1,35 +1,17 @@
 /* Global styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    color: #333; /* Main text color */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Ensure proper top margin for description on index.html */
-.index-container .description {
-    margin-top: 20px; /* Adjust this value as needed */
-}
 
 /* Sidebar styles */
 .sidebar {
     position: fixed;
     left: 0;
-    top: 60px; /* Adjust according to the height of your header */
+    top: 0;
     width: 250px; /* Adjust width as needed */
-    height: calc(100vh - 60px); /* Full height minus the header */
+    height: 100%; /* Full height of the viewport */
     background-color: #333; /* Background color for the sidebar */
     color: #fff; /* Text color */
     padding: 20px; /* Padding around the content */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
     overflow-y: auto; /* Scroll if content exceeds viewport height */
-    z-index: 1000; /* Ensure sidebar is above other content */
 }
 
 .sidebar-nav ul {
@@ -55,30 +37,41 @@ body {
     background-color: #555; /* Background color on hover */
 }
 
-/* Adjust main content to accommodate the sidebar */
-.container {
-    margin-left: 270px; /* Space for sidebar + some extra padding */
-    max-width: calc(100% - 270px); /* Ensure container width adjusts for sidebar */
-    padding: 20px; /* Padding inside the container */
+
+
+
+.team-info h2 {
+    text-align: center;
 }
 
-/* Center content on index.html */
-.index-container {
-    margin: 0 auto;
-    max-width: 960px; /* Ensure it does not exceed 960px width */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Main text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Fixed header styles */
+/* Team-specific colors */
+:root {
+    --primary-color: #ffffff; /* default primary color */
+    --secondary-color: #000000; /* default secondary color */
+}
+
+body {
+    background-color: #f0f0f0; /* Keep the body background color neutral */
+    color: var(--secondary-color);
+}
+
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 12px 0px 2px 0px;
-    z-index: 1000; /* Ensure header stays above other content */
-    box-sizing: border-box;
 }
 
 header .header-content {
@@ -144,20 +137,25 @@ header .dropdown-content.show {
     display: block;
 }
 
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; /* Ensure container is responsive */
+}
+
 main {
     flex: 1; /* Ensure the main content area grows to fill the available space */
     display: flex;
     justify-content: center;
     width: 100%; /* Ensure main content is responsive */
-    margin-top: 60px; /* Adjust to account for the fixed header height */
 }
 
-/* Ensure main content is not hidden behind the fixed header */
 .main-content {
     background-color: #fff;
     border-left: 15px solid var(--primary-color); /* Left border */
-    border-right: 15px solid var(--primary-color"); /* Right border */
-    border-bottom: 15px solid var(--primary-color"); /* Bottom border */
+    border-right: 15px solid var(--primary-color); /* Right border */
+    border-bottom: 15px solid var(--primary-color); /* Bottom border */
     border-top: none; /* No top border */
     border-radius: 0px; /* Keep rounded corners for the rest */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -167,11 +165,6 @@ main {
     width: 100%; /* Ensure the content is responsive */
     margin: 0 auto; /* Center the content */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-/* Adjust top margin for main content on team.html */
-.team-info {
-    margin-top: 20px; /* Add padding above the content to prevent it from being hidden by the fixed header */
 }
 
 .description {
@@ -258,6 +251,7 @@ footer p {
     font-family: 'Roboto', sans-serif;
 }
 
+
 /* Hide sidebar on small screens */
 @media (max-width: 768px) {
     .sidebar {
@@ -265,30 +259,34 @@ footer p {
     }
 }
 
+
+
 /* Responsive adjustments */
 @media (max-width: 500px) {
-    .team-button span {
-        margin-top: 7px;
-        font-size: 0.9rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold; /* Make the team name bold */
-    }
+  .team-button span {
+    margin-top: 7px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Make the team name bold */
+}
 
     .description {
-        padding: 15px 15px 15px 15px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 15px;
-        text-align: center;
-        box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    }
-
+    padding: 15px 15px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+    
     .main-content {
-        border-left: 0px solid var(--primary-color); /* Left border */
-        border-right: 0px solid var(--primary-color); /* Right border */
-        border-bottom: 0px solid var(--primary-color); /* Bottom border */
-    }
 
+    border-left: 0px solid var(--primary-color); /* Left border */
+    border-right: 0px solid var(--primary-color); /* Right border */
+    border-bottom: 0px solid var(--primary-color); /* Bottom border */
+  
+}
+    
     header .logo {
         max-height: 50px; /* Adjust as needed for smaller screens */
     }
