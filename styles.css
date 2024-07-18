@@ -12,7 +12,6 @@
     padding: 20px; /* Padding around the content */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
     overflow-y: auto; /* Scroll if content exceeds viewport height */
-    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .sidebar-nav ul {
@@ -38,22 +37,11 @@
     background-color: #555; /* Background color on hover */
 }
 
-/* Push main content to the right */
-.container {
-    margin-left: 250px; /* Width of the sidebar */
-    max-width: calc(100% - 250px); /* Ensure container adjusts based on sidebar width */
-    transition: margin-left 0.3s ease; /* Smooth transition */
-}
 
-@media (max-width: 768px) {
-    .sidebar {
-        display: none; /* Hide the sidebar on screens smaller than 768px */
-    }
-    
-    .container {
-        margin-left: 0; /* Remove left margin on smaller screens */
-        max-width: 100%; /* Full width */
-    }
+
+
+.team-info h2 {
+    text-align: center;
 }
 
 body {
@@ -147,6 +135,13 @@ header .dropdown-content a:hover {
 
 header .dropdown-content.show {
     display: block;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%; /* Ensure container is responsive */
 }
 
 main {
@@ -262,29 +257,111 @@ footer p {
     .sidebar {
         display: none; /* Hide the sidebar on screens smaller than 768px */
     }
-    
-    .container {
-        margin-left: 0; /* Remove left margin on smaller screens */
-        max-width: 100%; /* Full width */
-    }
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
-    .team-button span {
-        margin-top: 7px;
-        font-size: 0.9rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold; /* Make the team name bold */
+  .team-button span {
+    margin-top: 7px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Make the team name bold */
+}
+
+    .description {
+    padding: 15px 15px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+    
+    .main-content {
+
+    border-left: 0px solid var(--primary-color); /* Left border */
+    border-right: 0px solid var(--primary-color); /* Right border */
+    border-bottom: 0px solid var(--primary-color); /* Bottom border */
+  
+}
+    
+    header .logo {
+        max-height: 50px; /* Adjust as needed for smaller screens */
     }
 
-    .team-button img {
-        width: 30px; /* Adjust size of team logo */
-        height: 30px;
+    .description {
+        font-size: 1rem;
     }
 
-    .team-info .description {
-        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    .team-button {
+        padding: 10px;
+        margin: 5px;
+        width: 120px; /* Ensure team button is responsive */
+        height: 100px; /* Ensure team button is responsive */
+    }
+
+    header .dropdown-content {
+        position: fixed;
+        top: 50px; /* Adjust to match the height of your header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 50px); /* Full height minus the header */
+        background-color: #fff;
+        overflow-y: auto;
+        box-shadow: none;
+        display: none;
+        z-index: 1000;
+    }
+
+    header .dropdown-content a {
+        padding: 15px;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    header .dropdown-content.show {
+        display: block;
     }
 }
 
+/* Larger YouTube video */
+#youtube-video {
+    margin-top: 20px;
+}
+
+#youtube-iframe {
+    width: 100%; /* Full width */
+    height: 350px; /* Adjust height as needed */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Responsive footer links */
+footer .team-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .team-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+/* Additional styles for team page */
+.team-logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.team-logo {
+    max-width: 100px;
+}
+
+h2, .team-info p, .team-info ul {
+    color: var(--secondary-color);
+}
