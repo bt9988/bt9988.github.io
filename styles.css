@@ -12,6 +12,12 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Ensure proper top margin for description on index.html */
+.index-container .description {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+
 /* Sidebar styles */
 .sidebar {
     position: fixed;
