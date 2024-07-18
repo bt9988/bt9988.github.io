@@ -987,7 +987,54 @@
     "player": "Matthew Phillips",
     "name": "Home",
     "artist": "Phillip Phillips"
+},
+            {
+    "player": "Conor Sheary",
+    "name": "Sherry",
+    "artist": "Frankie Valli and the Four Seasons"
+},
+{
+    "player": "Evgeny Kuznetsov",
+    "name": "Till’ I Collapse",
+    "artist": "Eminem"
+},
+{
+    "player": "Trevor van Riemsdyk",
+    "name": "Born To Run",
+    "artist": "Bruce Springsteen"
+},
+{
+    "player": "Marcus Johansson",
+    "name": "Soul Bossa Nova",
+    "artist": "Quincy Jones"
+},
+{
+    "player": "Lars Eller",
+    "name": "Eye Of The Tiger",
+    "artist": "Survivor"
+},
+{
+    "player": "Garnet Hathaway",
+    "name": "What Is Love",
+    "artist": "Haddaway"
+},
+{
+    "player": "Nic Dowd",
+    "name": "You Can Call Me Al",
+    "artist": "Paul Simon"
+},
+{
+    "player": "Dmitry Orlov",
+    "name": "Numb",
+    "artist": "Linkin Park"
+},
+            {
+    "player": "John Carlson",
+    "name": "Johnny B. Goode",
+    "artist": "Chuck Berry"
 }
+
+
 
         ],
         "previousGoalSongs": [
