@@ -113,9 +113,9 @@ main {
 
 .main-content {
     background-color: #fff;
-    border-left: 10px solid var(--primary-color); /* Left border */
-    border-right: 10px solid var(--primary-color); /* Right border */
-    border-bottom: 10px solid var(--primary-color); /* Bottom border */
+    border-left: 15px solid var(--primary-color); /* Left border */
+    border-right: 15px solid var(--primary-color); /* Right border */
+    border-bottom: 15px solid var(--primary-color); /* Bottom border */
     border-top: none; /* No top border */
     border-radius: 0px; /* Keep rounded corners for the rest */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -290,4 +290,12 @@ footer .team-links a {
 
 h2, .team-info p, .team-info ul {
     color: var(--secondary-color);
+}
+
+.main-content {
+
+    border-left: 0px solid var(--primary-color); /* Left border */
+    border-right: 0px solid var(--primary-color); /* Right border */
+    border-bottom: 0px solid var(--primary-color); /* Bottom border */
+  
 }
