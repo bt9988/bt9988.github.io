@@ -1,5 +1,9 @@
 /* Global styles */
 
+.team-info h2 {
+    text-align: center;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -27,17 +31,15 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 12px 0;
-    position: relative; /* Ensure header stays at the top */
-    z-index: 1000; /* Ensure header is above other content */
+    padding: 12px 0px 2px 0px;
 }
 
 header .header-content {
     display: flex;
-    justify-content: space-between; /* Adjusted for better alignment */
+    justify-content: center;
     align-items: center;
     font-size: 14px;
-    padding: 0 20px;
+    padding: 0 20px; /* Adjusted padding for better alignment */
 }
 
 header .logo {
@@ -47,39 +49,27 @@ header .logo {
 header nav {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-left: auto; /* Push nav items to the right */
+    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
 }
 
-header .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header .nav-links li {
-    margin-right: 15px;
-}
-
-header .nav-links li:last-child {
-    margin-right: 0;
-}
-
-header .nav-links a {
+header .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-header .nav-links a:hover {
-    color: #f1f1f1;
+    margin: 0 10px; /* Adjusted margin for better spacing */
 }
 
 header .dropdown {
     position: relative;
     display: inline-block;
+}
+
+header .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
 }
 
 header .dropdown-content {
@@ -93,7 +83,7 @@ header .dropdown-content {
 
 header .dropdown-content a {
     color: black;
-    padding: 5px;
+    padding: 5px 5px;
     font-size: 14px;
     text-decoration: none;
     display: block;
@@ -103,7 +93,7 @@ header .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-header .dropdown:hover .dropdown-content {
+header .dropdown-content.show {
     display: block;
 }
 
@@ -111,68 +101,43 @@ header .dropdown:hover .dropdown-content {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    width: 100%;
+    width: 100%; /* Ensure container is responsive */
+}
+
+main {
+    flex: 1; /* Ensure the main content area grows to fill the available space */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Ensure space between sidebar and main content */
-}
-
-.sidebar {
-    width: 240px;
-    background-color: #333;
-    color: #fff;
-    padding-top: 20px;
-    position: sticky; /* Sticky sidebar */
-    top: 100px; /* Adjust based on your header height */
-}
-
-.sidebar-header {
-    background-color: #222;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.sidebar-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-nav li {
-    padding: 10px;
-}
-
-.sidebar-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar-nav a:hover {
-    background-color: #555;
+    justify-content: center;
+    width: 100%; /* Ensure main content is responsive */
 }
 
 .main-content {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex: 1;
-    margin-left: 20px;
-    box-sizing: border-box;
+    padding: 10px 20px 20px 20px;
+    flex: 1; /* Ensure the main content area grows to fill the available space */
+    max-width: 620px; /* Limit the width to 620px */
+    width: 100%; /* Ensure the content is responsive */
+    margin: 0 auto; /* Center the content */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .description {
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.team-info {
+    margin-top: 10px;
+}
+
+.team-info.individual-goal-songs-section #individual-songs-playlist {
+    margin-top: 10px; /* Add padding above Spotify playlist */
 }
 
 .team-buttons {
@@ -180,7 +145,8 @@ header .dropdown:hover .dropdown-content {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
-    width: 100%;
+    width: 100%; /* Ensure team buttons are responsive */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button {
@@ -197,32 +163,34 @@ header .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 100px;
+    justify-content: center; /* Center content vertically */
+    width: 120px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button:hover {
-    background-color: #f0f0f0;
-    color: #888;
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #888; /* Lighter grey for text color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-button img {
-    width: 35px;
+    width: 35px; /* Adjust size of team logo */
     height: 35px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     border-radius: 0%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-button span {
     margin-top: 10px;
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-weight: bold; /* Make the team name bold */
 }
 
 footer {
@@ -230,7 +198,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 20px; /* Provide space between team-info section and footer */
 }
 
 footer p {
@@ -239,19 +207,83 @@ footer p {
     font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    header .logo {
+        max-height: 50px; /* Adjust as needed for smaller screens */
     }
 
-    .sidebar {
+    .description {
+        font-size: 1rem;
+    }
+
+    .team-button {
+        padding: 10px;
+        margin: 5px;
+        width: 120px; /* Ensure team button is responsive */
+        height: 100px; /* Ensure team button is responsive */
+    }
+
+    header .dropdown-content {
+        position: fixed;
+        top: 50px; /* Adjust to match the height of your header */
+        left: 0;
         width: 100%;
-        height: auto;
-        padding-top: 20px;
-        position: static; /* Static position for smaller screens */
+        height: calc(100vh - 50px); /* Full height minus the header */
+        background-color: #fff;
+        overflow-y: auto;
+        box-shadow: none;
+        display: none;
+        z-index: 1000;
     }
 
-    .main-content {
-        margin-left: 0;
+    header .dropdown-content a {
+        padding: 15px;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
     }
+
+    header .dropdown-content.show {
+        display: block;
+    }
+}
+
+/* Larger YouTube video */
+#youtube-video {
+    margin-top: 20px;
+}
+
+#youtube-iframe {
+    width: 100%; /* Full width */
+    height: 350px; /* Adjust height as needed */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Responsive footer links */
+footer .team-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .team-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+/* Additional styles for team page */
+.team-logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.team-logo {
+    max-width: 100px;
+}
+
+h2, .team-info p, .team-info ul {
+    color: var(--secondary-color);
 }
