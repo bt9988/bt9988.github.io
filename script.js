@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         } else if (isTeamPage()) {
             setupTeamPage(teams);
         }
-        
+        populateDropdown(teams);
+    } catch (error) {
+        console.error('Error fetching team data:', error);
+    }
 
     function isIndexPage() {
         return window.location.pathname === '/index.html' || window.location.pathname === '/';
