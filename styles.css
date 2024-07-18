@@ -57,10 +57,16 @@ body {
     padding: 20px; /* Padding inside the container */
 }
 
+/* Fixed header styles */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 12px 0px 2px 0px;
+    z-index: 1000; /* Ensure header stays above other content */
 }
 
 header .header-content {
@@ -126,18 +132,12 @@ header .dropdown-content.show {
     display: block;
 }
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%; /* Ensure container is responsive */
-}
-
 main {
     flex: 1; /* Ensure the main content area grows to fill the available space */
     display: flex;
     justify-content: center;
     width: 100%; /* Ensure main content is responsive */
+    margin-top: 60px; /* Adjust to account for the fixed header height */
 }
 
 .main-content {
@@ -264,13 +264,13 @@ footer p {
         text-align: center;
         box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
     }
-    
+
     .main-content {
         border-left: 0px solid var(--primary-color); /* Left border */
         border-right: 0px solid var(--primary-color); /* Right border */
         border-bottom: 0px solid var(--primary-color); /* Bottom border */
     }
-    
+
     header .logo {
         max-height: 50px; /* Adjust as needed for smaller screens */
     }
