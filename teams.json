@@ -301,33 +301,34 @@
             "inUseSince": "2017"
         },
         "previousGoalSongs": [
-            {
-                "name": "Rock and Roll, Part 2",
-                "artist": "Gary Glitter",
-                "years": ["1996-2006","2007-2011"]
-            },
-            {
-                "name": "Song 2",
-                "artist": "Blur",
-                "years": ["2006-2007"]                
-            },
-{
-                "name": "Rock and Roll, Part 2 + The Whip",
-                "artist": "Gary Glitter + Locksley",
-                "years": ["2011-2015"]                
-            },
+            [
+    {
+        "name": "Delirious",
+        "artist": "Steve Aoki",
+        "years": ["2016-2017"]
+    },
+    {
+        "name": "Born To Rage",
+        "artist": "Dada",
+        "years": ["2015-2016"]
+    },
+    {
+        "name": "Rock and Roll, Part 2 + The Whip",
+        "artist": "Gary Glitter + Locksley",
+        "years": ["2011-2015"]
+    },
+    {
+        "name": "Song 2",
+        "artist": "Blur",
+        "years": ["2006-2007"]
+    },
+    {
+        "name": "Rock and Roll, Part 2",
+        "artist": "Gary Glitter",
+        "years": ["1996-2006", "2007-2011"]
+    }
+]
 
-            
-            {
-                "name": "Born To Rage",
-                "artist": "Dada",
-                "years": ["2015-2016"]                
-            },
-            {
-                "name": "Delirious",
-                "artist": "Steve Aoki",
-                "years": ["2016-2017"]                
-            }
             
         ]
     },
@@ -343,16 +344,6 @@
             "youtubeID": "O4UT57_7gsA"
         },
         "previousGoalSongs": [
-            {
-                "name": "Bro Hymn 2",
-                "artist": "Pennywise 2",
-                "years": [2021, 2020, 2019]
-            },
-            {
-                "name": "Bro Hymn 3",
-                "artist": "Pennywise 3",
-                "years": [1985, 1999, 1988]                
-            }
         ]
     },
     {
@@ -368,16 +359,19 @@
             
         },
         "previousGoalSongs": [
-            {
-                "name": "Rock and Roll, Part 2",
-                "artist": "Gary Glitter",
-                "years": ["1992-2011"]
-            },
-            {
-                "name": "The Whip",
-                "artist": "Locksley",
-                "years": ["2011-2013"]
-            }
+            [
+    {
+        "name": "The Whip",
+        "artist": "Locksley",
+        "years": ["2011-2013"]
+    },
+    {
+        "name": "Rock and Roll, Part 2",
+        "artist": "Gary Glitter",
+        "years": ["1992-2011"]
+    }
+]
+
         ]
     },
     {
@@ -499,20 +493,22 @@
         },
         "previousGoalSongs": [
             {
-               "name": "Crowd Chant",
-                "artist": "Joe Satriani",
-                "years": ["2000-2016", "2018-2020"]  
+                "name": "Jump Around",
+                "artist": "House of Pain",
+                "years": ["2021-2022"]            
             },
+            ,
             {
                 "name": "Let's Go Crazy",
                 "artist": "Prince",
                 "years": ["2016-2018"]
             },
             {
-                "name": "Jump Around",
-                "artist": "House of Pain",
-                "years": ["2021-2022"]            
+               "name": "Crowd Chant",
+                "artist": "Joe Satriani",
+                "years": ["2000-2016", "2018-2020"]  
             }
+            
         ]
     },
     {
@@ -765,11 +761,7 @@
             "spotifyID": "5Nl1flfIHQCG8pyY4gnWU9"
         },
         "previousGoalSongs": [
-            {
-                "name": "Rock and Roll, Part 2",
-                "artist": "Gary Glitter",
-                "years": ["2001-2005","2006-2015"]
-            },
+            
 
                 {
                 "name": "Let’s Go",
@@ -781,6 +773,11 @@
                 "name": "Holiday",
                 "artist": "Green Day",
                 "years": ["2005-2006"]                
+            },
+            {
+                "name": "Rock and Roll, Part 2",
+                "artist": "Gary Glitter",
+                "years": ["2001-2005","2006-2015"]
             }
         ]
     },
@@ -1190,21 +1187,24 @@
 
         ],
         "previousGoalSongs": [
-            {
-                "name": "Hell Yeah",
-                "artist": "Rev Theory",
-                "years": ["2011-2015"]
-            },
-            {
-                "name": "Shout",
-                "artist": "The Isley Brothers",
-                "years": ["2015-2016"]
-            },
-            {
-                "name": "Jump",
-                "artist": "Van Halen",
-                "years": ["2016-2017"]
-            }
+            [
+    {
+        "name": "Jump",
+        "artist": "Van Halen",
+        "years": ["2016-2017"]
+    },
+    {
+        "name": "Shout",
+        "artist": "The Isley Brothers",
+        "years": ["2015-2016"]
+    },
+    {
+        "name": "Hell Yeah",
+        "artist": "Rev Theory",
+        "years": ["2011-2015"]
+    }
+]
+
         ],
         "currentGoalSong": {
             "name": "Current Song",
