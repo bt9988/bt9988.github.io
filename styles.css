@@ -1,45 +1,5 @@
 /* Global styles */
 
-/* Sidebar styles */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px; /* Adjust width as needed */
-    height: 100%; /* Full height of the viewport */
-    background-color: #333; /* Background color for the sidebar */
-    color: #fff; /* Text color */
-    padding: 20px; /* Padding around the content */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
-    overflow-y: auto; /* Scroll if content exceeds viewport height */
-}
-
-.sidebar-nav ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-nav ul li {
-    margin: 15px 0; /* Space between items */
-}
-
-.sidebar-nav a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1rem; /* Font size */
-    display: block; /* Make the links block-level for better click area */
-    padding: 10px; /* Padding inside the link */
-    border-radius: 5px; /* Rounded corners for links */
-}
-
-.sidebar-nav a:hover {
-    background-color: #555; /* Background color on hover */
-}
-
-
-
-
 .team-info h2 {
     text-align: center;
 }
@@ -250,16 +210,6 @@ footer p {
     font-size: 0.8rem;
     font-family: 'Roboto', sans-serif;
 }
-
-
-/* Hide sidebar on small screens */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none; /* Hide the sidebar on screens smaller than 768px */
-    }
-}
-
-
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
