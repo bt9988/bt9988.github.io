@@ -113,9 +113,9 @@ main {
 
 .main-content {
     background-color: #fff;
-    border-left: 8px solid var(--secondary-color); /* Outer left border */
-    border-right: 8px solid var(--secondary-color); /* Outer right border */
-    border-bottom: 8px solid var(--secondary-color); /* Outer bottom border */
+    border-left: 15px solid var(--primary-color); /* Left border */
+    border-right: 15px solid var(--primary-color); /* Right border */
+    border-bottom: 15px solid var(--primary-color); /* Bottom border */
     border-top: none; /* No top border */
     border-radius: 0px; /* Keep rounded corners for the rest */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -125,24 +125,6 @@ main {
     width: 100%; /* Ensure the content is responsive */
     margin: 0 auto; /* Center the content */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    position: relative; /* Allow positioning of the inner border */
-    z-index: 1; /* Ensure it's above other content */
-}
-
-.main-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-left: 10px solid var(--primary-color); /* Inner left border */
-    border-right: 10px solid var(--primary-color); /* Inner right border */
-    border-bottom: 10px solid var(--primary-color); /* Inner bottom border */
-    border-top: none; /* No top border */
-    border-radius: 0px; /* Keep rounded corners for the rest */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    z-index: -1; /* Place behind the content */
 }
 
 .description {
@@ -308,4 +290,12 @@ footer .team-links a {
 
 h2, .team-info p, .team-info ul {
     color: var(--secondary-color);
+}
+
+.main-content {
+
+    border-left: 0px solid var(--primary-color); /* Left border */
+    border-right: 0px solid var(--primary-color); /* Right border */
+    border-bottom: 0px solid var(--primary-color); /* Bottom border */
+  
 }
