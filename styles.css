@@ -57,6 +57,12 @@ body {
     padding: 20px; /* Padding inside the container */
 }
 
+/* Center content on index.html */
+.index-container {
+    margin: 0 auto;
+    max-width: 960px; /* Ensure it does not exceed 960px width */
+}
+
 /* Fixed header styles */
 header {
     position: fixed;
@@ -67,6 +73,7 @@ header {
     color: #fff;
     padding: 12px 0px 2px 0px;
     z-index: 1000; /* Ensure header stays above other content */
+    box-sizing: border-box;
 }
 
 header .header-content {
@@ -140,6 +147,7 @@ main {
     margin-top: 60px; /* Adjust to account for the fixed header height */
 }
 
+/* Ensure main content is not hidden behind the fixed header */
 .main-content {
     background-color: #fff;
     border-left: 15px solid var(--primary-color); /* Left border */
