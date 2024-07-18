@@ -191,7 +191,7 @@ main {
 }
 
 .team-button span {
-    margin-top: 7px;
+    margin-top: 10px;
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold; /* Make the team name bold */
@@ -213,30 +213,6 @@ footer p {
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
-  .team-button span {
-    margin-top: 7px;
-    font-size: 0.9rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold; /* Make the team name bold */
-}
-
-    .description {
-    padding: 15px 15px 15px 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-    
-    .main-content {
-
-    border-left: 0px solid var(--primary-color); /* Left border */
-    border-right: 0px solid var(--primary-color); /* Right border */
-    border-bottom: 0px solid var(--primary-color); /* Bottom border */
-  
-}
-    
     header .logo {
         max-height: 50px; /* Adjust as needed for smaller screens */
     }
@@ -314,4 +290,12 @@ footer .team-links a {
 
 h2, .team-info p, .team-info ul {
     color: var(--secondary-color);
+}
+
+.main-content {
+
+    border-left: 0px solid var(--primary-color); /* Left border */
+    border-right: 0px solid var(--primary-color); /* Right border */
+    border-bottom: 0px solid var(--primary-color); /* Bottom border */
+  
 }
