@@ -213,7 +213,14 @@ footer p {
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
-   .main-content {
+  .team-button span {
+    margin-top: 17px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Make the team name bold */
+}
+    
+    .main-content {
 
     border-left: 0px solid var(--primary-color); /* Left border */
     border-right: 0px solid var(--primary-color); /* Right border */
