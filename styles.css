@@ -24,7 +24,7 @@ body {
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: #f0f0f0; /* Keep the body background color neutral */
     color: var(--secondary-color);
 }
 
@@ -113,7 +113,8 @@ main {
 
 .main-content {
     background-color: #fff;
-    border-radius: 0px 0px 5px 5px;
+    border: 5px solid var(--primary-color); /* Add border with primary color */
+    border-radius: 5px; /* Adjust radius for rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px 20px 20px;
     flex: 1; /* Ensure the main content area grows to fill the available space */
