@@ -117,7 +117,7 @@ main {
     border-right: 10px solid var(--primary-color); /* Right border */
     border-bottom: 10px solid var(--primary-color); /* Bottom border */
     border-top: none; /* No top border */
-    border-radius: 5px; /* Keep rounded corners for the rest */
+    border-radius: 0px; /* Keep rounded corners for the rest */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px 20px 20px;
     flex: 1; /* Ensure the main content area grows to fill the available space */
