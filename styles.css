@@ -17,7 +17,6 @@ body {
     margin-top: 20px; /* Adjust this value as needed */
 }
 
-
 /* Sidebar styles */
 .sidebar {
     position: fixed;
@@ -157,8 +156,8 @@ main {
 .main-content {
     background-color: #fff;
     border-left: 15px solid var(--primary-color); /* Left border */
-    border-right: 15px solid var(--primary-color); /* Right border */
-    border-bottom: 15px solid var(--primary-color); /* Bottom border */
+    border-right: 15px solid var(--primary-color"); /* Right border */
+    border-bottom: 15px solid var(--primary-color"); /* Bottom border */
     border-top: none; /* No top border */
     border-radius: 0px; /* Keep rounded corners for the rest */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -168,6 +167,11 @@ main {
     width: 100%; /* Ensure the content is responsive */
     margin: 0 auto; /* Center the content */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Adjust top margin for main content on team.html */
+.team-info {
+    margin-top: 20px; /* Add padding above the content to prevent it from being hidden by the fixed header */
 }
 
 .description {
