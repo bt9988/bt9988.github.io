@@ -34,7 +34,7 @@ header {
 
 header .header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Adjusted for better alignment */
     align-items: center;
     font-size: 14px;
     padding: 0 20px;
@@ -51,10 +51,30 @@ header nav {
     margin-left: auto; /* Push nav items to the right */
 }
 
-header .nav-link {
+header .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-right: 15px;
+}
+
+header .nav-links li:last-child {
+    margin-right: 0;
+}
+
+header .nav-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #f1f1f1;
 }
 
 header .dropdown {
@@ -83,7 +103,7 @@ header .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-header .dropdown-content.show {
+header .dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -106,6 +126,37 @@ header .dropdown-content.show {
     top: 100px; /* Adjust based on your header height */
 }
 
+.sidebar-header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px;
+}
+
+.sidebar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: #555;
+}
+
 .main-content {
     background-color: #fff;
     border-radius: 5px;
@@ -122,10 +173,6 @@ header .dropdown-content.show {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     text-align: center;
-}
-
-.team-info {
-    margin-top: 10px;
 }
 
 .team-buttons {
