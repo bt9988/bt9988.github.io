@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949" crossorigin="anonymous"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Goal Songs</title>
+    <title>Team Page | Hockey Goal Songs | Tracking Every NHL Goal Song</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#team1">Team 1</a></li>
-                <li><a href="#team2">Team 2</a></li>
-                <li><a href="#team3">Team 3</a></li>
-                <!-- Add more team links as needed -->
-            </ul>
-        </nav>
-    </div>
-    
     <header>
         <div class="header-content">
             <a href="index.html"><img src="hgs.png" alt="Hockey Goal Songs Logo" class="logo"></a>
@@ -25,25 +16,43 @@
     </header>
 
     <div class="container main-content">
-        <div class="team-info" id="team1">
-            <h2>Team 1</h2>
-            <div class="description">
-                <p>Description of Team 1's goal songs.</p>
+        <section class="team-info individual-goal-songs-section">
+            <h2>Individual Goal Songs</h2>
+            <div id="individual-songs-info">
+                <!-- Info about individual goal songs will be populated here -->
+            </div>
+            <div id="individual-songs">
+                <!-- Individual goal songs will be populated here -->
             </div>
             <div id="individual-songs-playlist">
-                <!-- Embed Spotify playlist or similar -->
+                <!-- Spotify playlist for individual goal songs will be embedded here -->
             </div>
-            <div class="team-buttons">
-                <div class="team-button">
-                    <img src="team1-logo.png" alt="Team 1 Logo">
-                    <span>Team 1</span>
-                </div>
-                <!-- Add more team buttons as needed -->
-            </div>
-        </div>
+        </section>
 
-        <!-- Repeat the above block for other teams -->
-        
+        <section class="team-info current-goal-song-section">
+            <h2 id="team-name-with-song">Goal Song</h2>
+
+            <div id="current-song">
+                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder"></span></strong> is "<span id="song-name"></span>" by <span id="artist-name"></span>. <span id="in-use-since"></span></p>
+            </div>
+
+            <div id="youtube-video">
+                <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Spotify Embed -->
+            <div id="spotify-player">
+                <iframe id="spotify-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="team-info">
+            <h2 id="team-name-with-song">Goal Song History</h2>
+            <div id="previous-songs">
+                <p id="previous-songs-header"></p>
+                <!-- Previous songs will be populated here -->
+            </div>
+        </section>
     </div>
 
     <footer>
