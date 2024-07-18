@@ -213,6 +213,14 @@ footer p {
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
+   .main-content {
+
+    border-left: 0px solid var(--primary-color); /* Left border */
+    border-right: 0px solid var(--primary-color); /* Right border */
+    border-bottom: 0px solid var(--primary-color); /* Bottom border */
+  
+}
+    
     header .logo {
         max-height: 50px; /* Adjust as needed for smaller screens */
     }
@@ -292,10 +300,4 @@ h2, .team-info p, .team-info ul {
     color: var(--secondary-color);
 }
 
-.main-content {
 
-    border-left: 0px solid var(--primary-color); /* Left border */
-    border-right: 0px solid var(--primary-color); /* Right border */
-    border-bottom: 0px solid var(--primary-color); /* Bottom border */
-  
-}
