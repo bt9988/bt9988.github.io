@@ -1166,7 +1166,7 @@
 
         ],
         "previousGoalSongs": [
-            [
+            
     {
         "name": "Jump",
         "artist": "Van Halen",
@@ -1181,8 +1181,7 @@
         "name": "Hell Yeah",
         "artist": "Rev Theory",
         "years": ["2011-2015"]
-    }
-]
+    }]
 
         ],
         "currentGoalSong": {
