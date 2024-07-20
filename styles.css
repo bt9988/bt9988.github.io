@@ -1,5 +1,42 @@
 /* Global styles */
 
+/* Add this to your existing styles */
+
+/* Style for the team header */
+.team-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.team-logo {
+    max-height: 50px; /* Adjust as needed */
+    margin-right: 15px; /* Space between logo and team name */
+}
+
+.team-name {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: var(--secondary-color); /* Use the secondary color defined in :root */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .team-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-logo {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between logo and team name on small screens */
+    }
+}
+
+
+
+
+
 .team-info h2 {
     text-align: center;
 }
