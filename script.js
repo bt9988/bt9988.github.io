@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
             previousSongsContainer.appendChild(songsList);
         } else {
-            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for <strong>${team.name}</strong>.`;
+            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for the <strong>${team.name}</strong>.`;
         }
     }
 
