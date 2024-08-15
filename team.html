@@ -7,6 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Page | Hockey Goal Songs | Tracking Every NHL Goal Song</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .back-button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #007BFF; /* Blue background */
+            color: white; /* White text */
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,6 +42,8 @@
     </header>
 
     <div class="container main-content">
+        <a class="back-button" onclick="goBack()">← Back</a>
+
         <section class="team-info individual-goal-songs-section">
             <h2>Individual Goal Songs</h2>
             <div id="individual-songs-info">
@@ -59,6 +87,11 @@
         <p>&copy; 2024 Hockey Goal Songs. All rights reserved.</p>
     </footer>
 
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
