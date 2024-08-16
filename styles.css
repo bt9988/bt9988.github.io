@@ -98,6 +98,16 @@ header .logo {
     background-color: #555;
 }
 
+/* Description */
+.description {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 /* Footer */
 footer {
     background-color: #333;
@@ -177,15 +187,6 @@ footer p {
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
 }
 
 /* Responsive adjustments */
