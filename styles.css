@@ -1,14 +1,61 @@
 /* Global styles */
-
-/* Existing styles from your provided file */
-/* Add these styles for the contact form */
-
-/* Contact Page Styles */
-.contact-intro {
-    text-align: center;
-    margin-bottom: 20px;
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 0;
+}
+
+header .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+header .logo {
+    max-height: 40px;
+}
+
+/* Main content */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-content {
+    background-color: #fff;
+    border-left: 15px solid var(--primary-color);
+    border-right: 15px solid var(--primary-color);
+    border-bottom: 15px solid var(--primary-color);
+    border-top: none;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px 20px;
+    flex: 1;
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Contact Form Styles */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -18,22 +65,23 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
 .contact-form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 .contact-form button {
@@ -44,150 +92,29 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .contact-form button:hover {
     background-color: #555;
 }
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
 
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
 
-
+/* Team Info */
 .team-info h2 {
     text-align: center;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    color: #333; /* Main text color */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Team-specific colors */
-:root {
-    --primary-color: #ffffff; /* default primary color */
-    --secondary-color: #000000; /* default secondary color */
-}
-
-body {
-    background-color: #f0f0f0; /* Keep the body background color neutral */
-    color: var(--secondary-color);
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 12px 0px 4px 0px;
-}
-
-header .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    padding: 0 20px; /* Adjusted padding for better alignment */
-}
-
-header .logo {
-    max-height: 40px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Ensure nav items wrap on smaller screens */
-}
-
-header .nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px; /* Adjusted margin for better spacing */
-}
-
-header .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-header .dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-}
-
-header .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-header .dropdown-content a {
-    color: black;
-    padding: 5px 5px;
-    font-size: 14px;
-    text-decoration: none;
-    display: block;
-}
-
-header .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-header .dropdown-content.show {
-    display: block;
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%; /* Ensure container is responsive */
-}
-
-main {
-    flex: 1; /* Ensure the main content area grows to fill the available space */
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Ensure main content is responsive */
-}
-
-.main-content {
-    background-color: #fff;
-    border-left: 15px solid var(--primary-color); /* Left border */
-    border-right: 15px solid var(--primary-color); /* Right border */
-    border-bottom: 15px solid var(--primary-color); /* Bottom border */
-    border-top: none; /* No top border */
-    border-radius: 0px; /* Keep rounded corners for the rest */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px 20px 20px;
-    flex: 1; /* Ensure the main content area grows to fill the available space */
-    max-width: 620px; /* Limit the width to 620px */
-    width: 100%; /* Ensure the content is responsive */
-    margin: 0 auto; /* Center the content */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-.description {
-    padding: 20px 20px 20px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .team-info {
@@ -195,16 +122,17 @@ main {
 }
 
 .team-info.individual-goal-songs-section #individual-songs-playlist {
-    margin-top: 10px; /* Add padding above Spotify playlist */
+    margin-top: 10px;
 }
 
+/* Team Buttons */
 .team-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
-    width: 100%; /* Ensure team buttons are responsive */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .team-button {
@@ -221,54 +149,49 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
-    width: 120px; /* Adjust the size as needed */
-    height: 100px; /* Adjust the size as needed */
+    justify-content: center;
+    width: 120px;
+    height: 100px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    box-sizing: border-box;
 }
 
 .team-button:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
-    color: #888; /* Lighter grey for text color */
+    background-color: #f0f0f0;
+    color: #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-button img {
-    width: 35px; /* Adjust size of team logo */
+    width: 35px;
     height: 35px;
     margin-bottom: 0px;
     border-radius: 0%;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    box-sizing: border-box;
 }
 
 .team-button span {
     margin-top: 8px;
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold; /* Make the team name bold */
+    font-weight: bold;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px; /* Provide space between team-info section and footer */
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.8rem;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
     header .logo {
-        max-height: 40px; /* Adjust as needed for smaller screens */
+        max-height: 40px;
     }
 
     .description {
@@ -278,16 +201,16 @@ footer p {
     .team-button {
         padding: 10px;
         margin: 5px;
-        width: 120px; /* Ensure team button is responsive */
-        height: 100px; /* Ensure team button is responsive */
+        width: 120px;
+        height: 100px;
     }
 
     header .dropdown-content {
         position: fixed;
-        top: 50px; /* Adjust to match the height of your header */
+        top: 50px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 50px); /* Full height minus the header */
+        height: calc(100vh - 50px);
         background-color: #fff;
         overflow-y: auto;
         box-shadow: none;
@@ -306,50 +229,13 @@ footer p {
     }
 }
 
-/* Larger YouTube video */
+/* Additional styles for YouTube video */
 #youtube-video {
     margin-top: 20px;
 }
 
 #youtube-iframe {
-    width: 100%; /* Full width */
-    height: 350px; /* Adjust height as needed */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-}
-
-/* Responsive footer links */
-footer .team-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-footer .team-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin: 5px 0;
-}
-
-/* Additional styles for team page */
-.team-logo-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.team-logo {
-    max-width: 100px;
-}
-
-h2, .team-info p, .team-info ul {
-    color: var(--secondary-color);
-}
-
-.main-content {
-
-    border-left: 0px solid var(--primary-color); /* Left border */
-    border-right: 0px solid var(--primary-color); /* Right border */
-    border-bottom: 0px solid var(--primary-color); /* Bottom border */
-  
+    width: 100%;
+    height: 350px;
+    box-sizing: border-box;
 }
