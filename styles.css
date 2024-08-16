@@ -25,10 +25,28 @@ header .header-content {
     align-items: center;
     font-size: 14px;
     padding: 0 20px;
+    width: 100%;
 }
 
 header .logo {
     max-height: 40px;
+    margin-right: 20px; /* Space between the logo and the links */
+}
+
+header .header-nav {
+    display: flex;
+    align-items: center;
+}
+
+header .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+header .nav-link:hover {
+    text-decoration: underline;
 }
 
 /* Main content */
@@ -41,7 +59,6 @@ header .logo {
 
 .main-content {
     background-color: #fff;
-
     border-top: none;
     border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
