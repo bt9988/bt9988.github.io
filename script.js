@@ -138,3 +138,28 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     window.navigateToTeam = navigateToTeam;
 });
+
+// Contact form submission handling
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Basic form validation
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    // You can add AJAX form submission here if needed, for now, we'll just log the values
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    alert("Thank you for your message! We'll get back to you soon.");
+
+    // Optionally clear the form
+    document.getElementById('contactForm').reset();
+});
