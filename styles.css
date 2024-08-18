@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header */
@@ -26,11 +26,12 @@ header .header-content {
     font-size: 14px;
     padding: 0 20px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 header .logo {
     max-height: 45px;
-    margin-right: 20px; /* Space between the logo and the links */
+    margin-right: 20px;
 }
 
 header .header-nav {
@@ -55,6 +56,7 @@ header .nav-link:hover {
     margin: 0 auto;
     padding: 20px;
     width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 .main-content {
@@ -78,6 +80,7 @@ header .nav-link:hover {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in element's width */
 }
 
 .contact-form .form-group {
@@ -96,7 +99,7 @@ header .nav-link:hover {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure input fields fit within the container */
 }
 
 .contact-form button {
@@ -143,10 +146,6 @@ footer p {
 }
 
 .team-info {
-    margin-top: 10px;
-}
-
-.team-info.individual-goal-songs-section #individual-songs-playlist {
     margin-top: 10px;
 }
 
@@ -242,6 +241,12 @@ footer p {
 
     header .dropdown-content.show {
         display: block;
+    }
+
+    /* Ensure main content fits within the viewport */
+    .container, .main-content, .contact-form {
+        padding: 10px;
+        max-width: 100%;
     }
 }
 
