@@ -30,7 +30,7 @@ header .header-content {
 }
 
 header .logo {
-    max-height: 35px;
+    max-height: 31px;
     margin-right: 20px;
 }
 
@@ -206,7 +206,7 @@ footer p {
 /* Responsive adjustments */
 @media (max-width: 500px) {
     header .logo {
-        max-height: 35px;
+        max-height: 31px;
     }
 
     .description {
