@@ -21,12 +21,17 @@ document.addEventListener("DOMContentLoaded", async function() {
         return window.location.pathname.startsWith('/team.html');
     }
 
+    function formatTeamName(teamName) {
+        return teamName.replace(/\s+/g, '-');
+    }
+
     function populateTeams(teams) {
         const teamButtonsContainer = document.querySelector('.team-buttons');
         if (!teamButtonsContainer) return;
 
         const teamButtonsHTML = teams.map(team => {
-            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
                         <span>${team.name}</span>
                     </button>`;
@@ -37,21 +42,14 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
-        const teamNameParam = urlParams.get('team');
-        if (!teamNameParam) return;
+        const teamNameWithSuffix = urlParams.get('team');
+        const teamName = teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ');
+        if (!teamName) return;
 
-        const teamName = decodeURIComponent(teamNameParam.replace(/-/g, ' '));
         const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
-        // Dynamic Meta Description
-        const metaDescription = document.createElement('meta');
-        metaDescription.name = "description";
-        metaDescription.content = `Learn about the ${team.name}'s goal songs. Discover the music that energizes the ${team.name} fans during games.`;
-        document.head.appendChild(metaDescription);
-
-        // Setting the page title
-        document.title = `${team.name} | Hockey Goal Songs | Tracking Every NHL Goal Song`;
+        document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
@@ -135,13 +133,14 @@ document.addEventListener("DOMContentLoaded", async function() {
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
         const dropdownHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name + '-Goal-Songs')}">${team.name}</a>`;
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
         }).join('');
         dropdownContent.innerHTML = dropdownHTML;
     }
 
     function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName + '-Goal-Songs')}`;
+        window.location.href = `team.html?team=${teamName}`;
     }
 
     window.navigateToTeam = navigateToTeam;
