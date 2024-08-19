@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!teamButtonsContainer) return;
 
         const teamButtonsHTML = teams.map(team => {
-            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(team.name)}')">
+            const formattedTeamName = team.name.replace(/\s+/g, '-'); // Replace spaces with dashes
+            return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
                         <span>${team.name}</span>
                     </button>`;
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
-        const teamName = urlParams.get('team');
+        const teamName = urlParams.get('team').replace(/-/g, ' '); // Replace dashes with spaces to match the team names in JSON
         if (!teamName) return;
 
         const team = teams.find(t => t.name === decodeURIComponent(teamName));
@@ -127,13 +128,15 @@ document.addEventListener("DOMContentLoaded", async function() {
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
         const dropdownHTML = teams.map(team => {
-            return `<a href="team.html?team=${encodeURIComponent(team.name)}">${team.name}</a>`;
+            const formattedTeamName = team.name.replace(/\s+/g, '-'); // Replace spaces with dashes
+            return `<a href="team.html?team=${encodeURIComponent(formattedTeamName)}">${team.name}</a>`;
         }).join('');
         dropdownContent.innerHTML = dropdownHTML;
     }
 
     function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+        const formattedTeamName = teamName.replace(/\s+/g, '-'); // Replace spaces with dashes
+        window.location.href = `team.html?team=${encodeURIComponent(formattedTeamName)}`;
     }
 
     window.navigateToTeam = navigateToTeam;
