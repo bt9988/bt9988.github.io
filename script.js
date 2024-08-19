@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!teamButtonsContainer) return;
 
         const teamButtonsHTML = teams.map(team => {
-            const formattedTeamName = team.name.replace(/\s+/g, '-'); // Replace spaces with dashes
-            return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
+            const teamNameWithSuffix = `${team.name}-Goal-Songs`;
+            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(teamNameWithSuffix)}')">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
                         <span>${team.name}</span>
                     </button>`;
@@ -38,13 +38,14 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
-        const teamName = urlParams.get('team').replace(/-/g, ' '); // Replace dashes with spaces to match the team names in JSON
+        const teamNameWithSuffix = urlParams.get('team');
+        const teamName = teamNameWithSuffix.replace('-Goal-Songs', '');
         if (!teamName) return;
 
         const team = teams.find(t => t.name === decodeURIComponent(teamName));
         if (!team) return;
 
-        document.title = `${team.name} | Hockey Goal Songs | Tracking Every NHL Goal Song`;
+        document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
@@ -128,15 +129,14 @@ document.addEventListener("DOMContentLoaded", async function() {
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
         const dropdownHTML = teams.map(team => {
-            const formattedTeamName = team.name.replace(/\s+/g, '-'); // Replace spaces with dashes
-            return `<a href="team.html?team=${encodeURIComponent(formattedTeamName)}">${team.name}</a>`;
+            const teamNameWithSuffix = `${team.name}-Goal-Songs`;
+            return `<a href="team.html?team=${encodeURIComponent(teamNameWithSuffix)}">${team.name}</a>`;
         }).join('');
         dropdownContent.innerHTML = dropdownHTML;
     }
 
     function navigateToTeam(teamName) {
-        const formattedTeamName = teamName.replace(/\s+/g, '-'); // Replace spaces with dashes
-        window.location.href = `team.html?team=${encodeURIComponent(formattedTeamName)}`;
+        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
     }
 
     window.navigateToTeam = navigateToTeam;
