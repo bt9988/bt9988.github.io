@@ -21,13 +21,17 @@ document.addEventListener("DOMContentLoaded", async function() {
         return window.location.pathname.startsWith('/team.html');
     }
 
+    function formatTeamName(teamName) {
+        return teamName.replace(/\s+/g, '-');
+    }
+
     function populateTeams(teams) {
         const teamButtonsContainer = document.querySelector('.team-buttons');
         if (!teamButtonsContainer) return;
 
         const teamButtonsHTML = teams.map(team => {
-            const teamNameWithSuffix = `${team.name}-Goal-Songs`;
-            return `<button class="team-button" onclick="navigateToTeam('${encodeURIComponent(teamNameWithSuffix)}')">
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
                         <span>${team.name}</span>
                     </button>`;
@@ -39,10 +43,10 @@ document.addEventListener("DOMContentLoaded", async function() {
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
         const teamNameWithSuffix = urlParams.get('team');
-        const teamName = teamNameWithSuffix.replace('-Goal-Songs', '');
+        const teamName = teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ');
         if (!teamName) return;
 
-        const team = teams.find(t => t.name === decodeURIComponent(teamName));
+        const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
@@ -129,14 +133,14 @@ document.addEventListener("DOMContentLoaded", async function() {
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
         const dropdownHTML = teams.map(team => {
-            const teamNameWithSuffix = `${team.name}-Goal-Songs`;
-            return `<a href="team.html?team=${encodeURIComponent(teamNameWithSuffix)}">${team.name}</a>`;
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
         }).join('');
         dropdownContent.innerHTML = dropdownHTML;
     }
 
     function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${encodeURIComponent(teamName)}`;
+        window.location.href = `team.html?team=${teamName}`;
     }
 
     window.navigateToTeam = navigateToTeam;
