@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /private/
+
+Allow: /index.html
+Allow: /team.html
+Allow: /team.html?team=
+Allow: /contact.html
+
+Sitemap: https://www.yourwebsite.com/sitemap.xml
