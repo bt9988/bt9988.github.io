@@ -157,4 +157,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     window.navigateToTeam = navigateToTeam;
+
+    // Mobile Menu Toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-nav').classList.toggle('open');
+    });
 });
