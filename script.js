@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", async function() {
     try {
+        // Load the header and footer
+        await loadHTML('header-container', 'header.html');
+        await loadHTML('footer-container', 'footer.html');
+
         const response = await fetch('teams.json');
         const teams = await response.json();
 
@@ -10,7 +14,16 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
         populateDropdown(teams);
     } catch (error) {
-        console.error('Error fetching team data:', error);
+        console.error('Error fetching data:', error);
+    }
+
+    function loadHTML(elementId, filePath) {
+        return fetch(filePath)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => console.error('Error loading file:', error));
     }
 
     function isIndexPage() {
