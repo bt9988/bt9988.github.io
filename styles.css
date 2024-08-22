@@ -270,6 +270,6 @@ footer p {
     height: 350px;
     border-radius: 8px; /* Rounded corners */
     overflow: hidden;   /* Ensures rounded corners are applied correctly */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a subtle 3D effect */
+    box-shadow: none;
     box-sizing: border-box;
 }
