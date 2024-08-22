@@ -46,7 +46,6 @@ header .nav-link {
     text-decoration: none;
     margin: 0 8px;
     font-size: 14px;
-    text-transform: uppercase;
 }
 
 header .nav-link:hover {
@@ -192,7 +191,6 @@ footer p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     box-sizing: border-box;
-    text-transform: uppercase;
 }
 
 .team-button:hover {
