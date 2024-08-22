@@ -142,6 +142,10 @@ footer {
     text-decoration: none;
 }
 
+.footerlink:hover {
+    text-decoration: underline;
+}
+
 footer p {
     margin: 0;
     font-size: 0.8rem;
