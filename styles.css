@@ -137,6 +137,11 @@ footer {
     
 }
 
+.footerlink {
+    color: #fff;
+    text-decoration: none;
+}
+
 footer p {
     margin: 0;
     font-size: 0.8rem;
