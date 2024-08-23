@@ -186,7 +186,7 @@ footer p {
     align-items: center;
     justify-content: center;
     width: 105px;
-    height: 80px;
+    height: 82px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -200,15 +200,15 @@ footer p {
 }
 
 .team-button img {
-    width: 33px;
-    height: 33px;
+    width: 32px;
+    height: 32px;
     margin-bottom: 0px;
     border-radius: 0%;
     box-sizing: border-box;
 }
 
 .team-button span {
-    margin-top: 6px;
+    margin-top: 5px;
     font-size: 0.8rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
