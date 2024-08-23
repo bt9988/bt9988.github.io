@@ -185,8 +185,8 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 105px;
-    height: 82px;
+    width: 110px;
+    height: 80px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -200,8 +200,8 @@ footer p {
 }
 
 .team-button img {
-    width: 32px;
-    height: 32px;
+    width: 33px;
+    height: 33px;
     margin-bottom: 0px;
     border-radius: 0%;
     box-sizing: border-box;
