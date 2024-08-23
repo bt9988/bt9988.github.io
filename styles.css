@@ -74,6 +74,11 @@ header .nav-link:hover {
     box-sizing: border-box;
 }
 
+.team-logo {
+width: 40px;
+    height: 40px;
+}
+
 /* Contact Form Styles */
 .contact-form {
     max-width: 600px;
