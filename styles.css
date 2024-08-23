@@ -279,7 +279,7 @@ footer p {
 #youtube-iframe {
     width: 100%;
     height: 350px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 10px; /* Rounded corners */
     overflow: hidden;   /* Ensures rounded corners are applied correctly */
     box-shadow: none;
     box-sizing: border-box;
