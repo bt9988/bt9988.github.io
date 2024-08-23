@@ -17,6 +17,8 @@ header {
     background-color: #333;
     color: #fff;
     padding: 0px 0;
+    position: relative; /* Make sure header is positioned correctly */
+    z-index: 10; /* Ensure header content is above other elements */
 }
 
 header .header-content {
@@ -262,20 +264,6 @@ footer p {
     }
 }
 
-/* Additional styles for YouTube video */
-#youtube-video {
-    margin-top: 20px;
-}
-
-#youtube-iframe {
-    width: 100%;
-    height: 350px;
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden;   /* Ensures rounded corners are applied correctly */
-    box-shadow: none;
-    box-sizing: border-box;
-}
-
 /* Mobile Navigation Styles */
 .menu-toggle {
     display: none;
@@ -284,6 +272,22 @@ footer p {
     padding: 15px;
     color: #fff;
     background-color: #333;
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-toggle:hover {
+    background-color: #555; /* Adjust as needed */
 }
 
 .mobile-nav {
@@ -322,4 +326,3 @@ footer p {
         display: block;
     }
 }
-
