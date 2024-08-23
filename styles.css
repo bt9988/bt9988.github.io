@@ -140,7 +140,6 @@ footer {
 .footerlink {
     color: #fff;
     text-decoration: none;
-    font-size: 14px; /* Ensure font size matches nav links */
 }
 
 .footerlink:hover {
@@ -203,7 +202,7 @@ footer p {
 .team-button img {
     width: 35px;
     height: 35px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     border-radius: 0%;
     box-sizing: border-box;
 }
@@ -260,6 +259,15 @@ footer p {
     .container, .main-content, .contact-form {
         padding: 10px;
         max-width: 100%;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 10px 5px; /* Adjust padding for mobile */
+    }
+
+    footer p {
+        font-size: 12px; /* Adjust font size if needed */
     }
 }
 
