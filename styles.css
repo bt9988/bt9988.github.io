@@ -74,10 +74,13 @@ header .nav-link:hover {
     box-sizing: border-box;
 }
 
-team-logo {
-width: 40px;
+.team-logo img {
+    width: 40px;
     height: 40px;
+    display: block;
+    margin: 0 auto; /* Centers the image */
 }
+
 
 /* Contact Form Styles */
 .contact-form {
