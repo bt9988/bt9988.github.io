@@ -296,7 +296,6 @@ footer p {
     box-sizing: border-box;
 }
 
-.spotify-player {
-margin-bottom:500px;
-
+#spotify-player {
+    margin-bottom: 20px; /* Adjust the value as needed */
 }
