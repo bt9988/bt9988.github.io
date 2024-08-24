@@ -266,7 +266,7 @@ footer p {
 
     /* Ensure main content fits within the viewport */
     .container, .main-content, .contact-form {
-        padding: 0px;
+        padding: 10px;
         max-width: 100%;
     }
 
