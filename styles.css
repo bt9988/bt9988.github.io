@@ -30,10 +30,10 @@ header .header-content {
 }
 
 header .logo {
-    max-height: 32px;
+    max-height: 34px;
     margin-right: 20px;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    margin-top: 16px;
+    margin-bottom: 9px;
 }
 
 header .header-nav {
