@@ -61,6 +61,11 @@ header .nav-link:hover {
     box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
+.container.main-content h2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .main-content {
     background-color: #fff;
     border-top: none;
