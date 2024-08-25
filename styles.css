@@ -169,7 +169,7 @@ footer p {
 .team-info h2 {
     text-align: center;
     margin-top: 12px; /* Adjust this value to reduce space above */
-    margin-bottom: 12px; /* Adjust this value to reduce space below */
+    margin-bottom: 120px; /* Adjust this value to reduce space below */
 }
 
 .team-info {
