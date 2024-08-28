@@ -596,15 +596,27 @@
     },
     "previousGoalSongs": [
         {
-            "name": "Bro Hymn 2",
-            "artist": "Pennywise 2",
-            "years": [2021, 2020, 2019]
+            "name": "Live Is Life",
+            "artist": "Opus"
+            
         },
         {
-            "name": "Bro Hymn 3",
-            "artist": "Pennywise 3",
-            "years": [1985, 1999, 1988]
+            "name": "Burn It To The Ground (Instrumental)",
+            "artist": "Nickelback"
+           
+        },
+{
+            "name": "Gold On The Ceiling (Islanders Remix)",
+            "artist": "The Black Keys"
+           
+        },
+{
+            "name": "Rock and Roll, Part 2",
+            "artist": "Gary Glitter"
+           
         }
+        
+        
     ]
 },
 {
