@@ -162,9 +162,8 @@ footer {
     text-decoration: underline;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px; /* Match font size with nav links */
+.footertext {
+    font-size: 50px;
 }
 
 /* Team Info */
