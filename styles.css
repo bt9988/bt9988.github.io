@@ -155,7 +155,7 @@ footer {
 
 .footerlink {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .footerlink:hover {
