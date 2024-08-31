@@ -151,14 +151,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    font-family: 'Roboto', sans-serif; /* Consistent font family */
-    font-size: 14px; /* Consistent font size */
+    font-size: 12px; /* Set a consistent font size */
 }
 
 .footerlink {
     color: #fff;
     text-decoration: underline;
-    font-size: 14px; /* Consistent font size */
 }
 
 .footerlink:hover {
@@ -166,10 +164,24 @@ footer {
 }
 
 .footertext {
-    font-size: 14px; /* Consistent font size */
+    font-size: 12px;
     margin-bottom: 3px;
     margin-top: 2px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    /* Footer adjustments */
+    footer {
+        padding: 10px 5px; /* Adjust padding for mobile */
+        font-size: 10px; /* Slightly smaller font size for better readability on smaller screens */
+    }
+
+    footer p {
+        font-size: 10px; /* Ensure the paragraph font size is consistent with the rest of the footer */
+    }
+}
+
 
 /* Team Info */
 .team-info h2 {
