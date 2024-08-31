@@ -1,5 +1,3 @@
-
-
 /* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -19,6 +17,8 @@ header {
     background-color: #333;
     color: #fff;
     padding: 0px 0;
+    font-family: 'Roboto', sans-serif; /* Consistent font family */
+    font-size: 14px; /* Consistent font size */
 }
 
 header .header-content {
@@ -151,11 +151,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    font-family: 'Roboto', sans-serif; /* Consistent font family */
+    font-size: 14px; /* Consistent font size */
 }
 
 .footerlink {
     color: #fff;
     text-decoration: underline;
+    font-size: 14px; /* Consistent font size */
 }
 
 .footerlink:hover {
@@ -163,7 +166,7 @@ footer {
 }
 
 .footertext {
-    font-size: 12px;
+    font-size: 14px; /* Consistent font size */
     margin-bottom: 3px;
     margin-top: 2px;
 }
@@ -250,7 +253,6 @@ footer {
     }
 
     .team-button {
-
         width: 110px;
         height: 80px;
     }
