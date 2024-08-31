@@ -17,7 +17,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 0px 0;
-    font-family: 'Roboto', sans-serif; /* Consistent font family */
+    font-family: 'Roboto', sans-serif;
     font-size: 14px; /* Consistent font size */
 }
 
@@ -25,34 +25,16 @@ header .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
-}
-
-header .logo {
-    max-height: 34px;
-    margin-right: 20px;
-    margin-top: 17px;
-    margin-bottom: 9px;
-}
-
-header .header-nav {
-    display: flex;
-    align-items: center;
 }
 
 header .nav-link {
     color: #fff;
     text-decoration: none;
     margin: 0 8px;
-    font-size: 14px;
-}
-
-header .nav-link:hover {
-    text-decoration: underline;
-}
+   
 
 /* Main content */
 .container {
@@ -154,36 +136,30 @@ footer {
     font-size: 12px; /* Set a consistent font size */
 }
 
-.footerlink {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footerlink:hover {
-    text-decoration: underline;
-}
-
 .footertext {
     font-size: 12px;
     margin-bottom: 3px;
     margin-top: 2px;
 }
 
-/* Responsive adjustments */
+/* Media Query Adjustments */
 @media (max-width: 500px) {
-    /* Footer adjustments */
-    footer {
-        padding: 10px 5px; /* Adjust padding for mobile */
-        font-size: 10px; /* Slightly smaller font size for better readability on smaller screens */
+    header .nav-link {
+        font-size: 12px; /* Adjust header font size on mobile */
     }
 
-    footer p {
+    footer {
+        padding: 10px 5px; /* Adjust padding for mobile */
+        font-size: 10px; /* Smaller font size for better readability on smaller screens */
+    }
+
+    .footertext {
         font-size: 10px; /* Ensure the paragraph font size is consistent with the rest of the footer */
     }
 }
 
-
 /* Team Info */
+    
 .team-info h2 {
     text-align: center;
     margin-top: 12px; /* Adjust this value to reduce space above */
