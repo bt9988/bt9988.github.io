@@ -1,0 +1,75 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+<!--footer starts from here-->
+<footer class="footer">
+<div class="container bottom_border">
+<div class="row">
+<div class=" col-sm-4 col-md col-sm-4  col-12 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Contact</h5>
+<!--headin5_amrc-->
+<p class="mb10">Missing a song/ Blow me </p>
+<p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+<p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+<p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+
+
+</div>
+
+
+<div class=" col-sm-4 col-md  col-6 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Western Conference</h5>
+<!--headin5_amrc-->
+<ul class="footer_ul_amrc">
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+<li><a href="http://webenlance.com">Team 1</a></li>
+</ul>
+<!--footer_ul_amrc ends here-->
+</div>
+
+
+<div class=" col-sm-4 col-md  col-6 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Eastern Conference</h5>
+<!--headin5_amrc-->
+<ul class="footer_ul_amrc">
+<li><a href="http://webenlance.com">Boston Bruins</a></li>
+<li><a href="http://webenlance.com">Buffalo Sabres</a></li>
+<li><a href="http://webenlance.com">Carolina Hurricanes</a></li>
+<li><a href="http://webenlance.com">Columbus Blue Jackets</a></li>
+<li><a href="http://webenlance.com">Detroit Red Wings</a></li>
+<li><a href="http://webenlance.com">Florida Panthers</a></li>
+<li><a href="http://webenlance.com">Montreal Canadiens</a></li>
+<li><a href="http://webenlance.com">New Jersey Devils</a></li>
+<li><a href="http://webenlance.com">New York Islanders</a></li>
+<li><a href="http://webenlance.com">New York Rangers</a></li>
+<li><a href="http://webenlance.com">Ottawa Senators</a></li>
+<li><a href="http://webenlance.com">Philadelphia Flyers</a></li>
+<li><a href="http://webenlance.com">Pittsburgh Penguins</a></li>
+<li><a href="http://webenlance.com">Tampa Bay Lightning</a></li>
+<li><a href="http://webenlance.com">Toronto Maple Leafs</a></li>
+<li><a href="http://webenlance.com">Washington Capitals</a></li>
+
+</ul>
+<!--footer_ul_amrc ends here-->
+</div>
+
+
+
