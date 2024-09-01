@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     try {
         // Load the header and footer
         await loadHTML('header-container', 'header.html');
-        await loadHTML('footer-container', 'footer2.html');
+        await loadHTML('footer-container', 'footer.html');
 
         const response = await fetch('teams.json');
         const teams = await response.json();
