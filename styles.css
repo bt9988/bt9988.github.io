@@ -255,28 +255,7 @@ footer {
         height: 80px;
     }
 
-    header .dropdown-content {
-        position: fixed;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 50px);
-        background-color: #fff;
-        overflow-y: auto;
-        box-shadow: none;
-        display: none;
-        z-index: 1000;
-    }
 
-    header .dropdown-content a {
-        padding: 15px;
-        font-size: 18px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    header .dropdown-content.show {
-        display: block;
-    }
 
     /* Ensure main content fits within the viewport */
     .container, .main-content, .contact-form {
@@ -311,8 +290,3 @@ footer {
 #spotify-player {
     margin-bottom: 18px; /* Adjust the value as needed */
 }
-
-
-
-
-
