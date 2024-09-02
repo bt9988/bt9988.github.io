@@ -290,3 +290,26 @@ footer {
 #spotify-player {
     margin-bottom: 18px; /* Adjust the value as needed */
 }
+
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .footer-nav {
+
+    align-items: center;
+}
+
+footer .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 14px;
+}
