@@ -313,3 +313,10 @@ footer .nav-link {
     margin: 0 8px;
     font-size: 14px;
 }
+
+footer .logo {
+    max-height: 34px;
+    margin-right: 20px;
+    margin-top: 17px;
+    margin-bottom: 9px;
+}
