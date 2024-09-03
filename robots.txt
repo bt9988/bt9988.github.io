@@ -8,4 +8,4 @@ Allow: /team.html
 Allow: /team.html?team=
 Allow: /contact.html
 
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://www.hockeygoalsongs.com/sitemap.xml
