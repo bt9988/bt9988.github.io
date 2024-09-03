@@ -1,7 +1,7 @@
 [
     {
         "name": "Anaheim Ducks",
-        "logo": "images/anaheim-ducks.png",
+        "logo": "images/anaheim-ducks.webp",
         "primaryColor": "#F47A38", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -24,7 +24,7 @@
     
     {
         "name": "Boston Bruins",
-        "logo": "images/boston-bruins.png",
+        "logo": "images/boston-bruins.webp",
         "primaryColor": "#FFB81C", 
         "secondaryColor": "#000",
         "conference": "Eastern",
@@ -47,7 +47,7 @@
     },
     {
         "name": "Buffalo Sabres",
-        "logo": "images/buffalo-sabres.png",
+        "logo": "images/buffalo-sabres.webp",
         "primaryColor": "#003087", 
         "secondaryColor": "#000",
         "individualGoalSongs": true,
