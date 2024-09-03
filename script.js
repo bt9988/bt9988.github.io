@@ -64,19 +64,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (!team) return;
 
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
+        
+        // Update meta description
+        updateMetaDescription(`Discover the current goal song that ignites the arena when the ${team.name} score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.`);
+
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
-
-        // Insert the dynamic meta description
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute("content", `Discover the current goal song that ignites the arena when the ${team.name} score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.`);
-        } else {
-            const newMetaDescription = document.createElement('meta');
-            newMetaDescription.name = 'description';
-            newMetaDescription.content = `Discover the current goal song that ignites the arena when the ${team.name} score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.`;
-            document.head.appendChild(newMetaDescription);
-        }
 
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
         const currentGoalSongSection = document.querySelector('.current-goal-song-section');
@@ -164,6 +157,16 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function navigateToTeam(teamName) {
         window.location.href = `team.html?team=${teamName}`;
+    }
+
+    function updateMetaDescription(description) {
+        let metaDescription = document.querySelector('meta[name="description"]');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.name = 'description';
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.content = description;
     }
 
     window.navigateToTeam = navigateToTeam;
