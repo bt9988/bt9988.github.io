@@ -413,7 +413,7 @@
         
         {
     "name": "Edmonton Oilers",
-    "logo": "images/edmonton-oilers.png",
+    "logo": "images/edmonton-oilers.webp",
     "primaryColor": "#041E42", 
     "secondaryColor": "#000",
     "conference": "Western",
@@ -440,7 +440,7 @@
 },
 {
     "name": "Florida Panthers",
-    "logo": "images/florida-panthers.png",
+    "logo": "images/florida-panthers.webp",
     "primaryColor": "#041E42", 
     "secondaryColor": "#000",
     "conference": "Eastern",
@@ -465,7 +465,7 @@
 },
 {
     "name": "Los Angeles Kings",
-    "logo": "images/los-angeles-kings.png",
+    "logo": "images/los-angeles-kings.webp",
     "primaryColor": "#111111", 
     "secondaryColor": "#000",
     "conference": "Western",
@@ -485,7 +485,7 @@
 },
 {
     "name": "Minnesota Wild",
-    "logo": "images/minnesota-wild.png",
+    "logo": "images/minnesota-wild.webp",
     "primaryColor": "#154734", 
     "secondaryColor": "#000",
     "conference": "Western",
@@ -516,7 +516,7 @@
 },
 {
     "name": "Montreal Canadiens",
-    "logo": "images/montreal-canadiens.png",
+    "logo": "images/montreal-canadiens.webp",
     "primaryColor": "#AF1E2D", 
     "secondaryColor": "#000",
     "conference": "Eastern",
