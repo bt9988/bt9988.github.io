@@ -66,6 +66,16 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
+        // Update meta description
+        const metaDescription = `Discover the current goal song that ignites the arena when the ${team.name} score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.`;
+        let metaDescriptionTag = document.querySelector('meta[name="description"]');
+        if (!metaDescriptionTag) {
+            metaDescriptionTag = document.createElement('meta');
+            metaDescriptionTag.name = 'description';
+            document.head.appendChild(metaDescriptionTag);
+        }
+        metaDescriptionTag.content = metaDescription;
+
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
         const currentGoalSongSection = document.querySelector('.current-goal-song-section');
 
