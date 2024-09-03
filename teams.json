@@ -353,7 +353,7 @@
     },
     {
         "name": "Dallas Stars",
-        "logo": "images/dallas-stars.png",
+        "logo": "images/dallas-stars.webp",
         "primaryColor": "#006847", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -381,7 +381,7 @@
     },
     {
         "name": "Detroit Red Wings",
-        "logo": "images/detroit-red-wings.png",
+        "logo": "images/detroit-red-wings.webp",
         "primaryColor": "#CE1126", 
         "secondaryColor": "#000",
         "conference": "Eastern",
