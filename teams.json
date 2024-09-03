@@ -182,6 +182,11 @@
                 "name": "Song 2",
                 "artist": "Blur"
                 
+            },
+            {
+                "name": "Let Me Clear My Throat",
+                "artist": "DJ Kool"
+                
             }
         ],
         "currentGoalSong": {
