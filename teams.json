@@ -198,7 +198,7 @@
     },
     {
         "name": "Calgary Flames",
-        "logo": "images/calgary-flames.png",
+        "logo": "images/calgary-flames.webp",
         "primaryColor": "#D2001C", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -237,7 +237,7 @@
     },
     {
         "name": "Carolina Hurricanes",
-        "logo": "images/carolina-hurricanes.png",
+        "logo": "images/carolina-hurricanes.webp",
         "primaryColor": "#CE1126", 
         "secondaryColor": "#000",
         "conference": "Eastern",
@@ -259,7 +259,7 @@
     },
     {
         "name": "Chicago Blackhawks",
-        "logo": "images/chicago-blackhawks.png",
+        "logo": "images/chicago-blackhawks.webp",
         "primaryColor": "#CF0A2C", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -294,7 +294,7 @@
     },
     {
         "name": "Colorado Avalanche",
-        "logo": "images/colorado-avalanche.png",
+        "logo": "images/colorado-avalanche.webp",
         "primaryColor": "#6F263D", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -339,7 +339,7 @@
     },
     {
         "name": "Columbus Blue Jackets",
-        "logo": "images/columbus-blue-jackets.png",
+        "logo": "images/columbus-blue-jackets.webp",
         "primaryColor": "#002654", 
         "secondaryColor": "#000",
         "conference": "Eastern",
