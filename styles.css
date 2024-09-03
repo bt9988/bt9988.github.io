@@ -32,7 +32,7 @@ header .header-content {
 }
 
 header .logo {
-    max-height: 34px;
+    max-height: 35px;
     margin-right: 20px;
     margin-top: 17px;
     margin-bottom: 9px;
@@ -241,7 +241,7 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 500px) {
     header .logo {
-        max-height: 31px;
+        max-height: 32px;
     }
 
     .description {
@@ -315,13 +315,13 @@ footer .nav-link {
 }
 
 footer .logo {
-    max-height: 34px;
+    max-height: 30px;
     margin-bottom: 2px;
 }
 
 @media (max-width: 500px) {
     footer .logo {
-        max-height: 31px;
+        max-height: 25px;
     }
 
 
