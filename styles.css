@@ -139,7 +139,7 @@ header .nav-link:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Remove shadow */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-top: 0px;
     background-color: #fff; /* Ensure it contrasts well with the background */
     text-align: center;
