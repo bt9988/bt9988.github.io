@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         await loadHTML('header-container', 'header.html');
         await loadHTML('footer-container', 'footer.html');
 
-        // Fetch the team data
         const response = await fetch('teams.json');
         const teams = await response.json();
 
@@ -67,10 +66,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
-        // Insert the dynamic meta description
-        const metaDescription = document.querySelector('meta[name="description"]');
-        metaDescription.setAttribute("content", `Discover the current goal song that ignites the arena when the ${team.name} score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.`);
-
         const individualGoalSongsSection = document.querySelector('.individual-goal-songs-section');
         const currentGoalSongSection = document.querySelector('.current-goal-song-section');
 
@@ -125,24 +120,41 @@ document.addEventListener("DOMContentLoaded", async function() {
             const youtubeIframe = document.getElementById('youtube-iframe');
             if (team.currentGoalSong) {
                 youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
-                youtubeIframe.style.display = 'block';
-            } else {
-                youtubeIframe.style.display = 'none';
-            }
-
-            const previousSongsHeader = document.getElementById('previous-songs-header');
-            previousSongsHeader.textContent = `Previous Goal Songs for ${team.name}`;
-
-            const previousSongsContainer = document.getElementById('previous-songs');
-            if (team.previousGoalSongs) {
-                const previousSongsList = document.createElement('ul');
-                team.previousGoalSongs.forEach(song => {
-                    const songItem = document.createElement('li');
-                    songItem.innerHTML = `"${song.name}" by ${song.artist}`;
-                    previousSongsList.appendChild(songItem);
-                });
-                previousSongsContainer.appendChild(previousSongsList);
             }
         }
+
+        const previousSongsContainer = document.getElementById('previous-songs');
+        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
+            const songsList = document.createElement('ul');
+            team.previousGoalSongs.forEach(song => {
+                const songItem = document.createElement('li');
+                let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
+                if (song.individualGoalSongs) {
+                    songItem.innerHTML = "Individual Goal Songs";
+                } else {
+                    songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
+                }
+                songsList.appendChild(songItem);
+            });
+            document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
+            previousSongsContainer.appendChild(songsList);
+        } else {
+            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for the <strong>${team.name}</strong>.`;
+        }
     }
+
+    function populateDropdown(teams) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const dropdownHTML = teams.map(team => {
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
+        }).join('');
+        dropdownContent.innerHTML = dropdownHTML;
+    }
+
+    function navigateToTeam(teamName) {
+        window.location.href = `team.html?team=${teamName}`;
+    }
+
+    window.navigateToTeam = navigateToTeam;
 });
