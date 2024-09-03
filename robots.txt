@@ -1,11 +1,9 @@
+# Allow all robots full access
 User-agent: *
 Disallow: /admin/
-Disallow: /temp/
+Disallow: /cgi-bin/
+Disallow: /tmp/
 Disallow: /private/
 
-Allow: /index.html
-Allow: /team.html
-Allow: /team.html?team=
-Allow: /contact.html
-
+# Sitemap location
 Sitemap: https://www.hockeygoalsongs.com/sitemap.xml
