@@ -539,7 +539,7 @@
 },
 {
     "name": "Nashville Predators",
-    "logo": "images/nashville-predators.png",
+    "logo": "images/nashville-predators.webp",
     "primaryColor": "#FFB81C", 
     "secondaryColor": "#000",
     "conference": "Western",
@@ -558,7 +558,7 @@
 },
 {
     "name": "New Jersey Devils",
-    "logo": "images/new-jersey-devils.png",
+    "logo": "images/new-jersey-devils.webp",
     "primaryColor": "#CE1126", 
     "secondaryColor": "#000",
     "conference": "Eastern",
@@ -589,7 +589,7 @@
 },
 {
     "name": "New York Islanders",
-    "logo": "images/new-york-islanders.png",
+    "logo": "images/new-york-islanders.webp",
     "primaryColor": "#00539B", 
     "secondaryColor": "#000",
     "conference": "Eastern",
@@ -631,7 +631,7 @@
 },
 {
     "name": "New York Rangers",
-    "logo": "images/new-york-rangers.png",
+    "logo": "images/new-york-rangers.webp",
     "primaryColor": "#0038A8", 
     "secondaryColor": "#000",
     "conference": "Eastern",
