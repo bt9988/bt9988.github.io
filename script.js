@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (window.teamName) {
             // Handle static page setup
             setupStaticPage(teams);
-        } else if (isIndexPage()) {
-            // Handle dynamic index page setup
-            populateTeams(teams);
-        } else if (isTeamPage()) {
-            // Handle dynamic team page setup
-            setupDynamicTeamPage(teams);
+        } else {
+            // Handle dynamic pages setup
+            if (isIndexPage()) {
+                populateTeams(teams);
+            } else if (isTeamPage()) {
+                setupDynamicTeamPage(teams);
+            }
+            populateDropdown(teams);
         }
-        
-        populateDropdown(teams);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -38,10 +38,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function isTeamPage() {
         return window.location.pathname.includes('-goal-songs.html');
-    }
-
-    function formatTeamName(teamName) {
-        return teamName.replace(/\s+/g, '-');
     }
 
     function setupStaticPage(teams) {
@@ -241,6 +237,10 @@ document.addEventListener("DOMContentLoaded", async function() {
         const url = new URL(window.location.href);
         const path = url.pathname.split('/').pop();
         return path.split('-goal-songs.html')[0].replace(/-/g, ' ');
+    }
+
+    function formatTeamName(name) {
+        return name.toLowerCase().replace(/ /g, '-');
     }
 
     function populateTeams(teams) {
