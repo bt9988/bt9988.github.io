@@ -1,47 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949" crossorigin="anonymous"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the current goal song that ignites the arena when the Vancouver Canucks score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.">
-    <title>Vancouver Canucks Goal Songs | Hockey Goal Songs</title>
+    <title>Vancouver Canucks Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song</title>
+    <meta name="description" content="" id="meta-description"> <!-- Placeholder for meta description -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header id="header-container"></header>
-    
-    <main>
-        <h1>Vancouver Canucks Goal Songs</h1>
-        
-        <section class="current-goal-song-section">
-            <h2>Current Goal Song</h2>
-            <p id="current-goal-song">
-                The current goal song for the NHL's <strong>Vancouver Canucks</strong> is 
-                "<span id="song-name">Song Name</span>" by 
-                <span id="artist-name">Artist Name</span>.
-                <span id="in-use-since">In use since Date (if applicable)</span>.
-            </p>
-            <iframe id="spotify-iframe" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="display: none;"></iframe>
-            <iframe id="youtube-iframe" width="100%" height="380" frameborder="0" allowfullscreen></iframe>
-        </section>
-        
-        <section class="individual-goal-songs-section" style="display: none;">
-            <h2>Individual Goal Songs</h2>
-            <p id="individual-songs-info">The NHL's <strong>Vancouver Canucks</strong> currently use individual goal songs for each player:</p>
-            <iframe id="individual-songs-playlist" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="display: none;"></iframe>
-            <div id="individual-songs"></div>
-        </section>
-        
-        <section id="previous-songs">
-            <h2>Previous Goal Songs</h2>
-            <ul id="previous-songs-list">
-                <!-- Previous goal songs will be dynamically inserted here -->
-            </ul>
-        </section>
-    </main>
 
-    <footer id="footer-container"></footer>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67F3BG6VWP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-67F3BG6VWP');
+</script>
+
     
+<body>
+
+    <!-- Container for the header -->
+    <header id="header-container"></header>
+
+    <div class="container main-content">
+
+        <!-- Team Information and Goal Songs -->
+
+        <section class="team-info current-goal-song-section">
+            <h2 id="team-name-with-song">Goal Song</h2>
+
+            <div id="current-song">
+                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder">Vancouver Canucks</span></strong> is "<span id="song-name">Don't You Forget About Me</span>" by <span id="artist-name">Simple Minds</span>. <span id="in-use-since"></span></p>
+            </div>
+
+            <div id="youtube-video">
+                <iframe id="youtube-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Spotify Embed -->
+            <div id="spotify-player">
+                <iframe id="spotify-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="team-info">
+            <h2 id="team-name-with-song">Goal Song History</h2>
+            <div id="previous-songs">
+                <p id="previous-songs-header"></p>
+                <!-- Previous songs will be populated here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Container for the footer -->
+    <footer id="footer-container"></footer>
+
     <script src="script.js"></script>
 </body>
 </html>
