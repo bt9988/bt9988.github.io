@@ -201,7 +201,7 @@
     },
     {
         "name": "Calgary Flames",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/calgary-flames.webp",
         "primaryColor": "#D2001C", 
         "secondaryColor": "#000",
