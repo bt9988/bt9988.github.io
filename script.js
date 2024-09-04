@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         const teamButtonsHTML = teams.map(team => {
             console.log('Processing team:', team); // Log each team data
+
+            // Check if the team is Vancouver Canucks
+            if (team.name === "Vancouver Canucks") {
+                return `<button class="team-button" onclick="navigateToStaticPage('/vancouver-canucks-goal-songs.html')">
+                            <img src="${team.logo}" alt="${team.name}" loading="lazy">
+                            <span>${team.name}</span>
+                        </button>`;
+            }
+
             const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
             return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
@@ -204,17 +213,32 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     }
 
-    function populateDropdown(teams) {
-        const dropdown = document.querySelector('#team-dropdown');
-        if (dropdown) {
-            dropdown.innerHTML = teams.map(team => {
-                const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
-                return `<option value="${formattedTeamName}">${team.name}</option>`;
-            }).join('');
-        }
+    function navigateToTeam(teamName) {
+        window.location.href = `/team.html?team=${teamName}`;
     }
 
-    window.navigateToTeam = function (teamName) {
-        window.location.href = `team.html?team=${teamName}`;
-    };
+    function navigateToStaticPage(staticPageUrl) {
+        window.location.href = staticPageUrl;
+    }
+
+    function populateDropdown(teams) {
+        const dropdown = document.getElementById('team-dropdown');
+        if (!dropdown) {
+            console.error('Team dropdown not found.');
+            return;
+        }
+
+        teams.forEach(team => {
+            const option = document.createElement('option');
+            option.value = team.name;
+            option.textContent = team.name;
+            dropdown.appendChild(option);
+        });
+
+        dropdown.addEventListener('change', function() {
+            const selectedTeam = dropdown.value;
+            const formattedTeamName = formatTeamName(`${selectedTeam}-Goal-Songs`);
+            navigateToTeam(formattedTeamName);
+        });
+    }
 });
