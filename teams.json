@@ -554,7 +554,7 @@
 },
 {
     "name": "Nashville Predators",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/nashville-predators.webp",
     "primaryColor": "#FFB81C", 
     "secondaryColor": "#000",
