@@ -157,11 +157,13 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function populateDropdown(teams) {
         const dropdownContent = document.querySelector('.dropdown-content');
-        const dropdownHTML = teams.map(team => {
-            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
-            return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
-        }).join('');
-        dropdownContent.innerHTML = dropdownHTML;
+        if (dropdownContent) { // Check if the dropdown content element exists
+            const dropdownHTML = teams.map(team => {
+                const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+                return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
+            }).join('');
+            dropdownContent.innerHTML = dropdownHTML;
+        }
     }
 
     function navigateToTeam(teamName) {
