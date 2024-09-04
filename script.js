@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
 
         const teamButtonsHTML = teams.map(team => {
+            console.log('Processing team:', team); // Log each team data
             const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
             return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
@@ -60,13 +61,15 @@ document.addEventListener("DOMContentLoaded", async function() {
         }).join('');
 
         teamButtonsContainer.innerHTML = teamButtonsHTML;
-        console.log('Teams populated:', teamButtonsHTML);
+        console.log('Teams populated:', teamButtonsHTML); // Log the generated HTML
     }
 
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
         const teamNameWithSuffix = urlParams.get('team');
         const teamName = teamNameWithSuffix ? teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ') : window.teamName;
+
+        console.log('Team name extracted:', teamName);
 
         if (!teamName) {
             console.error('No team name found.');
@@ -79,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             return;
         }
 
-        console.log('Setting up static page for:', teamName);
+        console.log('Setting up page for team:', team);
 
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
