@@ -897,6 +897,7 @@
     },
     {
         "name": "Vancouver Canucks",
+        "static": "TRUE",
         "logo": "images/vancouver-canucks.webp",
         "primaryColor": "#00205B", 
         "secondaryColor": "#000",
