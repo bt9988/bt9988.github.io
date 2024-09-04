@@ -606,7 +606,7 @@
 },
 {
     "name": "New York Islanders",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/new-york-islanders.webp",
     "primaryColor": "#00539B", 
     "secondaryColor": "#000",
@@ -649,7 +649,7 @@
 },
 {
     "name": "New York Rangers",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/new-york-rangers.webp",
     "primaryColor": "#0038A8", 
     "secondaryColor": "#000",
