@@ -808,7 +808,7 @@
     },
     {
         "name": "Seattle Kraken",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/seattle-kraken.webp",
         "primaryColor": "#001628", 
         "secondaryColor": "#000",
@@ -824,7 +824,7 @@
     },
     {
         "name": "St Louis Blues",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/st-louis-blues.webp",
         "primaryColor": "#002F87", 
         "secondaryColor": "#000",
@@ -910,7 +910,7 @@
     },
     {
         "name": "Utah Hockey Club",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/utah-hockey-club.webp",
         "primaryColor": "#69a6dd", 
         "secondaryColor": "#000",
@@ -966,7 +966,7 @@
     },
     {
         "name": "Vegas Golden Knights",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/vegas-golden-knights.webp",
         "primaryColor": "#B4975A", 
         "secondaryColor": "#000",
