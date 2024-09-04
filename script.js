@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         await loadHTML('header-container', 'header.html');
         await loadHTML('footer-container', 'footer.html');
 
+        console.log('Header and footer loaded.');
+
         const response = await fetch('teams.json');
         const teams = await response.json();
+
+        console.log('Teams data loaded:', teams);
 
         if (isIndexPage()) {
             populateTeams(teams);
@@ -27,10 +31,12 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function isIndexPage() {
+        console.log('Checking if index page');
         return window.location.pathname === '/index.html' || window.location.pathname === '/';
     }
 
     function isTeamPage() {
+        console.log('Checking if team page');
         return window.location.pathname.startsWith('/team.html') || window.location.pathname.startsWith('/anaheim-ducks-goal-songs.html');
     }
 
@@ -40,7 +46,10 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     function populateTeams(teams) {
         const teamButtonsContainer = document.querySelector('.team-buttons');
-        if (!teamButtonsContainer) return;
+        if (!teamButtonsContainer) {
+            console.error('Team buttons container not found.');
+            return;
+        }
 
         const teamButtonsHTML = teams.map(team => {
             const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
@@ -51,6 +60,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }).join('');
 
         teamButtonsContainer.innerHTML = teamButtonsHTML;
+        console.log('Teams populated:', teamButtonsHTML);
     }
 
     function setupTeamPage(teams) {
@@ -58,12 +68,18 @@ document.addEventListener("DOMContentLoaded", async function() {
         const teamNameWithSuffix = urlParams.get('team');
         const teamName = teamNameWithSuffix ? teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ') : window.teamName;
 
-        if (!teamName) return;
+        if (!teamName) {
+            console.error('No team name found.');
+            return;
+        }
 
         const team = teams.find(t => t.name === teamName);
-        if (!team) return;
+        if (!team) {
+            console.error('Team not found:', teamName);
+            return;
+        }
 
-        console.log('Setting up static page for:', teamName); // Added logging
+        console.log('Setting up static page for:', teamName);
 
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
@@ -173,38 +189,27 @@ document.addEventListener("DOMContentLoaded", async function() {
                     });
                     const previousSongsHeader = document.getElementById('previous-songs-header');
                     if (previousSongsHeader) {
-                        previousSongsHeader.innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
+                        previousSongsHeader.textContent = `Previous Goal Songs for the ${team.name}`;
                     }
                     previousSongsContainer.appendChild(songsList);
                 } else {
-                    const previousSongsHeader = document.getElementById('previous-songs-header');
-                    if (previousSongsHeader) {
-                        previousSongsHeader.innerHTML = `There are no previous goal songs listed for the <strong>${team.name}</strong>.`;
-                    }
+                    previousSongsContainer.innerHTML = `<p>No previous goal songs found for the ${team.name}.</p>`;
                 }
             }
         }
     }
 
     function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        if (dropdownContent) {
-            const dropdownHTML = teams.map(team => {
+        const dropdown = document.querySelector('#team-dropdown');
+        if (dropdown) {
+            dropdown.innerHTML = teams.map(team => {
                 const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
-                return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
+                return `<option value="${formattedTeamName}">${team.name}</option>`;
             }).join('');
-            dropdownContent.innerHTML = dropdownHTML;
         }
     }
 
-    function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${teamName}`;
-    }
-
-    window.navigateToTeam = navigateToTeam;
-
-    // Static page handling
-    if (window.teamName) {
-        setupTeamPage(await (await fetch('teams.json')).json());
+    window.navigateToTeam = function(teamName) {
+        window.location.href = `/team.html?team=${teamName}`;
     }
 });
