@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         const team = teams.find(t => t.name === teamName);
         if (!team) return;
 
+        console.log('Setting up static page for:', teamName); // Added logging
+
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
