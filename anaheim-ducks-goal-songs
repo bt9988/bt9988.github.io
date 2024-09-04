@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the current goal song that ignites the arena when the Team A score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.">
+    <title>Team A Goal Songs | Hockey Goal Songs</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script>
+        // Define the team name to be used by script.js
+        window.teamName = 'Team A';
+    </script>
+</head>
+<body>
+    <header id="header-container"></header>
+    <div class="container main-content">
+        <section class="team-info individual-goal-songs-section">
+            <!-- Content populated by JavaScript -->
+        </section>
+        <section class="team-info current-goal-song-section">
+            <!-- Content populated by JavaScript -->
+        </section>
+        <section class="team-info">
+            <!-- Content populated by JavaScript -->
+        </section>
+    </div>
+    <footer id="footer-container"></footer>
+</body>
+</html>
