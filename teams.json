@@ -423,7 +423,7 @@
         
         {
     "name": "Edmonton Oilers",
-            "static": "FALSE",
+            "static": "TRUE",
     "logo": "images/edmonton-oilers.webp",
     "primaryColor": "#041E42", 
     "secondaryColor": "#000",
