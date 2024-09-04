@@ -4,12 +4,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         await loadHTML('header-container', 'header.html');
         await loadHTML('footer-container', 'footer.html');
 
-        console.log('Header and footer loaded.');
-
         const response = await fetch('teams.json');
         const teams = await response.json();
-
-        console.log('Teams data loaded:', teams);
 
         if (isIndexPage()) {
             populateTeams(teams);
@@ -31,12 +27,10 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function isIndexPage() {
-        console.log('Checking if index page');
         return window.location.pathname === '/index.html' || window.location.pathname === '/';
     }
 
     function isTeamPage() {
-        console.log('Checking if team page');
         return window.location.pathname.startsWith('/team.html') || window.location.pathname.startsWith('/anaheim-ducks-goal-songs.html');
     }
 
@@ -52,33 +46,30 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
 
         const teamButtonsHTML = teams.map(team => {
-            console.log('Processing team:', team); // Log each team data
-
-            // Check if the team is Vancouver Canucks
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            
+            // Handle Vancouver Canucks separately
             if (team.name === "Vancouver Canucks") {
-                return `<button class="team-button" onclick="navigateToStaticPage('/vancouver-canucks-goal-songs.html')">
+                return `<button class="team-button" onclick="window.location.href='/vancouver-canucks-goal-songs.html'">
                             <img src="${team.logo}" alt="${team.name}" loading="lazy">
                             <span>${team.name}</span>
                         </button>`;
             }
 
-            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
-            return `<button class="team-button" onclick="navigateToTeam('${formattedTeamName}')">
+            // Handle other teams
+            return `<button class="team-button" onclick="window.location.href='/team.html?team=${formattedTeamName}'">
                         <img src="${team.logo}" alt="${team.name}" loading="lazy">
                         <span>${team.name}</span>
                     </button>`;
         }).join('');
 
         teamButtonsContainer.innerHTML = teamButtonsHTML;
-        console.log('Teams populated:', teamButtonsHTML); // Log the generated HTML
     }
 
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
         const teamNameWithSuffix = urlParams.get('team');
         const teamName = teamNameWithSuffix ? teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ') : window.teamName;
-
-        console.log('Team name extracted:', teamName);
 
         if (!teamName) {
             console.error('No team name found.');
@@ -91,13 +82,10 @@ document.addEventListener("DOMContentLoaded", async function() {
             return;
         }
 
-        console.log('Setting up page for team:', team);
-
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', team.secondaryColor);
 
-        // Update meta description
         const metaDescription = `Discover the current goal song that ignites the arena when the ${team.name} score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.`;
         let metaDescriptionTag = document.querySelector('meta[name="description"]');
         if (!metaDescriptionTag) {
@@ -211,14 +199,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                 }
             }
         }
-    }
-
-    function navigateToTeam(teamName) {
-        window.location.href = `/team.html?team=${teamName}`;
-    }
-
-    function navigateToStaticPage(staticPageUrl) {
-        window.location.href = staticPageUrl;
     }
 
     function populateDropdown(teams) {
