@@ -361,7 +361,7 @@
     },
     {
         "name": "Dallas Stars",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/dallas-stars.webp",
         "primaryColor": "#006847", 
         "secondaryColor": "#000",
