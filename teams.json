@@ -1077,7 +1077,7 @@
     },
     {
         "name": "Winnipeg Jets",
-        "logo": "images/winnipeg-jets.png",
+        "logo": "images/winnipeg-jets.webp",
         "primaryColor": "#041E42", 
         "secondaryColor": "#000",
         "individualGoalSongs": true,
