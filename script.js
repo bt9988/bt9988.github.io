@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function isTeamPage() {
-        return window.location.pathname.startsWith('/team.html') || window.location.pathname.startsWith('/anaheim-ducks-goal-songs.html');
+        return window.location.pathname.startsWith('/team.html') || window.location.pathname.endsWith('-goal-songs.html');
     }
 
     function formatTeamName(teamName) {
-        return teamName.replace(/\s+/g, '-');
+        return teamName.replace(/\s+/g, '-').toLowerCase();
     }
 
     function populateTeams(teams) {
@@ -46,21 +46,21 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
 
         const teamButtonsHTML = teams.map(team => {
-            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
-            
-            // Handle Vancouver Canucks separately
-            if (team.name === "Vancouver Canucks") {
-                return `<button class="team-button" onclick="window.location.href='/vancouver-canucks-goal-songs.html'">
+            const formattedTeamName = formatTeamName(`${team.name}-goal-songs`);
+
+            if (team.static === "TRUE") {
+                // Link to the static page
+                return `<button class="team-button" onclick="window.location.href='/${formattedTeamName}.html'">
+                            <img src="${team.logo}" alt="${team.name}" loading="lazy">
+                            <span>${team.name}</span>
+                        </button>`;
+            } else {
+                // Link to the dynamic team page
+                return `<button class="team-button" onclick="window.location.href='/team.html?team=${formattedTeamName}'">
                             <img src="${team.logo}" alt="${team.name}" loading="lazy">
                             <span>${team.name}</span>
                         </button>`;
             }
-
-            // Handle other teams
-            return `<button class="team-button" onclick="window.location.href='/team.html?team=${formattedTeamName}'">
-                        <img src="${team.logo}" alt="${team.name}" loading="lazy">
-                        <span>${team.name}</span>
-                    </button>`;
         }).join('');
 
         teamButtonsContainer.innerHTML = teamButtonsHTML;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
         const teamNameWithSuffix = urlParams.get('team');
-        const teamName = teamNameWithSuffix ? teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ') : window.teamName;
+        const teamName = teamNameWithSuffix ? teamNameWithSuffix.replace('-goal-songs', '').replace(/-/g, ' ') : window.teamName;
 
         if (!teamName) {
             console.error('No team name found.');
@@ -210,15 +210,15 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         teams.forEach(team => {
             const option = document.createElement('option');
-            option.value = team.name;
+            const formattedTeamName = formatTeamName(`${team.name}-goal-songs`);
+            option.value = team.static === "TRUE" ? `/${formattedTeamName}.html` : `/team.html?team=${formattedTeamName}`;
             option.textContent = team.name;
             dropdown.appendChild(option);
         });
 
         dropdown.addEventListener('change', function() {
-            const selectedTeam = dropdown.value;
-            const formattedTeamName = formatTeamName(`${selectedTeam}-Goal-Songs`);
-            navigateToTeam(formattedTeamName);
+            const selectedValue = dropdown.value;
+            window.location.href = selectedValue;
         });
     }
 });
