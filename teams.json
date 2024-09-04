@@ -574,7 +574,7 @@
 },
 {
     "name": "New Jersey Devils",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/new-jersey-devils.webp",
     "primaryColor": "#CE1126", 
     "secondaryColor": "#000",
