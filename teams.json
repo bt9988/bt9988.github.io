@@ -346,7 +346,7 @@
     },
     {
         "name": "Columbus Blue Jackets",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/columbus-blue-jackets.webp",
         "primaryColor": "#002654", 
         "secondaryColor": "#000",
