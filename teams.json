@@ -264,7 +264,7 @@
     },
     {
         "name": "Chicago Blackhawks",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/chicago-blackhawks.webp",
         "primaryColor": "#CF0A2C", 
         "secondaryColor": "#000",
