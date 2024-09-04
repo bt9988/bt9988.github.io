@@ -477,7 +477,7 @@
 },
 {
     "name": "Los Angeles Kings",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/los-angeles-kings.webp",
     "primaryColor": "#111111", 
     "secondaryColor": "#000",
