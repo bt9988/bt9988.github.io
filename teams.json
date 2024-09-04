@@ -1,7 +1,7 @@
 [
     {
         "name": "Anaheim Ducks",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/anaheim-ducks.webp",
         "primaryColor": "#F47A38", 
         "secondaryColor": "#000",
