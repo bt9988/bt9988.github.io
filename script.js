@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function isTeamPage() {
-        return window.location.pathname.includes('-goal-songs.html');
+        return window.location.pathname.startsWith('/team.html');
     }
 
     function formatTeamName(teamName) {
@@ -54,8 +54,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function setupTeamPage(teams) {
-        // Get the teamName from the global window object
-        const teamName = window.teamName;
+        const urlParams = new URLSearchParams(window.location.search);
+        const teamNameWithSuffix = urlParams.get('team');
+        const teamName = teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ');
         if (!teamName) return;
 
         const team = teams.find(t => t.name === teamName);
