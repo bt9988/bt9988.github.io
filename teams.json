@@ -498,7 +498,7 @@
 },
 {
     "name": "Minnesota Wild",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/minnesota-wild.webp",
     "primaryColor": "#154734", 
     "secondaryColor": "#000",
