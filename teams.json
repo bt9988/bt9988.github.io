@@ -650,7 +650,7 @@
 },
 {
     "name": "Ottawa Senators",
-    "logo": "images/ottawa-senators.png",
+    "logo": "images/ottawa-senators.webp",
     "primaryColor": "#DA1A32", 
     "secondaryColor": "#000",
     "conference": "Eastern",
@@ -673,7 +673,7 @@
 },
 {
     "name": "Philadelphia Flyers",
-    "logo": "images/philadelphia-flyers.png",
+    "logo": "images/philadelphia-flyers.webp",
     "primaryColor": "#F74902", 
     "secondaryColor": "#000",
     "conference": "Eastern",
@@ -727,7 +727,7 @@
     },
     {
         "name": "Pittsburgh Penguins",
-        "logo": "images/pittsburgh-penguins.png",
+        "logo": "images/pittsburgh-penguins.webp",
         "primaryColor": "#FCB514", 
         "secondaryColor": "#000",
         "conference": "Eastern",
@@ -752,7 +752,7 @@
     },
     {
         "name": "San Jose Sharks",
-        "logo": "images/san-jose-sharks.png",
+        "logo": "images/san-jose-sharks.webp",
         "primaryColor": "#006D75", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -785,7 +785,7 @@
     },
     {
         "name": "Seattle Kraken",
-        "logo": "images/seattle-kraken.png",
+        "logo": "images/seattle-kraken.webp",
         "primaryColor": "#001628", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -800,7 +800,7 @@
     },
     {
         "name": "St Louis Blues",
-        "logo": "images/st-louis-blues.png",
+        "logo": "images/st-louis-blues.webp",
         "primaryColor": "#002F87", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -814,7 +814,7 @@
     },
     {
         "name": "Tampa Bay Lightning",
-        "logo": "images/tampa-bay-lightning.png",
+        "logo": "images/tampa-bay-lightning.webp",
         "primaryColor": "#002868", 
         "secondaryColor": "#000",
         "conference": "Eastern",
@@ -838,7 +838,7 @@
     },
     {
         "name": "Toronto Maple Leafs",
-        "logo": "images/toronto-maple-leafs.png",
+        "logo": "images/toronto-maple-leafs.webp",
         "primaryColor": "#00205B", 
         "secondaryColor": "#000",
         "conference": "Eastern",
@@ -883,7 +883,7 @@
     },
     {
         "name": "Utah Hockey Club",
-        "logo": "images/utah-hockey-club.png",
+        "logo": "images/utah-hockey-club.webp",
         "primaryColor": "#69a6dd", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -897,7 +897,7 @@
     },
     {
         "name": "Vancouver Canucks",
-        "logo": "images/vancouver-canucks.png",
+        "logo": "images/vancouver-canucks.webp",
         "primaryColor": "#00205B", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -937,7 +937,7 @@
     },
     {
         "name": "Vegas Golden Knights",
-        "logo": "images/vegas-golden-knights.png",
+        "logo": "images/vegas-golden-knights.webp",
         "primaryColor": "#B4975A", 
         "secondaryColor": "#000",
         "conference": "Western",
@@ -953,7 +953,7 @@
     },
     {
         "name": "Washington Capitals",
-        "logo": "images/washington-capitals.png",
+        "logo": "images/washington-capitals.webp",
         "primaryColor": "#041E42", 
         "secondaryColor": "#000",
         "individualGoalSongs": true,
