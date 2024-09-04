@@ -451,7 +451,7 @@
 },
 {
     "name": "Florida Panthers",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/florida-panthers.webp",
     "primaryColor": "#041E42", 
     "secondaryColor": "#000",
