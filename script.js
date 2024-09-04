@@ -86,7 +86,10 @@ document.addEventListener("DOMContentLoaded", async function() {
             if (team.individualGoalSongs) {
                 individualGoalSongsSection.style.display = 'block';
                 currentGoalSongSection.style.display = 'none';
-                document.querySelector('.individual-goal-songs-section h2').textContent = `${team.name} Goal Songs`;
+                const individualSongsHeading = document.querySelector('.individual-goal-songs-section h2');
+                if (individualSongsHeading) {
+                    individualSongsHeading.textContent = `${team.name} Goal Songs`;
+                }
 
                 const individualSongsInfo = document.getElementById('individual-songs-info');
                 if (individualSongsInfo) {
@@ -112,34 +115,45 @@ document.addEventListener("DOMContentLoaded", async function() {
                 individualGoalSongsSection.style.display = 'none';
                 currentGoalSongSection.style.display = 'block';
 
-                document.getElementById('team-name-with-song').textContent = `${team.name} Goal Song`;
-                document.getElementById('team-name-placeholder').textContent = team.name;
+                const teamNameWithSong = document.getElementById('team-name-with-song');
+                const teamNamePlaceholder = document.getElementById('team-name-placeholder');
+                if (teamNameWithSong && teamNamePlaceholder) {
+                    teamNameWithSong.textContent = `${team.name} Goal Song`;
+                    teamNamePlaceholder.textContent = team.name;
+                }
 
                 if (team.currentGoalSong) {
-                    document.getElementById('song-name').textContent = team.currentGoalSong.name;
-                    document.getElementById('artist-name').textContent = team.currentGoalSong.artist;
+                    const songName = document.getElementById('song-name');
+                    const artistName = document.getElementById('artist-name');
+                    if (songName && artistName) {
+                        songName.textContent = team.currentGoalSong.name;
+                        artistName.textContent = team.currentGoalSong.artist;
 
-                    const inUseSince = team.currentGoalSong.inUseSince;
-                    if (inUseSince) {
-                        document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>. This goal song has been in use since <span id="in-use-since">${inUseSince}</span>.`;
-                    } else {
-                        document.getElementById('current-song').innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>.`;
+                        const inUseSince = team.currentGoalSong.inUseSince;
+                        const currentSong = document.getElementById('current-song');
+                        if (currentSong) {
+                            if (inUseSince) {
+                                currentSong.innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>. This goal song has been in use since <span id="in-use-since">${inUseSince}</span>.`;
+                            } else {
+                                currentSong.innerHTML = `The current goal song for the NHL's <strong>${team.name}</strong> is "<span id="song-name">${team.currentGoalSong.name}</span>" by <span id="artist-name">${team.currentGoalSong.artist}</span>.`;
+                            }
+                        }
                     }
-                }
 
-                const spotifyIframe = document.getElementById('spotify-iframe');
-                if (spotifyIframe) {
-                    if (team.currentGoalSong && team.currentGoalSong.spotifyID) {
-                        spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
-                        spotifyIframe.style.display = 'block';
-                    } else {
-                        spotifyIframe.style.display = 'none';
+                    const spotifyIframe = document.getElementById('spotify-iframe');
+                    if (spotifyIframe) {
+                        if (team.currentGoalSong && team.currentGoalSong.spotifyID) {
+                            spotifyIframe.src = `https://open.spotify.com/embed/track/${team.currentGoalSong.spotifyID}?utm_source=generator&theme=0`;
+                            spotifyIframe.style.display = 'block';
+                        } else {
+                            spotifyIframe.style.display = 'none';
+                        }
                     }
-                }
 
-                const youtubeIframe = document.getElementById('youtube-iframe');
-                if (youtubeIframe && team.currentGoalSong) {
-                    youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+                    const youtubeIframe = document.getElementById('youtube-iframe');
+                    if (youtubeIframe && team.currentGoalSong) {
+                        youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+                    }
                 }
             }
 
@@ -157,10 +171,16 @@ document.addEventListener("DOMContentLoaded", async function() {
                         }
                         songsList.appendChild(songItem);
                     });
-                    document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
+                    const previousSongsHeader = document.getElementById('previous-songs-header');
+                    if (previousSongsHeader) {
+                        previousSongsHeader.innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
+                    }
                     previousSongsContainer.appendChild(songsList);
                 } else {
-                    document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for the <strong>${team.name}</strong>.`;
+                    const previousSongsHeader = document.getElementById('previous-songs-header');
+                    if (previousSongsHeader) {
+                        previousSongsHeader.innerHTML = `There are no previous goal songs listed for the <strong>${team.name}</strong>.`;
+                    }
                 }
             }
         }
