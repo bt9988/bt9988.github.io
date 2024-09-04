@@ -669,7 +669,7 @@
 },
 {
     "name": "Ottawa Senators",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/ottawa-senators.webp",
     "primaryColor": "#DA1A32", 
     "secondaryColor": "#000",
@@ -693,7 +693,7 @@
 },
 {
     "name": "Philadelphia Flyers",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/philadelphia-flyers.webp",
     "primaryColor": "#F74902", 
     "secondaryColor": "#000",
