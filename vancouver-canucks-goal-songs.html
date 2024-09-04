@@ -21,23 +21,21 @@
                 <span id="artist-name">Artist Name</span>.
                 <span id="in-use-since">In use since Date (if applicable)</span>.
             </p>
-            <iframe id="spotify-iframe" src="https://open.spotify.com/embed/track/SpotifyID?utm_source=generator&theme=0" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="display: none;"></iframe>
-            <iframe id="youtube-iframe" src="https://www.youtube.com/embed/YouTubeID" width="100%" height="380" frameborder="0" allowfullscreen></iframe>
+            <iframe id="spotify-iframe" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="display: none;"></iframe>
+            <iframe id="youtube-iframe" width="100%" height="380" frameborder="0" allowfullscreen></iframe>
         </section>
         
         <section class="individual-goal-songs-section" style="display: none;">
             <h2>Individual Goal Songs</h2>
             <p id="individual-songs-info">The NHL's <strong>Vancouver Canucks</strong> currently use individual goal songs for each player:</p>
-            <iframe id="individual-songs-playlist" src="https://open.spotify.com/embed/playlist/PlaylistID" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe id="individual-songs-playlist" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="display: none;"></iframe>
             <div id="individual-songs"></div>
         </section>
         
         <section id="previous-songs">
             <h2>Previous Goal Songs</h2>
-            <ul>
-                <li>"Previous Song Name 1" by Previous Artist 1 (Years)</li>
-                <li>"Previous Song Name 2" by Previous Artist 2 (Years)</li>
-                <!-- Add more previous songs as needed -->
+            <ul id="previous-songs-list">
+                <!-- Previous goal songs will be dynamically inserted here -->
             </ul>
         </section>
     </main>
