@@ -983,7 +983,7 @@
     },
     {
         "name": "Washington Capitals",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/washington-capitals.webp",
         "primaryColor": "#041E42", 
         "secondaryColor": "#000",
@@ -1108,7 +1108,7 @@
     },
     {
         "name": "Winnipeg Jets",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/winnipeg-jets.webp",
         "primaryColor": "#041E42", 
         "secondaryColor": "#000",
