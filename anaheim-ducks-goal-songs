@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
     <script src="script.js" defer></script>
     <script>
         // Define the team name to be used by script.js
-        window.teamName = 'Team A';
+        window.teamName = 'Anaheim Ducks';
     </script>
 </head>
 <body>
