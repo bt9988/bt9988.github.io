@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (isIndexPage()) {
             populateTeams(teams);
         } else if (isTeamPage()) {
-            setupTeamPage(teams);
+            if (window.teamName) {
+                setupTeamPage(teams);
+            }
         }
         populateDropdown(teams);
     } catch (error) {
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     function isTeamPage() {
-        return window.location.pathname.startsWith('/team.html');
+        return window.location.pathname.includes('-goal-songs.html');
     }
 
     function formatTeamName(teamName) {
@@ -56,13 +58,17 @@ document.addEventListener("DOMContentLoaded", async function() {
     function setupTeamPage(teams) {
         const urlParams = new URLSearchParams(window.location.search);
         const teamNameWithSuffix = urlParams.get('team');
-        const teamName = teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ');
+        const teamName = teamNameWithSuffix ? teamNameWithSuffix.replace('-Goal-Songs', '').replace(/-/g, ' ') : '';
+
+        console.log('Team Name:', teamName); // Add logging
+
         if (!teamName) return;
 
         const team = teams.find(t => t.name === teamName);
-        if (!team) return;
-
-        console.log('Setting up static page for:', teamName); // Added logging
+        if (!team) {
+            console.error(`Team not found: ${teamName}`); // Log if team is not found
+            return;
+        }
 
         document.title = `${team.name} Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song`;
         document.documentElement.style.setProperty('--primary-color', team.primaryColor);
@@ -130,52 +136,28 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
 
             const youtubeIframe = document.getElementById('youtube-iframe');
-            if (team.currentGoalSong) {
-                youtubeIframe.src = `https://www.youtube.com/embed/${team.currentGoalSong.youtubeID}`;
+            if (team.currentGoalSong && team.currentGoalSong.youtubeURL) {
+                youtubeIframe.src = team.currentGoalSong.youtubeURL;
+                youtubeIframe.style.display = 'block';
+            } else {
+                youtubeIframe.style.display = 'none';
             }
-        }
-
-        const previousSongsContainer = document.getElementById('previous-songs');
-        if (team.previousGoalSongs && team.previousGoalSongs.length > 0) {
-            const songsList = document.createElement('ul');
-            team.previousGoalSongs.forEach(song => {
-                const songItem = document.createElement('li');
-                let years = song.years && song.years.length > 0 ? ` (${song.years.join(', ')})` : '';
-                if (song.individualGoalSongs) {
-                    songItem.innerHTML = "Individual Goal Songs";
-                } else {
-                    songItem.innerHTML = `"${song.name}" by ${song.artist}${years}`;
-                }
-                songsList.appendChild(songItem);
-            });
-            document.getElementById('previous-songs-header').innerHTML = `The <strong>${team.name}</strong> have previously used the following goal songs:`;
-            previousSongsContainer.appendChild(songsList);
-        } else {
-            document.getElementById('previous-songs-header').innerHTML = `There are no previous goal songs listed for the <strong>${team.name}</strong>.`;
         }
     }
 
     function populateDropdown(teams) {
-        const dropdownContent = document.querySelector('.dropdown-content');
-        if (dropdownContent) { // Check if the dropdown content element exists
-            const dropdownHTML = teams.map(team => {
-                const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
-                return `<a href="team.html?team=${formattedTeamName}">${team.name}</a>`;
-            }).join('');
-            dropdownContent.innerHTML = dropdownHTML;
-        }
+        const dropdown = document.querySelector('.team-dropdown');
+        if (!dropdown) return;
+
+        const optionsHTML = teams.map(team => {
+            const formattedTeamName = formatTeamName(`${team.name}-Goal-Songs`);
+            return `<option value="${formattedTeamName}">${team.name}</option>`;
+        }).join('');
+
+        dropdown.innerHTML = optionsHTML;
     }
 
-    function navigateToTeam(teamName) {
-        window.location.href = `team.html?team=${teamName}`;
-    }
-
-    window.navigateToTeam = navigateToTeam;
-
-    // Static page handling
-    if (window.teamName) {
-        // This code will run on static pages where `window.teamName` is defined.
-        console.log(`Static Page: ${window.teamName}`);
-        // Add additional static page logic here if needed.
-    }
+    window.navigateToTeam = function(team) {
+        window.location.href = `/team.html?team=${team}`;
+    };
 });
