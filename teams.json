@@ -300,7 +300,7 @@
     },
     {
         "name": "Colorado Avalanche",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/colorado-avalanche.webp",
         "primaryColor": "#6F263D", 
         "secondaryColor": "#000",
