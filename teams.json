@@ -530,7 +530,7 @@
 },
 {
     "name": "Montreal Canadiens",
-    "static": "FALSE",
+    "static": "TRUE",
     "logo": "images/montreal-canadiens.webp",
     "primaryColor": "#AF1E2D", 
     "secondaryColor": "#000",
