@@ -748,7 +748,7 @@
     },
     {
         "name": "Pittsburgh Penguins",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/pittsburgh-penguins.webp",
         "primaryColor": "#FCB514", 
         "secondaryColor": "#000",
@@ -774,7 +774,7 @@
     },
     {
         "name": "San Jose Sharks",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/san-jose-sharks.webp",
         "primaryColor": "#006D75", 
         "secondaryColor": "#000",
@@ -839,7 +839,7 @@
     },
     {
         "name": "Tampa Bay Lightning",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/tampa-bay-lightning.webp",
         "primaryColor": "#002868", 
         "secondaryColor": "#000",
@@ -864,7 +864,7 @@
     },
     {
         "name": "Toronto Maple Leafs",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/toronto-maple-leafs.webp",
         "primaryColor": "#00205B", 
         "secondaryColor": "#000",
