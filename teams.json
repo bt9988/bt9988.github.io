@@ -49,7 +49,7 @@
     },
     {
         "name": "Buffalo Sabres",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/buffalo-sabres.webp",
         "primaryColor": "#003087", 
         "secondaryColor": "#000",
