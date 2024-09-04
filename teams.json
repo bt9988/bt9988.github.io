@@ -25,7 +25,7 @@
     
     {
         "name": "Boston Bruins",
-        "static": "FALSE",
+        "static": "TRUE",
         "logo": "images/boston-bruins.webp",
         "primaryColor": "#FFB81C", 
         "secondaryColor": "#000",
