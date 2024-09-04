@@ -117,6 +117,8 @@ document.addEventListener("DOMContentLoaded", async function() {
                     const individualSongsPlaylist = document.getElementById('individual-songs-playlist');
                     if (individualSongsPlaylist && team.individualGoalSongsPlaylist) {
                         individualSongsPlaylist.innerHTML = `<iframe src="https://open.spotify.com/embed/playlist/${team.individualGoalSongsPlaylist}" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+                    } else {
+                        individualSongsPlaylist.style.display = 'none';
                     }
 
                     const individualSongsContainer = document.getElementById('individual-songs');
@@ -212,7 +214,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         }
     }
 
-    window.navigateToTeam = function(teamName) {
-        window.location.href = `/team.html?team=${teamName}`;
-    }
+    window.navigateToTeam = function (teamName) {
+        window.location.href = `team.html?team=${teamName}`;
+    };
 });
