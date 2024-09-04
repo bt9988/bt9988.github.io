@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                             <span>${team.name}</span>
                         </button>`;
             } else {
-                // Link to the dynamic team page
+                // Link to the dynamic team page (default if static is FALSE or missing)
                 return `<button class="team-button" onclick="window.location.href='/team.html?team=${formattedTeamName}'">
                             <img src="${team.logo}" alt="${team.name}" loading="lazy">
                             <span>${team.name}</span>
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             return;
         }
 
-        const team = teams.find(t => t.name === teamName);
+        const team = teams.find(t => t.name.toLowerCase() === teamName.toLowerCase());
         if (!team) {
             console.error('Team not found:', teamName);
             return;
