@@ -1,6 +1,7 @@
 [
     {
         "name": "Anaheim Ducks",
+        "static": "FALSE",
         "logo": "images/anaheim-ducks.webp",
         "primaryColor": "#F47A38", 
         "secondaryColor": "#000",
@@ -24,6 +25,7 @@
     
     {
         "name": "Boston Bruins",
+        "static": "FALSE",
         "logo": "images/boston-bruins.webp",
         "primaryColor": "#FFB81C", 
         "secondaryColor": "#000",
@@ -47,6 +49,7 @@
     },
     {
         "name": "Buffalo Sabres",
+        "static": "FALSE",
         "logo": "images/buffalo-sabres.webp",
         "primaryColor": "#003087", 
         "secondaryColor": "#000",
@@ -198,6 +201,7 @@
     },
     {
         "name": "Calgary Flames",
+        "static": "FALSE",
         "logo": "images/calgary-flames.webp",
         "primaryColor": "#D2001C", 
         "secondaryColor": "#000",
@@ -237,6 +241,7 @@
     },
     {
         "name": "Carolina Hurricanes",
+        "static": "FALSE",
         "logo": "images/carolina-hurricanes.webp",
         "primaryColor": "#CE1126", 
         "secondaryColor": "#000",
@@ -259,6 +264,7 @@
     },
     {
         "name": "Chicago Blackhawks",
+        "static": "FALSE",
         "logo": "images/chicago-blackhawks.webp",
         "primaryColor": "#CF0A2C", 
         "secondaryColor": "#000",
@@ -294,6 +300,7 @@
     },
     {
         "name": "Colorado Avalanche",
+        "static": "FALSE",
         "logo": "images/colorado-avalanche.webp",
         "primaryColor": "#6F263D", 
         "secondaryColor": "#000",
@@ -339,6 +346,7 @@
     },
     {
         "name": "Columbus Blue Jackets",
+        "static": "FALSE",
         "logo": "images/columbus-blue-jackets.webp",
         "primaryColor": "#002654", 
         "secondaryColor": "#000",
@@ -353,6 +361,7 @@
     },
     {
         "name": "Dallas Stars",
+        "static": "FALSE",
         "logo": "images/dallas-stars.webp",
         "primaryColor": "#006847", 
         "secondaryColor": "#000",
@@ -381,6 +390,7 @@
     },
     {
         "name": "Detroit Red Wings",
+        "static": "FALSE",
         "logo": "images/detroit-red-wings.webp",
         "primaryColor": "#CE1126", 
         "secondaryColor": "#000",
@@ -413,6 +423,7 @@
         
         {
     "name": "Edmonton Oilers",
+            "static": "FALSE",
     "logo": "images/edmonton-oilers.webp",
     "primaryColor": "#041E42", 
     "secondaryColor": "#000",
@@ -440,6 +451,7 @@
 },
 {
     "name": "Florida Panthers",
+    "static": "FALSE",
     "logo": "images/florida-panthers.webp",
     "primaryColor": "#041E42", 
     "secondaryColor": "#000",
@@ -465,6 +477,7 @@
 },
 {
     "name": "Los Angeles Kings",
+    "static": "FALSE",
     "logo": "images/los-angeles-kings.webp",
     "primaryColor": "#111111", 
     "secondaryColor": "#000",
@@ -485,6 +498,7 @@
 },
 {
     "name": "Minnesota Wild",
+    "static": "FALSE",
     "logo": "images/minnesota-wild.webp",
     "primaryColor": "#154734", 
     "secondaryColor": "#000",
@@ -516,6 +530,7 @@
 },
 {
     "name": "Montreal Canadiens",
+    "static": "FALSE",
     "logo": "images/montreal-canadiens.webp",
     "primaryColor": "#AF1E2D", 
     "secondaryColor": "#000",
@@ -539,6 +554,7 @@
 },
 {
     "name": "Nashville Predators",
+    "static": "FALSE",
     "logo": "images/nashville-predators.webp",
     "primaryColor": "#FFB81C", 
     "secondaryColor": "#000",
@@ -558,6 +574,7 @@
 },
 {
     "name": "New Jersey Devils",
+    "static": "FALSE",
     "logo": "images/new-jersey-devils.webp",
     "primaryColor": "#CE1126", 
     "secondaryColor": "#000",
@@ -589,6 +606,7 @@
 },
 {
     "name": "New York Islanders",
+    "static": "FALSE",
     "logo": "images/new-york-islanders.webp",
     "primaryColor": "#00539B", 
     "secondaryColor": "#000",
@@ -631,6 +649,7 @@
 },
 {
     "name": "New York Rangers",
+    "static": "FALSE",
     "logo": "images/new-york-rangers.webp",
     "primaryColor": "#0038A8", 
     "secondaryColor": "#000",
@@ -650,6 +669,7 @@
 },
 {
     "name": "Ottawa Senators",
+    "static": "FALSE",
     "logo": "images/ottawa-senators.webp",
     "primaryColor": "#DA1A32", 
     "secondaryColor": "#000",
@@ -673,6 +693,7 @@
 },
 {
     "name": "Philadelphia Flyers",
+    "static": "FALSE",
     "logo": "images/philadelphia-flyers.webp",
     "primaryColor": "#F74902", 
     "secondaryColor": "#000",
@@ -727,6 +748,7 @@
     },
     {
         "name": "Pittsburgh Penguins",
+        "static": "FALSE",
         "logo": "images/pittsburgh-penguins.webp",
         "primaryColor": "#FCB514", 
         "secondaryColor": "#000",
@@ -752,6 +774,7 @@
     },
     {
         "name": "San Jose Sharks",
+        "static": "FALSE",
         "logo": "images/san-jose-sharks.webp",
         "primaryColor": "#006D75", 
         "secondaryColor": "#000",
@@ -785,6 +808,7 @@
     },
     {
         "name": "Seattle Kraken",
+        "static": "FALSE",
         "logo": "images/seattle-kraken.webp",
         "primaryColor": "#001628", 
         "secondaryColor": "#000",
@@ -800,6 +824,7 @@
     },
     {
         "name": "St Louis Blues",
+        "static": "FALSE",
         "logo": "images/st-louis-blues.webp",
         "primaryColor": "#002F87", 
         "secondaryColor": "#000",
@@ -814,6 +839,7 @@
     },
     {
         "name": "Tampa Bay Lightning",
+        "static": "FALSE",
         "logo": "images/tampa-bay-lightning.webp",
         "primaryColor": "#002868", 
         "secondaryColor": "#000",
@@ -838,6 +864,7 @@
     },
     {
         "name": "Toronto Maple Leafs",
+        "static": "FALSE",
         "logo": "images/toronto-maple-leafs.webp",
         "primaryColor": "#00205B", 
         "secondaryColor": "#000",
@@ -883,6 +910,7 @@
     },
     {
         "name": "Utah Hockey Club",
+        "static": "FALSE",
         "logo": "images/utah-hockey-club.webp",
         "primaryColor": "#69a6dd", 
         "secondaryColor": "#000",
@@ -938,6 +966,7 @@
     },
     {
         "name": "Vegas Golden Knights",
+        "static": "FALSE",
         "logo": "images/vegas-golden-knights.webp",
         "primaryColor": "#B4975A", 
         "secondaryColor": "#000",
@@ -954,6 +983,7 @@
     },
     {
         "name": "Washington Capitals",
+        "static": "FALSE",
         "logo": "images/washington-capitals.webp",
         "primaryColor": "#041E42", 
         "secondaryColor": "#000",
@@ -1078,6 +1108,7 @@
     },
     {
         "name": "Winnipeg Jets",
+        "static": "FALSE",
         "logo": "images/winnipeg-jets.webp",
         "primaryColor": "#041E42", 
         "secondaryColor": "#000",
