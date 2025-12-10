@@ -911,7 +911,7 @@
     {
         "name": "Utah Mammoth",
         "static": "TRUE",
-        "logo": "images/utah-hockey-club2.webp",
+        "logo": "images/utah-mammoth.webp",
         "primaryColor": "#69a6dd", 
         "secondaryColor": "#000",
         "conference": "Western",
