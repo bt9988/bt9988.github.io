@@ -909,9 +909,9 @@
         ]
     },
     {
-        "name": "Utah Hockey Club",
+        "name": "Utah Mammoth",
         "static": "TRUE",
-        "logo": "images/utah-hockey-club.webp",
+        "logo": "images/utah-hockey-club2.webp",
         "primaryColor": "#69a6dd", 
         "secondaryColor": "#000",
         "conference": "Western",
