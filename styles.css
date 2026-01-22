@@ -1,5 +1,3 @@
-
-
 /* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -11,14 +9,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* Header */
 header {
     background-color: #333;
     color: #fff;
-    padding: 0px 0;
+    padding: 0;
 }
 
 header .header-content {
@@ -60,18 +58,11 @@ header .nav-link:hover {
     margin: 0 auto;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
-}
-
-.container.main-content h2 {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    box-sizing: border-box;
 }
 
 .main-content {
     background-color: #fff;
-    border-top: none;
-    border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px 20px;
     flex: 1;
@@ -81,114 +72,76 @@ header .nav-link:hover {
     box-sizing: border-box;
 }
 
+.container.main-content h2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* Team info */
+.team-info {
+    margin-top: 0;
+}
+
+.team-info h2 {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#team-name-with-song {
+    margin-bottom: 12px;
+}
+
+/* Team logo */
 .team-logo img {
     width: 40px;
     height: 40px;
     display: block;
-    line-height: 0;
-    margin: 0 auto; /* Centers the image */
-}
-
-
-/* Contact Form Styles */
-.contact-form {
-    max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Include padding and border in element's width */
 }
 
-.contact-form .form-group {
-    margin-bottom: 10px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
+/* -------------------------
+   ✅ RESPONSIVE YOUTUBE FIX
+-------------------------- */
+.video-wrapper {
+    position: relative;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Ensure input fields fit within the container */
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin: 16px 0;
+    overflow: hidden;
 }
 
-.contact-form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-.contact-form button:hover {
-    background-color: #555;
+/* Spotify */
+#spotify-player {
+    margin-bottom: 18px;
 }
 
 /* Description */
 .description {
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Remove shadow */
-    margin-bottom: 0px;
-    margin-top: 0px;
-    background-color: #fff; /* Ensure it contrasts well with the background */
+    margin: 0;
+    background-color: #fff;
     text-align: center;
     box-sizing: border-box;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.footerlink {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footerlink:hover {
-    text-decoration: underline;
-}
-
-.footertext {
-    font-size: 13px;
-    margin-bottom: 3px;
-    margin-top: 2px;
-}
-
-/* Team Info */
-.team-info h2 {
-    text-align: center;
-    margin-top: 12px; /* Adjust this value to reduce space above */
-    margin-bottom: 12px; /* Adjust this value to reduce space below */
-}
-
-.team-info {
-    margin-top: 0px;
-}
-
-/* Team Buttons */
+/* Team buttons */
 .team-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
+    margin: 20px 0;
 }
 
 .team-button {
@@ -201,7 +154,6 @@ footer {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,96 +175,63 @@ footer {
 .team-button img {
     width: 33px;
     height: 33px;
-    margin-bottom: 0px;
-    border-radius: 0%;
-    box-sizing: border-box;
 }
 
 .team-button span {
     margin-top: 5px;
     font-size: 0.8rem;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
 
-#team-name-with-song {
-    margin-bottom: 12px; /* Adjust this value to match the margins of the h2 elements */
+/* Contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
-@media (max-width: 500px) {
-    header .logo {
-        max-height: 33px;
-    }
-
-    .description {
-        font-size: 1rem;
-        padding: 15px; /* Adjust padding */
-    }
-
-    .team-button {
-
-        width: 110px;
-        height: 80px;
-    }
-
-
-
-    /* Ensure main content fits within the viewport */
-    .container, .main-content, .contact-form {
-        padding: 10px;
-        max-width: 100%;
-    }
-
-    /* Footer adjustments */
-    footer {
-        padding: 10px 5px; /* Adjust padding for mobile */
-    }
-
-    footer p {
-        font-size: 12px; /* Adjust font size if needed */
-    }
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-/* Additional styles for YouTube video */
-#youtube-video {
-    margin-top: 20px;
-}
-
-#youtube-iframe {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    height: 350px;
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden;   /* Ensures rounded corners are applied correctly */
-    box-shadow: none;
-    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-#spotify-player {
-    margin-bottom: 18px; /* Adjust the value as needed */
-}
-
-
-footer .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-footer .footer-nav {
-
-    align-items: center;
-}
-
-footer .nav-link {
+.contact-form button {
+    background-color: #333;
     color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footertext {
+    font-size: 13px;
+    margin: 2px 0 3px;
+}
+
+.footerlink {
+    color: #fff;
+    text-decoration: underline;
 }
 
 footer .logo {
@@ -320,9 +239,20 @@ footer .logo {
     margin-bottom: 2px;
 }
 
+/* Responsive */
 @media (max-width: 500px) {
+    header .logo {
+        max-height: 33px;
+    }
+
+    .container,
+    .main-content,
+    .contact-form {
+        padding: 10px;
+        max-width: 100%;
+    }
+
     footer .logo {
         max-height: 28px;
     }
-
-
+}
