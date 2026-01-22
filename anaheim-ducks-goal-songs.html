@@ -1,74 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5123855122106949" crossorigin="anonymous"></script>
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Site Name for SEO -->
+
     <meta property="og:site_name" content="Hockey Goal Songs">
-    <title>Anaheim Ducks Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song</title>
-    <meta name="description" content="Discover the current goal song that ignites the arena when the Anaheim Ducks score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs." id="meta-description">
+    <title>Anaheim Ducks Goal Songs | Hockey Goal Songs</title>
+    <meta name="description" content="Discover the current and past Anaheim Ducks goal songs. Watch videos, listen on Spotify, and explore Ducks goal song history.">
+
     <link rel="stylesheet" href="styles.css">
-
-      
-</head>
 </head>
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-67F3BG6VWP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-67F3BG6VWP');
 </script>
 
-    
 <body>
 
-    <!-- Container for the header -->
-    <header id="header-container"></header>
+<header id="header-container"></header>
 
-    <div class="container main-content">
+<div class="container main-content">
 
-        <!-- Team Information and Goal Songs -->
+    <!-- Current Goal Song -->
+    <section class="team-info current-goal-song-section">
+        <h2 id="team-name-with-song">Anaheim Ducks Goal Song</h2>
 
-        <section class="team-info current-goal-song-section">
-            <h2 id="team-name-with-song">Anaheim Ducks Goal Song</h2>
+        <div id="current-song">
+            <p>
+                The current goal song for the NHL's <strong>Anaheim Ducks</strong> is
+                "<strong>Coming For You</strong>" by <strong>The Offspring</strong>.
+                <span>This song has been in use since 2024.</span>
+            </p>
+        </div>
 
-            <div id="current-song">
-                <p>The current goal song for the NHL's <strong><span id="team-name-placeholder">Anaheim Ducks</span></strong> is "<span id="song-name">Coming For You</span>" by <span id="artist-name">The Offspring</span>. <span id="in-use-since">This song has been in use since 2024.</span></p>
-            </div>
+        <!-- YouTube Video -->
+        <div id="youtube-video">
+            <iframe
+                src="https://www.youtube.com/embed/Ji9NPW3mi8o"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
 
-            <div id="youtube-video">
-          <iframe id="youtube-iframe" src="https://www.youtube.com/embed/Ji9NPW3mi8o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
+        <!-- Spotify Embed -->
+        <div id="spotify-player">
+            <iframe
+                src="https://open.spotify.com/embed/track/0FLmCEO4OccwwiHxveEpt1?theme=0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
 
-            <!-- Spotify Embed -->
-            <div id="spotify-player">
-              <iframe id="spotify-iframe" src="https://open.spotify.com/embed/track/0FLmCEO4OccwwiHxveEpt1?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="display: block;"></iframe>
-            </div>
-        </section>
+    <!-- Goal Song History -->
+    <section class="team-info">
+        <h2>Goal Song History</h2>
 
-        <section class="team-info">
-            <h2 id="team-name-with-song">Goal Song History</h2>
-            <div id="previous-songs">
-                <p id="previous-songs-header">The <strong>Anaheim Ducks</strong> have used the following goal songs:</p>
-               <ul><li>"Bro Hymn" by Pennywise (2005-2024)</li>
-                   <li>"Kernkraft 400" by Zombie Nation (2005)</li></ul>
-                <!-- Previous songs will be populated here -->
-            </div>
-        </section>
-    </div>
+        <div id="previous-songs">
+            <p>The <strong>Anaheim Ducks</strong> have used the following goal songs:</p>
+            <ul>
+                <li>"Bro Hymn" by Pennywise (2005–2024)</li>
+                <li>"Kernkraft 400" by Zombie Nation (2005)</li>
+            </ul>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
 
    
 
-    <!-- Container for the footer -->
-    <footer id="footer-container"></footer>
+            <div class="product-grid">
 
-    <script src="script.js"></script>
+                <div class="product-card">
+                    <a href="https://amzn.to/3ZpY0mM" target="_blank" rel="nofollow sponsored">
+                        <img src="https://m.media-amazon.com/images/I/71Y1sVbEzDL._AC_SX679_.jpg" alt="Anaheim Ducks T-Shirt">
+                        <h4>Anaheim Ducks Official Logo T-Shirt</h4>
+                        <span class="amazon-button">View on Amazon</span>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="https://amzn.to/3TqJ0wX" target="_blank" rel="nofollow sponsored">
+                        <img src="https://m.media-amazon.com/images/I/71S-xc2F0GL._AC_SX679_.jpg" alt="Anaheim Ducks Hoodie">
+                        <h4>Anaheim Ducks Pullover Hoodie</h4>
+                        <span class="amazon-button">View on Amazon</span>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="https://amzn.to/3ZsM2yb" target="_blank" rel="nofollow sponsored">
+                        <img src="https://m.media-amazon.com/images/I/61rP9F4HcHL._AC_SX679_.jpg" alt="Anaheim Ducks Hat">
+                        <h4>'47 Brand Anaheim Ducks Adjustable Hat</h4>
+                        <span class="amazon-button">View on Amazon</span>
+                    </a>
+                </div>
+
+                <div class="product-card">
+                    <a href="https://amzn.to/48KQZqv" target="_blank" rel="nofollow sponsored">
+                        <img src="https://m.media-amazon.com/images/I/71vKk6I1jQL._AC_SX679_.jpg" alt="Anaheim Ducks Flag">
+                        <h4>Anaheim Ducks Team Flag</h4>
+                        <span class="amazon-button">View on Amazon</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="affiliate-disclosure">
+                As an Amazon Associate, Hockey Goal Songs earns from qualifying purchases.
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<footer id="footer-container"></footer>
+
+<script src="script.js"></script>
 </body>
 </html>
