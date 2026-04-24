@@ -295,4 +295,27 @@ footer .logo {
     footer .logo {
         max-height: 28px;
     }
+/* Shop Block */
+.shop-block {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.shop-block img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.shop-block a {
+    color: #333;              /* matches your body text */
+    text-decoration: none;
+}
+
+.shop-block a:hover {
+    text-decoration: underline;
+}
+
+    
 }
