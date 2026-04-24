@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +5,19 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Site Name for SEO -->
+    
     <meta property="og:site_name" content="Hockey Goal Songs">
     <title>Vegas Golden Knights Goal Songs | Hockey Goal Songs | Tracking Every NHL Goal Song</title>
-    <meta name="description" content="Discover the current goal song that ignites the arena when the Vegas Golden Knights score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs." id="meta-description">
+    <meta name="description" content="Discover the current goal song that ignites the arena when the Vegas Golden Knights score at Hockey Goal Songs. Watch YouTube videos, listen through an embedded Spotify player, and explore information on previously used goal songs.">
+
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* -------------------------
-           Responsive YouTube Video
-        -------------------------- */
+        /* Responsive YouTube Video */
         .video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             margin: 16px 0;
@@ -33,135 +31,87 @@
             height: 100%;
             border: 0;
         }
-
-        /* -------------------------
-           Related Products
-        -------------------------- */
-        .related-products {
-            margin-top: 32px;
-        }
-
-        .related-products h3 {
-            margin-bottom: 16px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-        }
-
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 12px;
-            background: #fff;
-            text-align: center;
-        }
-
-.product-card img {
-    width: 100%;
-    height: 200px;           /* 👈 consistent height */
-    object-fit: contain;     /* show full product without cropping */
-    margin-bottom: 10px;
-}
-
-        .product-card h4 {
-            font-size: 15px;
-            margin: 8px 0;
-            color: #111;
-        }
-
-        .product-card a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .product-card .cta {
-            display: inline-block;
-            margin-top: 6px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .affiliate-disclosure {
-            font-size: 12px;
-            color: #666;
-            margin-top: 12px;
-        }
     </style>
 </head>
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-67F3BG6VWP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-67F3BG6VWP');
 </script>
 
-    
 <body>
 
-    <!-- Container for the header -->
-    <header id="header-container"></header>
+<header id="header-container"></header>
 
-    <div class="container main-content">
+<div class="container main-content">
 
-        <!-- Team Information and Goal Songs -->
+<section class="team-info current-goal-song-section">
+    <h2 id="team-name-with-song">Vegas Golden Knights Goal Song</h2>
 
-<section class="team-info current-goal-song-section" style="display: block;">
-            <h2 id="team-name-with-song">Vegas Golden Knights Goal Song</h2>
+    <div id="current-song">
+        The current goal song for the NHL's <strong>Vegas Golden Knights</strong> is 
+        "<span id="song-name">Vegas Lights</span>" by 
+        <span id="artist-name">Panic! At the Disco</span>.
+    </div>
 
-            <div id="current-song">The current goal song for the NHL's <strong>Vegas Golden Knights</strong> is "<span id="song-name">Vegas Lights</span>" by <span id="artist-name">Panic! At the Disco</span>.</div>
+    <div class="video-wrapper">
+        <iframe 
+            id="youtube-iframe"
+            src="https://www.youtube.com/embed/aIs7QtCsUAg"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
 
-            <div id="youtube-video">
-                <iframe id="youtube-iframe" src="https://www.youtube.com/embed/aIs7QtCsUAg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
+    <div id="spotify-player">
+        <iframe 
+            id="spotify-iframe"
+            src="https://open.spotify.com/embed/track/0zewUY3RSh8yaV7q66Okem?utm_source=generator&theme=0"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
 
-            <!-- Spotify Embed -->
-            <div id="spotify-player">
-                <iframe id="spotify-iframe" src="https://open.spotify.com/embed/track/0zewUY3RSh8yaV7q66Okem?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="display: block;"></iframe>
-            </div>
-        </section>
+<section class="team-info">
+    <h2>Goal Song History</h2>
 
-        <section class="team-info">
-            <h2 id="team-name-with-song">Goal Song History</h2>
-            <div id="previous-songs">
-                <p id="previous-songs-header">No previous goal songs are listed for the <strong>Vegas Golden Knights</strong>.</p>
-               
-               
-                <!-- Previous songs will be populated here -->
-            </div>
+    <div id="previous-songs">
+        <p>No previous goal songs are listed for the <strong>Vegas Golden Knights</strong>.</p>
+    </div>
 
-<!-- Related Products -->
-<!-- Golden Knights Shop -->
-<div class="golden-knights-shop">
-    <h3>Shop Golden Knights Gear Now</h3>
+    <!-- SHOP BLOCK -->
+    <div>
+        <h3>Shop Golden Knights Gear Now</h3>
 
-    <iframe 
-        id="iframe_900" 
-        src="//a.impactradius-go.com/gen-ad-code/5551897/830691/9663/" 
-        width="300" 
-        height="250" 
-        scrolling="no" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">
-    </iframe>
+        <iframe 
+            src="https://a.impactradius-go.com/gen-ad-code/5551897/830691/9663/"
+            width="300"
+            height="250"
+            scrolling="no"
+            frameborder="0">
+        </iframe>
 
-    <p>
-        <a href="https://fanatics.93n6tx.net/c/5551897/830691/9663" target="_blank" rel="nofollow sponsored">
-            View more Golden Knights gear →
-        </a>
-    </p>
+        <p>
+            <a href="https://fanatics.93n6tx.net/c/5551897/830691/9663" target="_blank" rel="nofollow sponsored">
+                View more Golden Knights gear →
+            </a>
+        </p>
+    </div>
+
+</section>
+
 </div>
 
-    <!-- Container for the footer -->
-    <footer id="footer-container"></footer>
+<footer id="footer-container"></footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
