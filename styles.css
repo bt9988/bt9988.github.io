@@ -297,20 +297,29 @@ footer .logo {
     }
 /* Shop Block */
 .shop-block {
-    text-align: center;
     margin-top: 24px;
+}
+
+.shop-block h3 {
+    text-align: center;
+}
+
+.shop-block a {
+    display: block;           /* 👈 key fix */
+    text-align: center;       /* 👈 centers inline stuff inside */
+    color: #333;
+    text-decoration: none;
 }
 
 .shop-block img {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;           /* 👈 hard center */
     max-width: 100%;
     height: auto;
 }
 
-.shop-block a {
-    color: #333;              /* matches your body text */
-    text-decoration: none;
+.shop-block p {
+    text-align: center;       /* 👈 centers the text link */
 }
 
 .shop-block a:hover {
