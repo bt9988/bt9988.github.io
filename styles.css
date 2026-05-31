@@ -328,3 +328,23 @@ footer .logo {
 
     
 }
+
+/* =========================
+   Amazon Music CTA (SAFE ADD-ON)
+========================= */
+
+.music-cta {
+    margin: 8px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.music-cta a {
+    color: #0a66c2;
+    text-decoration: none;
+}
+
+.music-cta a:hover {
+    text-decoration: underline;
+}
