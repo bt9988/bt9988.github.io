@@ -329,6 +329,38 @@ footer .logo {
     
 }
 
+
+/* Homepage content */
+.homepage-content {
+    margin: 35px auto 20px;
+    padding: 25px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    max-width: 850px;
+}
+
+.homepage-content h2 {
+    text-align: center;
+    margin: 0 0 18px;
+    font-size: 1.4rem;
+}
+
+.homepage-content p {
+    margin: 0 0 14px;
+    line-height: 1.7;
+}
+
+.homepage-content p:last-child {
+    margin-bottom: 0;
+}
+
+.homepage-content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+
 /* =========================
    Amazon Music CTA (SAFE ADD-ON)
 ========================= */
