@@ -1,382 +1,385 @@
 /* Global styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
+font-family: 'Roboto', sans-serif;
+line-height: 1.6;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+color: #333;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+overflow-x: hidden;
 }
 
 /* Amazon-style CTA button */
 .amazon-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 14px;
-    background-color: #1a1a1a;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+display: inline-block;
+margin-top: 10px;
+padding: 8px 14px;
+background-color: #1a1a1a;
+color: #fff;
+font-size: 14px;
+font-weight: 600;
+border-radius: 6px;
+transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .product-card a:hover .amazon-button {
-    background-color: #000;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+background-color: #000;
+transform: translateY(-1px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Header */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 0;
+background-color: #333;
+color: #fff;
+padding: 0;
 }
 
 header .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 14px;
+padding: 0 20px;
+width: 100%;
+box-sizing: border-box;
 }
 
 header .logo {
-    max-height: 37px;
-    margin-right: 20px;
-    margin-top: 17px;
-    margin-bottom: 9px;
+max-height: 37px;
+margin-right: 20px;
+margin-top: 17px;
+margin-bottom: 9px;
 }
 
 header .header-nav {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 
 header .nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    font-size: 14px;
+color: #fff;
+text-decoration: none;
+margin: 0 8px;
+font-size: 14px;
 }
 
 header .nav-link:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 /* Main content */
 .container {
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+max-width: 990px;
+margin: 0 auto;
+padding: 20px;
+width: 100%;
+box-sizing: border-box;
 }
 
 .main-content {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px 20px;
-    flex: 1;
-    max-width: 620px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 10px 20px 20px;
+flex: 1;
+max-width: 620px;
+width: 100%;
+margin: 0 auto;
+box-sizing: border-box;
 }
 
 .container.main-content h2 {
-    margin-top: 12px;
-    margin-bottom: 12px;
+margin-top: 12px;
+margin-bottom: 12px;
 }
 
 /* Team info */
 .team-info {
-    margin-top: 0;
+margin-top: 0;
 }
 
 .team-info h2 {
-    text-align: center;
-    margin-top: 12px;
-    margin-bottom: 12px;
+text-align: center;
+margin-top: 12px;
+margin-bottom: 12px;
 }
 
 #team-name-with-song {
-    margin-bottom: 12px;
+margin-bottom: 12px;
 }
 
 /* Team logo */
 .team-logo img {
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin: 0 auto;
+width: 40px;
+height: 40px;
+display: block;
+margin: 0 auto;
 }
 
 /* =========================
-   GLOBAL RESPONSIVE YOUTUBE
+GLOBAL RESPONSIVE YOUTUBE
 ========================= */
 
 /* Used on older team pages */
 #youtube-video {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    margin: 16px 0;
+position: relative;
+width: 100%;
+padding-bottom: 56.25%; /* 16:9 */
+height: 0;
+overflow: hidden;
+margin: 16px 0;
 }
 
 #youtube-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
 }
 
 /* Used on Bruins + newer pages */
 .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    margin: 16px 0;
-    overflow: hidden;
+position: relative;
+width: 100%;
+padding-bottom: 56.25%; /* 16:9 */
+height: 0;
+margin: 16px 0;
+overflow: hidden;
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
 }
 
 /* Spotify */
 #spotify-player {
-    margin-bottom: 18px;
+margin-bottom: 18px;
 }
 
 /* Description */
 .description {
-    padding: 20px;
-    border-radius: 8px;
-    margin: 0;
-    background-color: #fff;
-    text-align: center;
-    box-sizing: border-box;
+padding: 16px;
+border-radius: 8px;
+margin: 0;
+background-color: #fff;
+text-align: center;
+box-sizing: border-box;
+font-size: 15px;
+line-height: 1.6;
 }
 
 /* Team buttons */
 .team-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin: 20px 0;
 }
 
 .team-button {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 8px;
-    margin: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 110px;
-    height: 80px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    box-sizing: border-box;
+background-color: #fff;
+color: #333;
+border: 1px solid #ddd;
+padding: 8px;
+margin: 4px;
+cursor: pointer;
+font-size: 1rem;
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 110px;
+height: 80px;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
+box-sizing: border-box;
 }
 
 .team-button:hover {
-    background-color: #f0f0f0;
-    color: #888;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+background-color: #f0f0f0;
+color: #888;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-button img {
-    width: 33px;
-    height: 33px;
+width: 33px;
+height: 33px;
 }
 
 .team-button span {
-    margin-top: 5px;
-    font-size: 0.8rem;
-    font-weight: bold;
+margin-top: 5px;
+font-size: 0.8rem;
+font-weight: bold;
 }
 
 /* Contact form */
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+max-width: 600px;
+margin: 0 auto;
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
 }
 
 .contact-form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px 0;
 }
 
 .footertext {
-    font-size: 13px;
-    margin: 2px 0 3px;
+font-size: 13px;
+margin: 2px 0 3px;
 }
 
 .footerlink {
-    color: #fff;
-    text-decoration: underline;
+color: #fff;
+text-decoration: underline;
 }
 
 footer .logo {
-    max-height: 31px;
-    margin-bottom: 2px;
+max-height: 31px;
+margin-bottom: 2px;
 }
 
 /* Responsive */
 @media (max-width: 500px) {
-    header .logo {
-        max-height: 33px;
-    }
+header .logo {
+max-height: 33px;
+}
 
-    .container,
-    .main-content,
-    .contact-form {
-        padding: 10px;
-        max-width: 100%;
-    }
+```
+.container,
+.main-content,
+.contact-form {
+    padding: 10px;
+    max-width: 100%;
+}
 
-    footer .logo {
-        max-height: 28px;
-    }
+footer .logo {
+    max-height: 28px;
+}
+```
+
 /* Shop Block */
 .shop-block {
-    margin-top: 24px;
+margin-top: 24px;
 }
 
 .shop-block h3 {
-    text-align: center;
+text-align: center;
 }
 
 .shop-block a {
-    display: block;           /* 👈 key fix */
-    text-align: center;       /* 👈 centers inline stuff inside */
-    color: #333;
-    text-decoration: none;
+display: block;           /* 👈 key fix */
+text-align: center;       /* 👈 centers inline stuff inside */
+color: #333;
+text-decoration: none;
 }
 
 .shop-block img {
-    display: block;
-    margin: 0 auto;           /* 👈 hard center */
-    max-width: 100%;
-    height: auto;
+display: block;
+margin: 0 auto;           /* 👈 hard center */
+max-width: 100%;
+height: auto;
 }
 
 .shop-block p {
-    text-align: center;       /* 👈 centers the text link */
+text-align: center;       /* 👈 centers the text link */
 }
 
 .shop-block a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
-    
 }
-
 
 /* Homepage content */
 .homepage-content {
-    margin: 35px auto 20px;
-    padding: 25px 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-sizing: border-box;
-    max-width: 850px;
+margin: 35px auto 20px;
+padding: 20px 18px;
+background-color: #fff;
+border-radius: 8px;
+box-sizing: border-box;
+max-width: 850px;
 }
 
 .homepage-content h2 {
-    text-align: center;
-    margin: 0 0 18px;
-    font-size: 1.4rem;
+text-align: center;
+margin: 0 0 16px;
+font-size: 1.4rem;
 }
 
 .homepage-content p {
-    margin: 0 0 14px;
-    line-height: 1.7;
+margin: 0 0 13px;
+font-size: 15px;
+line-height: 1.65;
 }
 
 .homepage-content p:last-child {
-    margin-bottom: 0;
+margin-bottom: 0;
 }
 
 .homepage-content a {
-    color: #333;
-    text-decoration: underline;
+color: #333;
+text-decoration: underline;
 }
 
-
 /* =========================
-   Amazon Music CTA (SAFE ADD-ON)
+Amazon Music CTA (SAFE ADD-ON)
 ========================= */
 
 .music-cta {
-    margin: 8px 0 0;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.4;
+margin: 8px 0 0;
+font-size: 13px;
+font-weight: 600;
+line-height: 1.4;
 }
 
 .music-cta a {
-    color: #0a66c2;
-    text-decoration: none;
+color: #0a66c2;
+text-decoration: none;
 }
 
 .music-cta a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
