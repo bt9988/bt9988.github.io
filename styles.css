@@ -12,6 +12,14 @@ min-height: 100vh;
 overflow-x: hidden;
 }
 
+.goal-songs-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px 0;
+}
+
+
 /* Amazon-style CTA button */
 .amazon-button {
 display: inline-block;
